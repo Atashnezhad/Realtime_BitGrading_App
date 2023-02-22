@@ -1,0 +1,122 @@
+[
+    {
+        "id": "15a01d82-7f3c-4695-88b1-b2adaf331c13",
+        "timestamp": 1677102760,
+        "provider": "provider_name",
+        "drill_string_id": "ds_1",
+        "data": {
+            "md": 0.0,
+            "wob": 6380.884,
+            "rpm": 203.669,
+            "rop": 90.662
+        }
+    },
+    {
+        "id": "9f2ebd7d-73b2-471d-87f5-8ba8f3069e6a",
+        "timestamp": 1677102761,
+        "provider": "provider_name",
+        "drill_string_id": "ds_1",
+        "data": {
+            "md": 1000.0,
+            "wob": 33608.407,
+            "rpm": 204.341,
+            "rop": 261.36
+        }
+    },
+    {
+        "id": "8efe9989-1633-47a1-b983-b39a8d35dba2",
+        "timestamp": 1677102762,
+        "provider": "provider_name",
+        "drill_string_id": "ds_1",
+        "data": {
+            "md": 2000.0,
+            "wob": 31073.849,
+            "rpm": 332.934,
+            "rop": 137.953
+        }
+    },
+    {
+        "id": "22d79924-fe3f-484c-b766-aff3da3a4480",
+        "timestamp": 1677102763,
+        "provider": "provider_name",
+        "drill_string_id": "ds_1",
+        "data": {
+            "md": 3000.0,
+            "wob": 23875.194,
+            "rpm": 111.445,
+            "rop": 123.278
+        }
+    },
+    {
+        "id": "6067b367-e49d-4144-be7e-7a76a349f44e",
+        "timestamp": 1677102764,
+        "provider": "provider_name",
+        "drill_string_id": "ds_1",
+        "data": {
+            "md": 4000.0,
+            "wob": 37940.461,
+            "rpm": 246.379,
+            "rop": 66.942
+        }
+    },
+    {
+        "id": "ef6aa031-6080-43c0-be1c-c5d8884c01ff",
+        "timestamp": 1677102765,
+        "provider": "provider_name",
+        "drill_string_id": "ds_1",
+        "data": {
+            "md": 5000.0,
+            "wob": 44656.344,
+            "rpm": 139.578,
+            "rop": 129.572
+        }
+    },
+    {
+        "id": "3cf329d8-8d77-4fdc-bcf2-ad7fa0df3006",
+        "timestamp": 1677102766,
+        "provider": "provider_name",
+        "drill_string_id": "ds_1",
+        "data": {
+            "md": 6000.0,
+            "wob": 44837.616,
+            "rpm": 67.626,
+            "rop": 254.135
+        }
+    },
+    {
+        "id": "756fad7a-6a90-4c8e-8be0-bf01d64880c2",
+        "timestamp": 1677102767,
+        "provider": "provider_name",
+        "drill_string_id": "ds_1",
+        "data": {
+            "md": 7000.0,
+            "wob": 43349.163,
+            "rpm": 166.844,
+            "rop": 1.485
+        }
+    },
+    {
+        "id": "318aee2c-1a1d-472b-8bca-fd00252a0a41",
+        "timestamp": 1677102768,
+        "provider": "provider_name",
+        "drill_string_id": "ds_1",
+        "data": {
+            "md": 8000.0,
+            "wob": 43144.582,
+            "rpm": 74.414,
+            "rop": 246.316
+        }
+    },
+    {
+        "id": "cae03d6f-dfa7-4050-bf3c-d24b1082e460",
+        "timestamp": 1677102769,
+        "provider": "provider_name",
+        "drill_string_id": "ds_1",
+        "data": {
+            "md": 9000.0,
+            "wob": 1934.542,
+            "rpm": 98.37,
+            "rop": 116.33
+        }
+    }
+]

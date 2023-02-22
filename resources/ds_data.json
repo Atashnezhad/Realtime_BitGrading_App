@@ -1,0 +1,20 @@
+[
+    {
+        "id": "a5f1b0cd-8400-417e-abb0-b19c0db8748d",
+        "drill_string_id": "ds_1",
+        "down_hole_motor_id": "1390fa8d-7",
+        "flowrate": 70.159
+    },
+    {
+        "id": "7f07dc9f-c4e8-4f65-b30f-2b20f21e7a17",
+        "drill_string_id": "ds_2",
+        "down_hole_motor_id": "4fe6a0a4-3",
+        "flowrate": 97.033
+    },
+    {
+        "id": "0fdfda5a-74cd-41ed-81f7-6c6585886681",
+        "drill_string_id": "ds_3",
+        "down_hole_motor_id": "04fec0d3-f",
+        "flowrate": 453.695
+    }
+]
