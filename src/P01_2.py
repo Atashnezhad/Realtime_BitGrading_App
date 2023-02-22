@@ -2,7 +2,7 @@ import json
 import uuid
 from datetime import datetime
 from pathlib import Path
-from typing import List, Dict, Any
+from typing import Any, Dict, List
 
 import numpy as np
 
@@ -43,9 +43,13 @@ class GenerateDummyData:
         wobs: np.ndarray = np.random.uniform(wob_min, wob_max, number_of_datapoints + 1)
         rpms: np.ndarray = np.random.uniform(rpm_min, rpm_max, number_of_datapoints + 1)
         rops: np.ndarray = np.random.uniform(rop_min, rop_max, number_of_datapoints + 1)
-        flowrates: np.ndarray = np.random.uniform(flowrate_min, flowrate_max, number_of_datapoints + 1)
+        flowrates: np.ndarray = np.random.uniform(
+            flowrate_min, flowrate_max, number_of_datapoints + 1
+        )
 
-        timestamps: List[int] = [self.curr_ts + i for i in range(1, number_of_datapoints + 1)]
+        timestamps: List[int] = [
+            self.curr_ts + i for i in range(1, number_of_datapoints + 1)
+        ]
         ids: List[str] = [str(uuid.uuid4()) for _ in range(1, number_of_datapoints + 1)]
         records: List[Dict[str, Any]] = [
             {
@@ -53,9 +57,17 @@ class GenerateDummyData:
                 "timestamp": ts,
                 "provider": "provider_name",
                 "drill_string_id": drill_string_id,
-                "data": {"md": round(md, 3), "wob": round(wob, 3), "rpm": round(rpm, 3), "rop": round(rop, 3), "flowrate": round(flowrate, 3)},
+                "data": {
+                    "md": round(md, 3),
+                    "wob": round(wob, 3),
+                    "rpm": round(rpm, 3),
+                    "rop": round(rop, 3),
+                    "flowrate": round(flowrate, 3),
+                },
             }
-            for id, ts, md, wob, rpm, rop, flowrate in zip(ids, timestamps, mds, wobs, rpms, rops, flowrates)
+            for id, ts, md, wob, rpm, rop, flowrate in zip(
+                ids, timestamps, mds, wobs, rpms, rops, flowrates
+            )
         ]
         return records
 
@@ -96,14 +108,16 @@ class GenerateDummyData:
         number_of_ds = kwargs.get("number_of_datapoints", 3)
         ids: List[str] = [str(uuid.uuid4()) for _ in range(1, number_of_ds + 1)]
         ds_ids = [f"ds_{i}" for i in range(1, number_of_ds + 1)]
-        down_hole_motor_ids: List[str] = [f"motor_id_{i}" for i in range(1, number_of_ds + 1)]
+        down_hole_motor_ids: List[str] = [
+            f"motor_id_{i}" for i in range(1, number_of_ds + 1)
+        ]
         records: List[Dict[str, Any]] = [
             {
                 "id": id,
                 "_drill_string_id": ds_id,
                 "down_hole_motor_id": dhm_id,
             }
-                for id, ds_id, dhm_id in zip(ids, ds_ids, down_hole_motor_ids)
+            for id, ds_id, dhm_id in zip(ids, ds_ids, down_hole_motor_ids)
         ]
         with open(_path / file_name, "w") as f:
             json.dump(records, f, indent=4, sort_keys=False)
@@ -123,7 +137,9 @@ class GenerateDummyData:
         dhm_ids = [f"motor_id_{i}" for i in range(1, number_of_dhm + 1)]
         motor_cof_min: float = kwargs.get("mds_min", 0)
         motor_cof_max: float = kwargs.get("mds_max", 500)
-        motor_cofs: np.ndarray = np.random.uniform(motor_cof_min, motor_cof_max, number_of_dhm + 1)
+        motor_cofs: np.ndarray = np.random.uniform(
+            motor_cof_min, motor_cof_max, number_of_dhm + 1
+        )
         records: List[Dict[str, Any]] = [
             {
                 "id": id,
@@ -131,7 +147,7 @@ class GenerateDummyData:
                 "motor_cof": motor_cof,
                 "type": "positive_displacement",
             }
-                for id, motor_cof, dhm_id in zip(ids, motor_cofs, dhm_ids)
+            for id, motor_cof, dhm_id in zip(ids, motor_cofs, dhm_ids)
         ]
         with open(_path / file_name, "w") as f:
             json.dump(records, f, indent=4, sort_keys=False)
@@ -162,7 +178,7 @@ if __name__ == "__main__":
     )
     obj.combine_json_files(
         combined_file_name="data_combined.json",
-        file_names=["data_ds_1.json", "data_ds_2.json", "data_ds_3.json"]
+        file_names=["data_ds_1.json", "data_ds_2.json", "data_ds_3.json"],
     )
 
     obj.make_ds_data()
