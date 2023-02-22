@@ -7,7 +7,7 @@ from typing import List, Dict, Any
 import numpy as np
 
 
-class GenerateData:
+class GenerateDummyData:
     """
     Generate data for the project.
     """
@@ -33,6 +33,8 @@ class GenerateData:
         rpm_max: float = kwargs.get("rpm_max", 350)
         rop_min: float = kwargs.get("rop_min", 0)
         rop_max: float = kwargs.get("rop_max", 300)
+        flowrate_min: float = kwargs.get("mds_min", 0)
+        flowrate_max: float = kwargs.get("mds_max", 500)
 
         drill_string_id: str = kwargs.get("drill_string_id", "ds_1")
 
@@ -41,6 +43,8 @@ class GenerateData:
         wobs: np.ndarray = np.random.uniform(wob_min, wob_max, number_of_datapoints + 1)
         rpms: np.ndarray = np.random.uniform(rpm_min, rpm_max, number_of_datapoints + 1)
         rops: np.ndarray = np.random.uniform(rop_min, rop_max, number_of_datapoints + 1)
+        flowrates: np.ndarray = np.random.uniform(flowrate_min, flowrate_max, number_of_datapoints + 1)
+
         timestamps: List[int] = [self.curr_ts + i for i in range(1, number_of_datapoints + 1)]
         ids: List[str] = [str(uuid.uuid4()) for _ in range(1, number_of_datapoints + 1)]
         records: List[Dict[str, Any]] = [
@@ -49,9 +53,9 @@ class GenerateData:
                 "timestamp": ts,
                 "provider": "provider_name",
                 "drill_string_id": drill_string_id,
-                "data": {"md": round(md, 3), "wob": round(wob, 3), "rpm": round(rpm, 3), "rop": round(rop, 3)},
+                "data": {"md": round(md, 3), "wob": round(wob, 3), "rpm": round(rpm, 3), "rop": round(rop, 3), "flowrate": round(flowrate, 3)},
             }
-            for id, ts, md, wob, rpm, rop in zip(ids, timestamps, mds, wobs, rpms, rops)
+            for id, ts, md, wob, rpm, rop, flowrate in zip(ids, timestamps, mds, wobs, rpms, rops, flowrates)
         ]
         return records
 
@@ -83,7 +87,7 @@ class GenerateData:
     def make_ds_data(**kwargs) -> None:
         """
         Make data for drill string. This method is used to generate some
-        dummy data with drillstring id, flowrate, down hole-motor_id, etc.
+        dummy data with drillstring id, down hole-motor_id, etc.
         :param kwargs:
         :return:
         """
@@ -92,26 +96,52 @@ class GenerateData:
         number_of_ds = kwargs.get("number_of_datapoints", 3)
         ids: List[str] = [str(uuid.uuid4()) for _ in range(1, number_of_ds + 1)]
         ds_ids = [f"ds_{i}" for i in range(1, number_of_ds + 1)]
-        flowrate_min: float = kwargs.get("mds_min", 0)
-        flowrate_max: float = kwargs.get("mds_max", 500)
-        flowrates: np.ndarray = np.random.uniform(flowrate_min, flowrate_max, number_of_ds)
-        # use 10 character random striing id for down hole motor.
-        down_hole_motor_ids: List[str] = [str(uuid.uuid4())[:10] for _ in range(1, number_of_ds + 1)]
+        down_hole_motor_ids: List[str] = [f"motor_id_{i}" for i in range(1, number_of_ds + 1)]
         records: List[Dict[str, Any]] = [
             {
                 "id": id,
-                "drill_string_id": ds_id,
+                "_drill_string_id": ds_id,
                 "down_hole_motor_id": dhm_id,
-                "flowrate": round(flowrate, 3),
             }
-                for id, ds_id, dhm_id, flowrate in zip(ids, ds_ids, down_hole_motor_ids, flowrates)
+                for id, ds_id, dhm_id in zip(ids, ds_ids, down_hole_motor_ids)
+        ]
+        with open(_path / file_name, "w") as f:
+            json.dump(records, f, indent=4, sort_keys=False)
+
+    @staticmethod
+    def make_dhm_data(**kwargs) -> None:
+        """
+        Make data for down hole motor. This method is used to generate some
+        dummy data with drillstring id, down hole-motor_id, etc.
+        :param kwargs:
+        :return:
+        """
+        _path = kwargs.get("path", Path(__file__).parent / ".." / "resources")
+        file_name = kwargs.get("file_name", "dhm_data.json")
+        number_of_dhm = kwargs.get("number_of_datapoints", 3)
+        ids: List[str] = [str(uuid.uuid4()) for _ in range(1, number_of_dhm + 1)]
+        dhm_ids = [f"motor_id_{i}" for i in range(1, number_of_dhm + 1)]
+        motor_cof_min: float = kwargs.get("mds_min", 0)
+        motor_cof_max: float = kwargs.get("mds_max", 500)
+        motor_cofs: np.ndarray = np.random.uniform(motor_cof_min, motor_cof_max, number_of_dhm + 1)
+        records: List[Dict[str, Any]] = [
+            {
+                "id": id,
+                "motor_id": dhm_id,
+                "motor_cof": motor_cof,
+                "type": "positive_displacement",
+            }
+                for id, motor_cof, dhm_id in zip(ids, motor_cofs, dhm_ids)
         ]
         with open(_path / file_name, "w") as f:
             json.dump(records, f, indent=4, sort_keys=False)
 
 
 if __name__ == "__main__":
-    obj = GenerateData()
+    # set seed for reproducibility
+    np.random.seed(42)
+
+    obj = GenerateDummyData()
 
     obj.generate_records_and_save_data(
         file_name="data_ds_1.json",
@@ -136,3 +166,5 @@ if __name__ == "__main__":
     )
 
     obj.make_ds_data()
+
+    obj.make_dhm_data()

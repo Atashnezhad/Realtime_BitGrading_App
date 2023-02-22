@@ -1,122 +1,132 @@
 [
     {
-        "id": "db94fd5a-a4f8-4039-b6fd-b1bd74b34aeb",
-        "timestamp": 1677102760,
+        "id": "ebfc4a89-2795-49e3-b21b-daf440475dff",
+        "timestamp": 1677105123,
         "provider": "provider_name",
         "drill_string_id": "ds_3",
         "data": {
             "md": 0.0,
-            "wob": 2368.058,
-            "rpm": 207.954,
-            "rop": 184.658
+            "wob": 44360.637,
+            "rpm": 37.762,
+            "rop": 86.925,
+            "flowrate": 448.046
         }
     },
     {
-        "id": "ef76c227-2c70-4fd0-bd97-8abeaea92cdb",
-        "timestamp": 1677102761,
+        "id": "c07f60bd-12a6-4eed-af9b-c7da7ba27225",
+        "timestamp": 1677105124,
         "provider": "provider_name",
         "drill_string_id": "ds_3",
         "data": {
             "md": 1000.0,
-            "wob": 26509.43,
-            "rpm": 280.401,
-            "rop": 180.059
+            "wob": 23610.746,
+            "rpm": 11.0,
+            "rop": 48.366,
+            "flowrate": 159.002
         }
     },
     {
-        "id": "43d87512-1f72-4476-a135-a71d02146f2f",
-        "timestamp": 1677102762,
+        "id": "dd961fa7-0ebc-409a-b7ca-4a46aee84e58",
+        "timestamp": 1677105125,
         "provider": "provider_name",
         "drill_string_id": "ds_3",
         "data": {
             "md": 2000.0,
-            "wob": 35749.83,
-            "rpm": 224.498,
-            "rop": 295.823
+            "wob": 5979.712,
+            "rpm": 222.744,
+            "rop": 278.909,
+            "flowrate": 55.026
         }
     },
     {
-        "id": "b963a3d0-b8b6-48c7-b0ce-0a10859b2270",
-        "timestamp": 1677102763,
+        "id": "b2ec80c3-6217-44d5-a16d-4fcbac2c1804",
+        "timestamp": 1677105126,
         "provider": "provider_name",
         "drill_string_id": "ds_3",
         "data": {
             "md": 3000.0,
-            "wob": 44510.413,
-            "rpm": 170.397,
-            "rop": 89.29
+            "wob": 35662.239,
+            "rpm": 110.025,
+            "rop": 242.436,
+            "flowrate": 113.968
         }
     },
     {
-        "id": "34da3613-c14c-475c-9ccd-4891b02e67c4",
-        "timestamp": 1677102764,
+        "id": "64312d64-469c-4251-bdaa-f0583187f72d",
+        "timestamp": 1677105127,
         "provider": "provider_name",
         "drill_string_id": "ds_3",
         "data": {
             "md": 4000.0,
-            "wob": 14633.031,
-            "rpm": 329.969,
-            "rop": 219.133
+            "wob": 38039.252,
+            "rpm": 178.0,
+            "rop": 190.021,
+            "flowrate": 213.554
         }
     },
     {
-        "id": "36950898-f8ff-4b40-b1f3-3eedf7e45d6c",
-        "timestamp": 1677102765,
+        "id": "35d9ad57-f8f6-4f4f-94fd-75cbc44657fe",
+        "timestamp": 1677105128,
         "provider": "provider_name",
         "drill_string_id": "ds_3",
         "data": {
             "md": 5000.0,
-            "wob": 2073.174,
-            "rpm": 328.169,
-            "rop": 52.834
+            "wob": 28063.86,
+            "rpm": 317.648,
+            "rop": 261.438,
+            "flowrate": 409.007
         }
     },
     {
-        "id": "0f6db9cf-7aed-46ec-9cc0-5bb3fd88e679",
-        "timestamp": 1677102766,
+        "id": "3bb9a3e2-3cb8-4bf4-ab72-a1b4f46e42a1",
+        "timestamp": 1677105129,
         "provider": "provider_name",
         "drill_string_id": "ds_3",
         "data": {
             "md": 6000.0,
-            "wob": 46908.612,
-            "rpm": 167.328,
-            "rop": 267.729
+            "wob": 38548.359,
+            "rpm": 87.252,
+            "rop": 241.102,
+            "flowrate": 430.365
         }
     },
     {
-        "id": "dc771e32-27b8-4e0b-9c1e-41fe1f85f5cc",
-        "timestamp": 1677102767,
+        "id": "268322df-32b3-4fdd-8faf-6425eeac77fd",
+        "timestamp": 1677105130,
         "provider": "provider_name",
         "drill_string_id": "ds_3",
         "data": {
             "md": 7000.0,
-            "wob": 34429.348,
-            "rpm": 315.123,
-            "rop": 55.19
+            "wob": 24689.78,
+            "rpm": 143.634,
+            "rop": 55.971,
+            "flowrate": 3.476
         }
     },
     {
-        "id": "b44bbd72-97a2-4be2-a54e-17836bbbacbd",
-        "timestamp": 1677102768,
+        "id": "799a1160-8d2e-4238-bb47-36501b9bf3b1",
+        "timestamp": 1677105131,
         "provider": "provider_name",
         "drill_string_id": "ds_3",
         "data": {
             "md": 8000.0,
-            "wob": 33105.518,
-            "rpm": 343.686,
-            "rop": 153.121
+            "wob": 26136.641,
+            "rpm": 264.443,
+            "rop": 267.768,
+            "flowrate": 255.374
         }
     },
     {
-        "id": "90a6a25a-ce88-49b1-b989-66a031938da3",
-        "timestamp": 1677102769,
+        "id": "67dadcea-a30d-47d0-8897-cc8610a196ed",
+        "timestamp": 1677105132,
         "provider": "provider_name",
         "drill_string_id": "ds_3",
         "data": {
             "md": 9000.0,
-            "wob": 2356.98,
-            "rpm": 308.381,
-            "rop": 182.882
+            "wob": 21377.051,
+            "rpm": 80.079,
+            "rop": 161.803,
+            "flowrate": 208.706
         }
     }
 ]

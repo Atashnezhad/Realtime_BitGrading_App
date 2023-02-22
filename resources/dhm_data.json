@@ -1,0 +1,20 @@
+[
+    {
+        "id": "a2c0ad27-c6a0-4b1b-8bdd-12f6f89effe2",
+        "motor_id": "motor_id_1",
+        "motor_cof": 59.9326836668414,
+        "type": "positive_displacement"
+    },
+    {
+        "id": "d4042e4a-4af7-4267-a496-e8b34d11117b",
+        "motor_id": "motor_id_2",
+        "motor_cof": 168.807585701814,
+        "type": "positive_displacement"
+    },
+    {
+        "id": "83700c41-5140-4b56-968b-ed787dabe61c",
+        "motor_id": "motor_id_3",
+        "motor_cof": 471.4548519562596,
+        "type": "positive_displacement"
+    }
+]
