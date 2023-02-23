@@ -91,7 +91,9 @@ class GenerateDummyData:
         :return:
         """
         _path = kwargs.get("path", Path(__file__).parent / ".." / "resources")
-        file_names = kwargs.get("file_names", ["wits_ds_1.json", "wits_ds_2.json", "wits_ds_3.json"])
+        file_names = kwargs.get(
+            "file_names", ["wits_ds_1.json", "wits_ds_2.json", "wits_ds_3.json"]
+        )
         combined_file_name = kwargs.get("combined_file_name", "data_combined.json")
         records = []
         for file_name in file_names:

@@ -65,6 +65,9 @@ class Api:
         ts_min = query.get("ts_min", {})
         ts_max = query.get("ts_max", {})
         if ts_min and ts_max:
+            # check both the timestamp are not equal otherwise it rises an error
+            if ts_min == ts_max:
+                raise ValueError("ts_min and ts_max are equal.")
             records = [
                 record for record in records if ts_min <= record["timestamp"] < ts_max
             ]

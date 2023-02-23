@@ -40,3 +40,9 @@ run-black:
 .PHONY: run-pytest
 run-pytest:
 	pytest test/*.py
+
+# run code coverage and exclude P01_1.py and P01_2.py
+.PHONY: run-coverage
+run-coverage:
+	coverage run --source=src -m pytest test/*.py
+	coverage report -m --omit=src/P01_1.py,src/P01_2.py
