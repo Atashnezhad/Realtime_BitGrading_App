@@ -26,12 +26,17 @@ install-requirements:
 .PHONY: run-flake8
 run-flake8:
 	isort src/*.py
-	#isort test/*.py
+	isort test/*.py
 	flake8 src/*.py
-	#flake8 test/*.py
+	flake8 test/*.py
 
 # run black on all python files in the src folder
 .PHONY: run-black
 run-black:
 	black src/*.py
 	black test/*.py
+
+# run the pytest script
+.PHONY: run-pytest
+run-pytest:
+	pytest test/*.py

@@ -1,6 +1,7 @@
 import unittest
-from src.osu_api import Api
 from pathlib import Path
+
+from src.osu_api import Api
 
 
 class Test1(unittest.TestCase):

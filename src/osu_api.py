@@ -47,6 +47,10 @@ class Api:
         if not all(field in records[0] for field in fields):
             # print available fields
             print(f"Available fields are: {records[0].keys()}")
+            # print the specific field that is not present
+            print(
+                f"Fields that are not present: {set(fields) - set(records[0].keys())}"
+            )
             raise ValueError("\n\nFields are not present in the data.")
 
         # check if timestamp is present in the query
@@ -56,6 +60,14 @@ class Api:
                 records = sorted(records, key=lambda x: x["timestamp"], reverse=True)
             else:
                 records = sorted(records, key=lambda x: x["timestamp"])
+
+        # filter data based on the timestamp
+        ts_min = query.get("ts_min", {})
+        ts_max = query.get("ts_max", {})
+        if ts_min and ts_max:
+            records = [
+                record for record in records if ts_min <= record["timestamp"] < ts_max
+            ]
 
         # filter the data based on the fields
         if fields:
@@ -72,11 +84,11 @@ if __name__ == "__main__":
     api = Api()
     query = {
         "provider_name": "provider_name",
-        "sort": -1,
-        "limit": 13,
-        "fields": ["id", "motor_id", "motor_cof", "type"],
+        "sort": 1,
+        "limit": 20,
+        "fields": ["id", "timestamp", "provider", "drill_string_id", "data"],
+        "ts_min": 1677112070,
+        "ts_max": 1677112080,
     }
-    records = api.get_data(
-        data_name="dhm_data", provider_name="provider_name", query=query
-    )
+    records = api.get_data(data_name="wits", provider_name="provider_name", query=query)
     print(records)
