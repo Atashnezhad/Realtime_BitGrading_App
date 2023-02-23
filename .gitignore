@@ -1,3 +1,5 @@
 venv/
 .idea
 .pytest_cache
+.coverage
+htmlcov
