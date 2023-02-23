@@ -3,16 +3,18 @@ from pathlib import Path
 from typing import Dict
 
 
-class DummyApi:
+class Api:
     """
-    Dummy API class
+    API class
     This api is used to get, put, delete data from a database.
     There is no endpoint is used in this class. The DummyApi class
     reads the data from the local location.
     """
 
     def __init__(self, *args, **kwargs) -> None:
-        self._path: str = kwargs.get("path", Path(__file__).parent / ".." / "resources")
+        self._path: str = kwargs.get(
+            "resources_path", Path(__file__).parent / ".." / "resources"
+        )
 
     def get_data(self, *args, **kwargs) -> Dict:
         provider = kwargs.get("provider_name", {})
@@ -63,12 +65,11 @@ class DummyApi:
 
         # limit the data
         records = records[:limit]
-
         return records
 
 
 if __name__ == "__main__":
-    api = DummyApi()
+    api = Api()
     query = {
         "provider_name": "provider_name",
         "sort": -1,

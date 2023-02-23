@@ -57,7 +57,7 @@ class GenerateDummyData:
             {
                 "id": id,
                 "timestamp": ts,
-                "provider": "provider_name",
+                "provider": "osu_provider",
                 "drill_string_id": drill_string_id,
                 "data": {
                     "md": round(md, 3),

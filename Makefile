@@ -34,4 +34,4 @@ run-flake8:
 .PHONY: run-black
 run-black:
 	black src/*.py
-	#black test/*.py
+	black test/*.py

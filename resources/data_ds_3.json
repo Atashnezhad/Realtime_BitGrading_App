@@ -1,8 +1,8 @@
 [
     {
-        "id": "795c1b7d-2e8b-4ea1-99f4-28dbbcf5447e",
+        "id": "0b766126-0a62-4d7d-9411-b42378bf4cb2",
         "timestamp": 1677112089,
-        "provider": "provider_name",
+        "provider": "osu_provider",
         "drill_string_id": "ds_3",
         "data": {
             "md": 0.0,
@@ -13,9 +13,9 @@
         }
     },
     {
-        "id": "a00304ee-55fb-4798-aaf1-f644344b3b8f",
+        "id": "35b14357-5bb1-4bed-94a4-aaccdc4a3c36",
         "timestamp": 1677112090,
-        "provider": "provider_name",
+        "provider": "osu_provider",
         "drill_string_id": "ds_3",
         "data": {
             "md": 1000.0,
@@ -26,9 +26,9 @@
         }
     },
     {
-        "id": "9fa986f5-f33a-4d0b-9aff-60930ddd1e21",
+        "id": "8974068a-fcd0-4f70-bb96-f3048b99d718",
         "timestamp": 1677112091,
-        "provider": "provider_name",
+        "provider": "osu_provider",
         "drill_string_id": "ds_3",
         "data": {
             "md": 2000.0,
@@ -39,9 +39,9 @@
         }
     },
     {
-        "id": "34343b6e-c841-4ad5-91eb-59a320c39327",
+        "id": "87dafd58-3613-4fb1-978e-8d6212351425",
         "timestamp": 1677112092,
-        "provider": "provider_name",
+        "provider": "osu_provider",
         "drill_string_id": "ds_3",
         "data": {
             "md": 3000.0,
@@ -52,9 +52,9 @@
         }
     },
     {
-        "id": "7adf684b-3cbd-4c5a-b113-b4ceb8fe4eaa",
+        "id": "ed8cda9a-4808-47a8-a189-76faa6f69293",
         "timestamp": 1677112093,
-        "provider": "provider_name",
+        "provider": "osu_provider",
         "drill_string_id": "ds_3",
         "data": {
             "md": 4000.0,
@@ -65,9 +65,9 @@
         }
     },
     {
-        "id": "5ff79936-b801-4648-8f0e-d96508cccffa",
+        "id": "ed1a1739-d925-413a-9806-5559fb8193f3",
         "timestamp": 1677112094,
-        "provider": "provider_name",
+        "provider": "osu_provider",
         "drill_string_id": "ds_3",
         "data": {
             "md": 5000.0,
@@ -78,9 +78,9 @@
         }
     },
     {
-        "id": "dc48560e-cec6-4ad0-91ad-df6611345d9b",
+        "id": "81bbda3e-3f90-4ad9-b2ac-7e7e0a7a2c82",
         "timestamp": 1677112095,
-        "provider": "provider_name",
+        "provider": "osu_provider",
         "drill_string_id": "ds_3",
         "data": {
             "md": 6000.0,
@@ -91,9 +91,9 @@
         }
     },
     {
-        "id": "a42a7a4f-b1ab-4789-a550-a98b795a3f4e",
+        "id": "1733e234-71dd-4eff-bafa-981ece8c86fe",
         "timestamp": 1677112096,
-        "provider": "provider_name",
+        "provider": "osu_provider",
         "drill_string_id": "ds_3",
         "data": {
             "md": 7000.0,
@@ -104,9 +104,9 @@
         }
     },
     {
-        "id": "47776c6b-5312-4bf6-93a3-f8d369c9f419",
+        "id": "d5bd61fc-4efd-4fa0-90e7-448b35c85fd4",
         "timestamp": 1677112097,
-        "provider": "provider_name",
+        "provider": "osu_provider",
         "drill_string_id": "ds_3",
         "data": {
             "md": 8000.0,
@@ -117,9 +117,9 @@
         }
     },
     {
-        "id": "02368de1-aea9-4353-bd4b-8e4e7008eef9",
+        "id": "867d4560-6e99-4ad5-82c8-1b639d204f4c",
         "timestamp": 1677112098,
-        "provider": "provider_name",
+        "provider": "osu_provider",
         "drill_string_id": "ds_3",
         "data": {
             "md": 9000.0,
