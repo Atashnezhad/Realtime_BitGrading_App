@@ -16,7 +16,8 @@ class GenerateDummyData:
         curr_dt: datetime = datetime.now()
         self.curr_ts: int = int(round(curr_dt.timestamp()))
 
-    def _generate_records(self, **kwargs) -> List[Dict[str, Any]]:
+    @staticmethod
+    def _generate_records(**kwargs) -> List[Dict[str, Any]]:
         """
         Generate records for the project.
         :param kwargs:
@@ -35,6 +36,7 @@ class GenerateDummyData:
         rop_max: float = kwargs.get("rop_max", 300)
         flowrate_min: float = kwargs.get("mds_min", 0)
         flowrate_max: float = kwargs.get("mds_max", 500)
+        start_ts = kwargs.get("start_ts", 1677112068)
 
         drill_string_id: str = kwargs.get("drill_string_id", "ds_1")
 
@@ -48,7 +50,7 @@ class GenerateDummyData:
         )
 
         timestamps: List[int] = [
-            self.curr_ts + i for i in range(1, number_of_datapoints + 1)
+            start_ts + i for i in range(1, number_of_datapoints + 1)
         ]
         ids: List[str] = [str(uuid.uuid4()) for _ in range(1, number_of_datapoints + 1)]
         records: List[Dict[str, Any]] = [
@@ -71,10 +73,11 @@ class GenerateDummyData:
         ]
         return records
 
-    def generate_records_and_save_data(self, **kwargs) -> None:
+    @staticmethod
+    def generate_records_and_save_data(**kwargs) -> None:
         _path = kwargs.get("path", Path(__file__).parent / ".." / "resources")
         file_name = kwargs.get("file_name", "data.json")
-        records = self._generate_records(**kwargs)
+        records = GenerateDummyData._generate_records(**kwargs)
         with open(_path / file_name, "w") as f:
             json.dump(records, f, indent=4, sort_keys=False)
 
@@ -156,6 +159,7 @@ class GenerateDummyData:
 if __name__ == "__main__":
     # set seed for reproducibility
     np.random.seed(42)
+    START_TIMESTAMP = 1677112068
 
     obj = GenerateDummyData()
 
@@ -163,21 +167,24 @@ if __name__ == "__main__":
         file_name="data_ds_1.json",
         number_of_datapoints=10,
         drill_string_id="ds_1",
+        start_ts=START_TIMESTAMP,
     )
-
+    START_TIMESTAMP += 10
     obj.generate_records_and_save_data(
         file_name="data_ds_2.json",
         number_of_datapoints=10,
         drill_string_id="ds_2",
+        start_ts=START_TIMESTAMP,
     )
-
+    START_TIMESTAMP += 10
     obj.generate_records_and_save_data(
         file_name="data_ds_3.json",
         number_of_datapoints=10,
         drill_string_id="ds_3",
+        start_ts=START_TIMESTAMP,
     )
     obj.combine_json_files(
-        combined_file_name="data_combined.json",
+        combined_file_name="wits.json",
         file_names=["data_ds_1.json", "data_ds_2.json", "data_ds_3.json"],
     )
 
