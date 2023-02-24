@@ -166,13 +166,22 @@ class BGApp:
 if __name__ == "__main__":
     api = Api()
     start_ts = 1677112070
-    end_ts = 1677112083
-    # make batch events between start_ts and end_ts with 5 seconds interval
+    end_ts = 1677113068 # 1677112083
+
+    # empty the bg_data.json file in the resources/calculated_bg folder
+    path = Path(__file__).parent / ".." / "resources" / "calculated_bg"
+    filename = "bg_data.json"
+    address = path / filename
+    with open(address, "w") as f:
+        json.dump([], f)
+
+
+    # make batch events between start_ts and end_ts with 60 seconds interval
     # and call the rop_app.get_wits_data() method for each batch event and print the records
-    for i in range(start_ts, end_ts, 5):
-        _end_ts = i + 5
+    for i in range(start_ts, end_ts, 60):
+        _end_ts = i + 60
         # check if i + 5 is less than end_ts
-        if i + 5 > end_ts:
+        if i + 60 > end_ts:
             _end_ts = end_ts
         event = {"start_ts": i, "end_ts": _end_ts}
         # print(event)
