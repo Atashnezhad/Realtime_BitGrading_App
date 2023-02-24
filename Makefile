@@ -41,7 +41,7 @@ run-black:
 run-pytest:
 	pytest test/*.py
 
-# run code coverage and exclude P01_1.py and P01_2.py
+# run code coverage and exclude P01_1_make_dummy_data.py and P01_2_make_dummy_data.py
 .PHONY: run-coverage
 run-coverage:
 	coverage run --source=src -m pytest test/*.py

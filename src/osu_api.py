@@ -82,6 +82,15 @@ class Api:
         records = records[:limit]
         return records
 
+    def post_data(self, *args, **kwargs) -> None:
+        data = kwargs.get("data", {})
+        address = kwargs.get("address", {})
+        if not address:
+            raise ValueError("Address is not provided.")
+        # save data as json at provided address
+        with open(address, "w") as f:
+            json.dump(data, f, indent=4, sort_keys=False)
+
 
 if __name__ == "__main__":
     api = Api()

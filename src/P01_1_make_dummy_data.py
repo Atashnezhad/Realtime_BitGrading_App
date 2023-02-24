@@ -35,5 +35,5 @@ if __name__ == "__main__":
     if not path.exists():
         path.mkdir()
     # save the data in the resources' folder as json.
-    with open(path / "data.json", "w") as f:
+    with open(path / "wits.json", "w") as f:
         json.dump(records, f, indent=4, sort_keys=False)
