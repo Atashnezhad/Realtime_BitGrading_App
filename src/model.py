@@ -1,4 +1,10 @@
+from enum import Enum
+
 from pydantic import BaseModel, Field
+
+
+class Settings(Enum):
+    ACCEPTED_ACTIVITIES = ["rotary_drilling", "slide_drilling"]
 
 
 class Wits(BaseModel):
@@ -31,11 +37,17 @@ class Wits(BaseModel):
     @staticmethod
     def check_fields(data: dict) -> bool:
         fields = Wits.__fields__.keys()
-        # exclude drill_string_id and timestampfrom the fields
+        # exclude drill_string_id and timestamp from the fields
         fields = [
             field for field in fields if field not in ["drill_string_id", "timestamp"]
         ]
         return all([data.get("data", {}).get(field) is not None for field in fields])
+
+    @staticmethod
+    def check_activity(data: dict) -> bool:
+        if data.get("activity") in Settings.ACCEPTED_ACTIVITIES.value:
+            return True
+        print(f"Activity {data.get('activity')} is not accepted.")
 
 
 class DrillSting(BaseModel):

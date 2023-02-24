@@ -1,10 +1,13 @@
 import json
+import random
 import uuid
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List
 
 import numpy as np
+
+from src.enums import Activities
 
 
 class GenerateDummyData:
@@ -55,6 +58,13 @@ class GenerateDummyData:
             start_ts + i for i in range(1, number_of_datapoints + 1)
         ]
         ids: List[str] = [str(uuid.uuid4()) for _ in range(1, number_of_datapoints + 1)]
+
+        # use Activity enum to make random activity.
+        activities: List[str] = [
+            random.choice(list(Activities)).value
+            for _ in range(1, number_of_datapoints + 1)
+        ]
+
         records: List[Dict[str, Any]] = [
             {
                 "id": id,
@@ -68,9 +78,10 @@ class GenerateDummyData:
                     "rop": round(rop, 3),
                     "flowrate": round(flowrate, 3),
                 },
+                "activity": activity,
             }
-            for id, ts, md, wob, rpm, rop, flowrate in zip(
-                ids, timestamps, mds, wobs, rpms, rops, flowrates
+            for id, ts, md, wob, rpm, rop, flowrate, activity in zip(
+                ids, timestamps, mds, wobs, rpms, rops, flowrates, activities
             )
         ]
         return records

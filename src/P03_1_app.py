@@ -26,7 +26,14 @@ class BGApp:
         query = {
             "sort": 1,
             # "limit": 3,
-            "fields": ["id", "timestamp", "provider", "drill_string_id", "data"],
+            "fields": [
+                "id",
+                "timestamp",
+                "provider",
+                "drill_string_id",
+                "data",
+                "activity",
+            ],
             "ts_min": start_ts,
             "ts_max": end_ts,
         }
@@ -37,7 +44,9 @@ class BGApp:
         )
 
         parsed_wits_records = [
-            Wits.parse_wits(record) for record in records if Wits.check_fields(record)
+            Wits.parse_wits(record)
+            for record in records
+            if Wits.check_fields(record) and Wits.check_activity(record)
         ]
 
         return parsed_wits_records
@@ -167,8 +176,8 @@ if __name__ == "__main__":
             _end_ts = end_ts
         event = {"start_ts": i, "end_ts": _end_ts}
         # print(event)
-        rop_app = BGApp(api, event)
-        rop_app.run()
+        bg_app = BGApp(api, event)
+        bg_app.run()
         # print(records)
         # sleep for 5 second
         # time.sleep(1)
