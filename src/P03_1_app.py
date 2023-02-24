@@ -166,7 +166,7 @@ class BGApp:
 if __name__ == "__main__":
     api = Api()
     start_ts = 1677112070
-    end_ts = 1677113068 # 1677112083
+    end_ts = 1677115068 # 1677112083
 
     # empty the bg_data.json file in the resources/calculated_bg folder
     path = Path(__file__).parent / ".." / "resources" / "calculated_bg"
