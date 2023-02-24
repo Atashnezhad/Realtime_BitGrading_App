@@ -46,3 +46,13 @@ run-pytest:
 run-coverage:
 	coverage run --source=src -m pytest test/*.py
 	coverage report -m --omit=src/P01_1.py,src/P01_2.py
+
+# run the following commands consecutively
+# black, flake8, pytest, git-automated
+.PHONY: run-all
+run-all:
+	make run-black
+	make run-flake8
+	make run-pytest
+	make run-coverage
+	make git-automated
