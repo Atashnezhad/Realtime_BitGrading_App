@@ -1,583 +1,511 @@
 [
     {
-        "id": "fddf1426-9de8-4808-bfeb-e81f528fdc4a",
+        "id": "e3c9d21f-1e44-4f94-aa13-3d392d69cbbb",
         "timestamp": 1677112071,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.135
+            "bg": 0.045
         }
     },
     {
-        "id": "33221d46-26e2-4086-a173-44d0da53b3b5",
+        "id": "cf575030-7511-4e8f-914a-00a37d648b27",
         "timestamp": 1677112075,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.136
+            "bg": 0.045
         }
     },
     {
-        "id": "f914c6ad-d0ec-45f3-9850-8445b111a82f",
+        "id": "200cbda7-b154-43cc-8c6d-4c2035f1a806",
         "timestamp": 1677112079,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.137
+            "bg": 0.046
         }
     },
     {
-        "id": "b13983e4-9734-456b-8914-99ad439fa31c",
+        "id": "61b32196-9990-4d6d-884b-85df682c3ece",
         "timestamp": 1677112133,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.06
+            "bg": 0.066
         }
     },
     {
-        "id": "c45cd0ad-400d-469e-b0b8-9770b2c9c9ff",
+        "id": "ce7a49d2-cf9a-48d2-ab40-359892772c0f",
         "timestamp": 1677112134,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.09
+            "bg": 0.076
         }
     },
     {
-        "id": "3955def3-0957-43ec-9b6c-a0a49a2f1228",
+        "id": "984bd154-fb32-4357-bcf2-8bd3e036a2f0",
         "timestamp": 1677112137,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.1
+            "bg": 0.079
         }
     },
     {
-        "id": "965d5ceb-16c1-4253-b1e5-6cae0151d7d3",
+        "id": "b00dd5fc-a5e9-44da-a995-1051c5410c6e",
         "timestamp": 1677112191,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.043
+            "bg": 0.093
         }
     },
     {
-        "id": "a74a8833-f227-4fcf-9c20-4dc28b26c8fe",
+        "id": "4a139042-dcfd-41be-9006-3784f1e68433",
         "timestamp": 1677112192,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.059
+            "bg": 0.099
         }
     },
     {
-        "id": "f5165c81-76fe-4b13-8f58-32a7622fcdee",
+        "id": "106213f1-b0a9-4482-802e-53fa3491cf91",
         "timestamp": 1677112194,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.149
+            "bg": 0.129
         }
     },
     {
-        "id": "0c780970-715d-4c9f-bf68-275f93e3bc1c",
+        "id": "e222d637-ad4f-4896-89e2-bdb32b98ecd5",
         "timestamp": 1677112257,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.107
+            "bg": 0.165
         }
     },
     {
-        "id": "2733ad75-bbea-4dc5-add3-b2595ab886a8",
+        "id": "482125f2-906d-47f7-bcfd-b955bf8b38fe",
         "timestamp": 1677112259,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.114
+            "bg": 0.167
         }
     },
     {
-        "id": "0fbb580f-bed5-4fc5-8b7b-7e17ac8074ba",
+        "id": "f9bec9ac-f397-4a79-8205-7660be422e85",
         "timestamp": 1677112313,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.001
+            "bg": 0.167
         }
     },
     {
-        "id": "2b62af6b-7695-40af-9655-a7788460499f",
+        "id": "8d82cf3e-9d4a-47c7-b7e1-56b0e2fead12",
         "timestamp": 1677112315,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.061
+            "bg": 0.187
         }
     },
     {
-        "id": "c18133a4-d89b-4e0c-bf81-986130e9b65e",
+        "id": "c2b02336-9745-475a-91d0-948c8881d479",
         "timestamp": 1677112316,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.175
+            "bg": 0.225
         }
     },
     {
-        "id": "84266f2a-d0a3-4131-a25d-c0ce69374df7",
+        "id": "236e7ee3-e685-4c9a-9c46-92794fbe3be5",
         "timestamp": 1677112317,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.2
+            "bg": 0.234
         }
     },
     {
-        "id": "f40d7d1d-08e9-4fb0-89d1-d10de5d5bdbe",
+        "id": "8ef0e5d9-b2d4-4e80-a541-d2ac2f20c806",
         "timestamp": 1677112318,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.314
+            "bg": 0.272
         }
     },
     {
-        "id": "493f33f7-2e6f-4277-a51c-5a4aaf5d1c79",
+        "id": "21d7de1a-8fcc-472d-ba78-b53c4994a766",
         "timestamp": 1677112372,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.053
+            "bg": 0.29
         }
     },
     {
-        "id": "6a69a04e-fe23-4353-8b47-80526dbb78c7",
+        "id": "4de795cb-4274-49f9-803b-99e653eec97b",
         "timestamp": 1677112374,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.132
+            "bg": 0.316
         }
     },
     {
-        "id": "c762fe07-620b-48a1-a1e2-b1bd010c859d",
+        "id": "b54fb767-3817-4191-9237-e43078b14d53",
         "timestamp": 1677112375,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.186
+            "bg": 0.334
         }
     },
     {
-        "id": "45df66af-8f2d-4920-862b-b5718b89bef5",
+        "id": "3ccb90d4-b11e-4a51-88f9-f5e2ce4e51f5",
         "timestamp": 1677112376,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.237
+            "bg": 0.351
         }
     },
     {
-        "id": "ed5a8503-2355-42e7-a208-bd7ae8a24583",
+        "id": "09fad39f-4031-4539-b7f3-c90d513bfef8",
         "timestamp": 1677112430,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.134
+            "bg": 0.396
         }
     },
     {
-        "id": "07810e56-6360-4155-886c-e51ba7d2e294",
+        "id": "4de56d98-1f10-4d3b-ba6c-889304cd2db2",
         "timestamp": 1677112433,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.19
+            "bg": 0.414
         }
     },
     {
-        "id": "27cb13ec-d9df-4db3-ac75-a2b9c176e45d",
+        "id": "ca5b9bd3-7d4b-4294-bcef-d574dc3b8456",
         "timestamp": 1677112435,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.338
+            "bg": 0.464
         }
     },
     {
-        "id": "1f6de4d0-5cf1-474c-ba4b-fe9f73faa23e",
+        "id": "dc9c1220-5d09-4b32-85cb-606ba0085383",
         "timestamp": 1677112439,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.353
+            "bg": 0.469
         }
     },
     {
-        "id": "d8fdc8c9-9d74-4920-aa17-1f181a528bc2",
+        "id": "bd355d66-b9be-49db-8dfc-c33f79ca924b",
         "timestamp": 1677112496,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.114
+            "bg": 0.507
         }
     },
     {
-        "id": "c86f674b-df64-45b7-9fa5-462c4205a2ad",
+        "id": "359f92ec-721e-4901-900d-aa3bbb799080",
         "timestamp": 1677112497,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.191
+            "bg": 0.533
         }
     },
     {
-        "id": "0e922bdf-1a3a-4f60-ab81-fdc5b4425d39",
+        "id": "9af89017-933d-431c-be11-52b2591f8e29",
         "timestamp": 1677112498,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.211
+            "bg": 0.539
         }
     },
     {
-        "id": "b0c212a4-7723-4ff0-8e64-8a8913b51454",
+        "id": "fcd1801a-70fe-4974-a283-87e42cfc552c",
         "timestamp": 1677112550,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.09
+            "bg": 0.569
         }
     },
     {
-        "id": "4da1b653-7c14-4547-a08e-0e9d0378325a",
+        "id": "b446f654-34d3-459e-8133-5882852938bb",
         "timestamp": 1677112556,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.095
+            "bg": 0.571
         }
     },
     {
-        "id": "965f1f65-f64c-434d-a21f-0ba05749607f",
+        "id": "af8438e6-961a-46c2-a699-d57002cf4fb0",
         "timestamp": 1677112558,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.269
+            "bg": 0.629
         }
     },
     {
-        "id": "66431220-5c5d-405b-976f-836ebfa7ac13",
+        "id": "b04691de-aa94-428b-911b-7c116ab18291",
         "timestamp": 1677112611,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.008
+            "bg": 0.632
         }
     },
     {
-        "id": "c61b5953-c9f9-49a4-97a8-a1d3215bd560",
+        "id": "962a2931-19ad-46bc-a4b6-376d2c35af89",
         "timestamp": 1677112618,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.107
+            "bg": 0.665
         }
     },
     {
-        "id": "0acb5581-c4e3-459b-9ffb-1db9d1292b8c",
+        "id": "99ea923b-45a7-452d-bed1-3218c2f804e7",
         "timestamp": 1677112670,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.013
+            "bg": 0.669
         }
     },
     {
-        "id": "c0e2ad86-0995-423b-9651-5b0b210ec5a3",
+        "id": "e6911bca-95b3-4358-bc2e-d1916fd28f0c",
         "timestamp": 1677112675,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.058
+            "bg": 0.684
         }
     },
     {
-        "id": "bb4015ff-940d-41d4-8568-b33a6a0bfdcf",
+        "id": "ce9f3adb-ed41-47e2-9baf-72d21bde9e30",
         "timestamp": 1677112679,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.065
+            "bg": 0.687
         }
     },
     {
-        "id": "9e941bb2-e11d-4090-98b1-423c52097bab",
+        "id": "b223429b-55eb-4ba8-818d-0a02ba841650",
         "timestamp": 1677112734,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.001
+            "bg": 0.687
         }
     },
     {
-        "id": "d9480e9f-c816-4ea5-952b-2ea83e0c9b62",
+        "id": "255d6fed-70f0-444a-b0e3-ab7759ea382b",
         "timestamp": 1677112737,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.003
+            "bg": 0.688
         }
     },
     {
-        "id": "c3618c4c-d356-4380-bbf6-d14327a518f8",
+        "id": "df39b6bc-43bb-4ad9-ae58-d3b0334882c1",
         "timestamp": 1677112791,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.014
+            "bg": 0.693
         }
     },
     {
-        "id": "db42c256-ecd2-4172-a203-2305ba9b02d1",
+        "id": "81a7a44b-379f-446f-ad87-52331f6ac66d",
         "timestamp": 1677112794,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.044
+            "bg": 0.703
         }
     },
     {
-        "id": "ae1d89b5-deaf-4f15-bf8b-9724d10c9469",
+        "id": "4c55291e-50dd-4839-8551-5617c812c9a3",
         "timestamp": 1677112799,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.062
+            "bg": 0.709
         }
     },
     {
-        "id": "fae5966f-3a24-4d8d-8129-3c786bed505d",
+        "id": "bd23278d-17c3-4c96-a583-c19ba1caeb6f",
         "timestamp": 1677112851,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.006
+            "bg": 0.711
         }
     },
     {
-        "id": "df9b9def-cb0c-471e-bb6f-a4b1c12a38a3",
+        "id": "5a65d596-3cef-4ed5-a948-de1a7e8caad0",
         "timestamp": 1677112856,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.025
+            "bg": 0.717
         }
     },
     {
-        "id": "727c9102-7a1d-411e-b28f-d1511a023eb1",
+        "id": "2541a7cb-5e28-41d0-a273-4a7bcdf313c3",
         "timestamp": 1677112919,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.014
+            "bg": 0.722
         }
     },
     {
-        "id": "89fa48ce-8eae-4250-b8c5-7294cdde607d",
+        "id": "71e4359c-b7f8-4028-99c2-d730b5521fb3",
         "timestamp": 1677112970,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.005
+            "bg": 0.724
         }
     },
     {
-        "id": "8738ccea-6195-4d86-ae95-72608a884353",
+        "id": "55b21ed7-957f-466b-8b71-7604fadec6b8",
         "timestamp": 1677112974,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.118
+            "bg": 0.761
         }
     },
     {
-        "id": "3631f512-18d5-4f9c-bd53-62b53e46bcbc",
+        "id": "81a0885e-221b-4f9a-8c29-237b1eefff83",
         "timestamp": 1677112976,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.121
+            "bg": 0.762
         }
     },
     {
-        "id": "8188129c-f5c7-43a4-a82a-1813d8d96b75",
+        "id": "b53dc455-5826-4f24-9334-19eb3d34ac47",
         "timestamp": 1677112978,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.122
+            "bg": 0.763
         }
     },
     {
-        "id": "31160696-a4b9-46f3-b09f-1d0d6eb0baf8",
+        "id": "aef15ee8-41e5-4330-a844-5f6017d675a4",
         "timestamp": 1677113035,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.063
+            "bg": 0.784
         }
     },
     {
-        "id": "92652f89-a5da-4436-8d60-15e4a94d6d9a",
+        "id": "37294189-3e67-4b24-9315-0aef789de283",
         "timestamp": 1677113036,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.127
+            "bg": 0.805
         }
     },
     {
-        "id": "5719aab2-011e-4899-83d8-2ce9308e6d3f",
+        "id": "2143addd-4aa6-4a82-b32e-a7b4bf22d34c",
         "timestamp": 1677113037,
         "provider": "osu_provider",
         "drillstring_id": "ds_1",
         "data": {
-            "bg": 0.196
+            "bg": 0.828
         }
     },
     {
-        "id": "50179a7a-8235-4733-8562-7d47fc213971",
+        "id": "9b47d253-9bfb-4587-ba5c-2008cbf78953",
         "timestamp": 1677113095,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.226
+            "bg": 0.075
         }
     },
     {
-        "id": "9306bb46-8654-4530-bcf5-411c46a9d129",
+        "id": "feb28ef2-c2b4-4833-a54f-9d90afd47b59",
         "timestamp": 1677113096,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.309
+            "bg": 0.103
         }
     },
     {
-        "id": "51cc3d96-e102-4f6d-b2c6-71e9abe3719a",
+        "id": "4d9aaf7e-9346-4bd1-99b7-1da9ffbec399",
         "timestamp": 1677113097,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.34
+            "bg": 0.113
         }
     },
     {
-        "id": "35637e9e-3903-42f2-b651-32dc078d2521",
+        "id": "390bc5d0-298f-44db-98c9-152f43c3d578",
         "timestamp": 1677113098,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.606
+            "bg": 0.202
         }
     },
     {
-        "id": "32475411-a2b5-4536-8872-d896262459fd",
+        "id": "b9a3872b-cdd8-47b4-80f9-b05fc73fdb89",
         "timestamp": 1677113099,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.654
+            "bg": 0.218
         }
     },
     {
-        "id": "6c4631dd-23f4-4362-826c-5d78b50f3f4e",
+        "id": "0734b914-5dfb-42b9-81a2-c30541ca178e",
         "timestamp": 1677113150,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.017
+            "bg": 0.224
         }
     },
     {
-        "id": "cd40ee19-21f7-417d-a7ed-18b81fab27ed",
+        "id": "60f8389f-1cfe-4051-8be0-99e55c724e95",
         "timestamp": 1677113153,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_2",
-        "data": {
-            "bg": 0.363
-        }
-    },
-    {
-        "id": "9f3a923b-91e4-4755-864c-9cbdb4bbf68c",
-        "timestamp": 1677113154,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_2",
-        "data": {
-            "bg": 0.379
-        }
-    },
-    {
-        "id": "309e942e-4b11-4f39-b0c2-05077d9f1f7f",
-        "timestamp": 1677113210,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_2",
-        "data": {
-            "bg": 0.199
-        }
-    },
-    {
-        "id": "2e2a838e-c9ff-4904-8982-49fa83df912e",
-        "timestamp": 1677113214,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_2",
-        "data": {
-            "bg": 0.523
-        }
-    },
-    {
-        "id": "424311c9-0e42-4f74-8250-062c17aea7be",
-        "timestamp": 1677113218,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_2",
-        "data": {
-            "bg": 0.638
-        }
-    },
-    {
-        "id": "3f69c92d-15a2-46f3-9acf-24be0ed50235",
-        "timestamp": 1677113270,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_2",
-        "data": {
-            "bg": 0.14
-        }
-    },
-    {
-        "id": "ccdac51a-84b6-4029-97c2-cedae80fe5d0",
-        "timestamp": 1677113273,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_2",
-        "data": {
-            "bg": 0.162
-        }
-    },
-    {
-        "id": "3990fef2-e8d7-4c1f-b211-f4bf781b2e83",
-        "timestamp": 1677113275,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_2",
-        "data": {
-            "bg": 0.195
-        }
-    },
-    {
-        "id": "2bb4540f-7be5-4b27-bfe8-a81942b0aa67",
-        "timestamp": 1677113333,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
@@ -585,44 +513,89 @@
         }
     },
     {
-        "id": "14449807-16b3-4da1-a508-07b566b7ee96",
+        "id": "27fd8325-4c8a-4bd3-8095-5d60d0993783",
+        "timestamp": 1677113154,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_2",
+        "data": {
+            "bg": 0.344
+        }
+    },
+    {
+        "id": "c6589dc2-9a3b-478f-89d1-a4de9ac1e7bb",
+        "timestamp": 1677113210,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_2",
+        "data": {
+            "bg": 0.41
+        }
+    },
+    {
+        "id": "dbc3d755-aaeb-4839-b242-427426bbf8a5",
+        "timestamp": 1677113214,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_2",
+        "data": {
+            "bg": 0.518
+        }
+    },
+    {
+        "id": "e94b1be6-bd48-4aa5-b081-381ff6fe41ae",
+        "timestamp": 1677113218,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_2",
+        "data": {
+            "bg": 0.557
+        }
+    },
+    {
+        "id": "94bf38d2-5125-4a0b-9d0c-6ef5082e8b56",
+        "timestamp": 1677113270,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_2",
+        "data": {
+            "bg": 0.604
+        }
+    },
+    {
+        "id": "7e100352-84f2-4b9b-9213-080624e03198",
+        "timestamp": 1677113273,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_2",
+        "data": {
+            "bg": 0.611
+        }
+    },
+    {
+        "id": "a209a94b-e521-4fad-826b-c5f2d7eeb66b",
+        "timestamp": 1677113275,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_2",
+        "data": {
+            "bg": 0.622
+        }
+    },
+    {
+        "id": "ecad155a-8143-4cc0-99cc-163a458cb743",
+        "timestamp": 1677113333,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_2",
+        "data": {
+            "bg": 0.735
+        }
+    },
+    {
+        "id": "e7d3af22-0c76-463b-898c-d4b3085f15e2",
         "timestamp": 1677113335,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.479
+            "bg": 0.782
         }
     },
     {
-        "id": "e28af0fd-307b-4488-a5b1-ff1002fc4f41",
+        "id": "cf20211f-23e0-4e0f-91b4-3da33f38bcd7",
         "timestamp": 1677113390,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_2",
-        "data": {
-            "bg": 0.24
-        }
-    },
-    {
-        "id": "814395be-d563-4caf-9e59-007ac0b8bd0b",
-        "timestamp": 1677113392,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_2",
-        "data": {
-            "bg": 0.493
-        }
-    },
-    {
-        "id": "17401b60-3d00-489f-91f5-893cc5d6904e",
-        "timestamp": 1677113393,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_2",
-        "data": {
-            "bg": 0.527
-        }
-    },
-    {
-        "id": "5335c2ba-f9d8-4789-8be9-2ae430a44f63",
-        "timestamp": 1677113394,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
@@ -630,800 +603,422 @@
         }
     },
     {
-        "id": "5e6971bf-fcfa-4cd2-a073-c1f4feb5cc2d",
+        "id": "53be9986-cccc-4b91-bb03-4c8c88cb2f97",
+        "timestamp": 1677113392,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_2",
+        "data": {
+            "bg": 0.946
+        }
+    },
+    {
+        "id": "7ad3fbe7-2566-4097-8e49-1ac528d8b8ab",
+        "timestamp": 1677113393,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_2",
+        "data": {
+            "bg": 0.958
+        }
+    },
+    {
+        "id": "53d23a93-943a-4491-9e4c-14955b2819f7",
+        "timestamp": 1677113394,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_2",
+        "data": {
+            "bg": 1.069
+        }
+    },
+    {
+        "id": "e36b2756-a366-41b9-bdc4-f60c873b182d",
         "timestamp": 1677113397,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.977
+            "bg": 1.108
         }
     },
     {
-        "id": "02f3d06b-8190-43b3-b21e-8a1bea3e9e0d",
+        "id": "d9c43e20-13cc-4861-a9dd-66c5e7734afd",
         "timestamp": 1677113450,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.152
+            "bg": 1.159
         }
     },
     {
-        "id": "5150ad22-0e09-4a2d-aadc-b6db8659609e",
+        "id": "db737af1-cad6-4269-995e-b18b45fb13fd",
         "timestamp": 1677113451,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.442
+            "bg": 1.255
         }
     },
     {
-        "id": "6ac9d9a8-3cf0-47e0-8c05-7deff3a6a464",
+        "id": "d0a3586f-03fe-4367-8f17-bdbcbe7669d0",
         "timestamp": 1677113454,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.459
+            "bg": 1.261
         }
     },
     {
-        "id": "9e5ed9eb-78f3-4635-a07c-67cf75ee9a52",
+        "id": "7090c317-5c3d-4e0a-b2ab-150598080b65",
         "timestamp": 1677113456,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.605
+            "bg": 1.31
         }
     },
     {
-        "id": "1df6cfa1-628c-4150-a822-74285c6ce7d3",
+        "id": "71c07b71-4b1a-4ffb-9edf-8519280f0cda",
         "timestamp": 1677113459,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.985
+            "bg": 1.436
         }
     },
     {
-        "id": "7c106cc7-32aa-4808-a1cb-a324f372c1cf",
+        "id": "c04be35f-5222-4145-99c7-b8139ddc48b0",
         "timestamp": 1677113513,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.102
+            "bg": 1.47
         }
     },
     {
-        "id": "e01f63f2-7cdd-4192-8523-0086517fb233",
+        "id": "aefd794a-dac3-44bd-b008-534f161f3a2e",
         "timestamp": 1677113514,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.298
+            "bg": 1.535
         }
     },
     {
-        "id": "6d7df085-2527-4bdc-875a-bce0f8820070",
+        "id": "38818d71-6dbe-4856-81b8-20b45558399b",
         "timestamp": 1677113519,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.556
+            "bg": 1.621
         }
     },
     {
-        "id": "5c448bd3-dead-4ff4-80cd-fb095c65912b",
+        "id": "d4073f2d-3d54-499d-8aa2-dd55e4057442",
         "timestamp": 1677113573,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.247
+            "bg": 1.703
         }
     },
     {
-        "id": "9d369a68-abfa-4a43-bd96-d3bb2cce8975",
+        "id": "33ff330a-ceb8-4145-9d09-3063dddcf920",
         "timestamp": 1677113575,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.288
+            "bg": 1.717
         }
     },
     {
-        "id": "bdcc01c5-e4a7-4861-8497-db003f8494c4",
+        "id": "7065033c-482e-4813-9a53-3135f18c7663",
         "timestamp": 1677113577,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.324
+            "bg": 1.729
         }
     },
     {
-        "id": "326111c5-5465-488e-9049-6d776788de23",
+        "id": "958d7ec7-ae7d-4a19-b9c8-8253d0b381a4",
         "timestamp": 1677113579,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.468
+            "bg": 1.777
         }
     },
     {
-        "id": "cd636df4-e13c-4b44-a798-6845543b4866",
+        "id": "cb84293d-9304-4b7c-9b69-b30f28c3b60f",
         "timestamp": 1677113632,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.064
+            "bg": 1.798
         }
     },
     {
-        "id": "2639a322-a9a7-4a2d-998e-09ed6269ac48",
+        "id": "61ded624-813c-4912-8cb1-16701ad3deae",
         "timestamp": 1677113633,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.109
+            "bg": 1.813
         }
     },
     {
-        "id": "f573581c-57b6-4deb-921e-af98d2f5d0bc",
+        "id": "20f3f258-c825-4da1-b33d-b56ff20b5c22",
         "timestamp": 1677113635,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.294
+            "bg": 1.875
         }
     },
     {
-        "id": "27e4f75a-d75e-4b77-9667-63456ed68793",
+        "id": "6f157604-47e8-4533-a0ed-0a9a17613c3b",
         "timestamp": 1677113638,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.548
+            "bg": 1.96
         }
     },
     {
-        "id": "955c34a1-b8f0-4437-937d-11999405d26b",
+        "id": "c5d945b5-7cb6-4e62-b0fb-60e577a54bdb",
         "timestamp": 1677113691,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.123
+            "bg": 2.001
         }
     },
     {
-        "id": "b50b5101-96a6-4c4d-a525-4826cdc7b426",
+        "id": "0b4a0e3f-2c93-4546-99d8-a1502cedfbca",
         "timestamp": 1677113694,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.266
+            "bg": 2.049
         }
     },
     {
-        "id": "04b07a3f-aba1-428e-8ba3-9cfbb4aec545",
+        "id": "d25ae864-e41a-4fdd-ad79-8f3aa2e98439",
         "timestamp": 1677113695,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.317
+            "bg": 2.066
         }
     },
     {
-        "id": "63e86b78-74ce-4c92-9280-886d093a8a11",
+        "id": "808baf1c-dfea-4360-9e74-09eeb70a7634",
         "timestamp": 1677113697,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.494
+            "bg": 2.125
         }
     },
     {
-        "id": "0e6004f3-ace1-4b41-a077-99ff0ea1c6ad",
+        "id": "af85c90a-9711-4425-820e-1e1e98b6d950",
         "timestamp": 1677113698,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.737
+            "bg": 2.206
         }
     },
     {
-        "id": "528ea14a-bc7e-4bed-86be-2d79618cedb6",
+        "id": "f11c42ec-88b4-467a-a415-a32a32356015",
         "timestamp": 1677113755,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.125
+            "bg": 2.248
         }
     },
     {
-        "id": "6c7a4abc-186a-4041-8135-d5ee79af723c",
+        "id": "3f49e5de-3347-4aed-81be-d3f38cd5fce1",
         "timestamp": 1677113759,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.282
+            "bg": 2.3
         }
     },
     {
-        "id": "8f8d3513-ce1e-4d9e-ae23-ed245f3ec813",
+        "id": "2a0c29c0-9484-43d3-8eea-42893d72441b",
         "timestamp": 1677113810,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.015
+            "bg": 2.305
         }
     },
     {
-        "id": "0f1a8977-1f16-43d9-b65f-08c759797d82",
+        "id": "32db5b21-c25a-468b-ad8b-6e3ba13d0101",
         "timestamp": 1677113812,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.024
+            "bg": 2.308
         }
     },
     {
-        "id": "3ecd1eda-9155-4f83-91bb-1c7bdb90468f",
+        "id": "cd6f08e3-50ca-49d0-92bc-0a2c7973b87d",
         "timestamp": 1677113813,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.165
+            "bg": 2.355
         }
     },
     {
-        "id": "d30455a7-4dd1-47b9-8c55-0a16669aa8f8",
+        "id": "09bd598d-ceb2-4ab3-aad5-43b5277409cf",
         "timestamp": 1677113875,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.051
+            "bg": 2.372
         }
     },
     {
-        "id": "d590d034-38ae-44a9-b5b5-0bcdc14ddba6",
+        "id": "e9b254a7-8357-4fa7-9397-9af868c707fd",
         "timestamp": 1677113879,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.368
+            "bg": 2.478
         }
     },
     {
-        "id": "e00793ac-286f-4b23-abc4-e30dcf627e14",
+        "id": "aa31b776-4525-4f7f-8599-94099341bd16",
         "timestamp": 1677113933,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.13
+            "bg": 2.521
         }
     },
     {
-        "id": "c71194a0-21fc-4290-9faa-622a7c820979",
+        "id": "8d4aa605-fabc-49f8-8c54-177cebd59652",
         "timestamp": 1677113937,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.195
+            "bg": 2.543
         }
     },
     {
-        "id": "31622f9a-1268-42ac-b43e-af80d13d9e58",
+        "id": "8ce320b7-1b59-4fcf-a624-0a7b11b06743",
         "timestamp": 1677113939,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.283
+            "bg": 2.572
         }
     },
     {
-        "id": "e607685a-ae95-4893-92d2-a58524af5361",
+        "id": "b8aa025c-0185-486c-bde3-ae2fe41254e3",
         "timestamp": 1677113990,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.097
+            "bg": 2.604
         }
     },
     {
-        "id": "7b63014e-a87f-495c-8d53-c8b4825e2251",
+        "id": "8fbb3154-c08a-498a-a7c0-410e13d4d1d2",
         "timestamp": 1677113991,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.212
+            "bg": 2.643
         }
     },
     {
-        "id": "1e15fb09-a40e-4ab3-8e0d-1c6ae8f9f155",
+        "id": "94cd3da6-fd04-4bee-a8c2-362dfd680c6c",
         "timestamp": 1677113993,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.491
+            "bg": 2.736
         }
     },
     {
-        "id": "3f962347-71bd-4c29-93e9-397f136fdded",
+        "id": "008d5b3f-1e6d-4157-a9a2-2a043527d5c5",
         "timestamp": 1677113997,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.719
+            "bg": 2.812
         }
     },
     {
-        "id": "3b83c23b-707f-4db9-b44c-cf445c697360",
+        "id": "51710c10-dad3-4266-ba81-fac98ea943dc",
         "timestamp": 1677114051,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.284
+            "bg": 2.907
         }
     },
     {
-        "id": "5793189e-d655-4856-b86a-5a52f3039993",
+        "id": "3cfca1f9-95e4-4e47-95af-dc86f4d42e78",
         "timestamp": 1677114053,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.474
+            "bg": 2.97
         }
     },
     {
-        "id": "f4afd423-a443-416a-b4df-50cad5deb661",
+        "id": "099ae5e8-c909-4926-921e-e36a8f64fee7",
         "timestamp": 1677114056,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.61
+            "bg": 3.015
         }
     },
     {
-        "id": "7beb8b75-7ef9-4f8e-9b09-6048742c7ef7",
+        "id": "a4b794c6-3cfc-4654-b63d-fc3be73ced88",
         "timestamp": 1677114057,
         "provider": "osu_provider",
         "drillstring_id": "ds_2",
         "data": {
-            "bg": 0.702
+            "bg": 3.046
         }
     },
     {
-        "id": "26a61229-9311-4cc4-b505-0993b9c4659f",
+        "id": "a2b4e2d5-e46b-4e0a-9bff-2553d617380a",
         "timestamp": 1677114171,
         "provider": "osu_provider",
         "drillstring_id": "ds_3",
         "data": {
-            "bg": 0.064
+            "bg": 0.021
         }
     },
     {
-        "id": "359c36b8-8c2e-4dd6-a2d8-c59d17d7c8e0",
+        "id": "726db693-f8a2-4327-9a03-869a7fff326f",
         "timestamp": 1677114172,
         "provider": "osu_provider",
         "drillstring_id": "ds_3",
         "data": {
-            "bg": 0.105
+            "bg": 0.035
         }
     },
     {
-        "id": "eeef98ff-4aac-4651-974a-4e9060af7851",
+        "id": "1fe20035-3a32-44b1-a4d7-dc62ea57d458",
         "timestamp": 1677114178,
         "provider": "osu_provider",
         "drillstring_id": "ds_3",
         "data": {
-            "bg": 0.14
+            "bg": 0.047
         }
     },
     {
-        "id": "d525b8b8-ecda-4e80-97c9-fcdff8f8f5c5",
+        "id": "875c3346-e70a-4058-bb58-ebfbb004879c",
         "timestamp": 1677114179,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.16
-        }
-    },
-    {
-        "id": "e845fef2-3bf7-443b-978b-e206ee034947",
-        "timestamp": 1677114231,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.116
-        }
-    },
-    {
-        "id": "248695e3-4ef3-4fbc-8265-2dff970dd335",
-        "timestamp": 1677114236,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.156
-        }
-    },
-    {
-        "id": "fab248c7-87f2-44e2-9a42-ae1e2f79a8ea",
-        "timestamp": 1677114238,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.261
-        }
-    },
-    {
-        "id": "8b6e834e-d58a-42e6-82ca-271a4b9b5bee",
-        "timestamp": 1677114291,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.028
-        }
-    },
-    {
-        "id": "4de3a8b4-12b9-4e4e-bbba-ea59c406bfff",
-        "timestamp": 1677114295,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.043
-        }
-    },
-    {
-        "id": "707791c6-58c4-4c05-89d2-724bb096c606",
-        "timestamp": 1677114299,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.138
-        }
-    },
-    {
-        "id": "0f968bcc-0c3b-4692-ba3d-ca7ad43c27ef",
-        "timestamp": 1677114350,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.069
-        }
-    },
-    {
-        "id": "bfc988ca-7faf-4154-8960-fd186694f8b7",
-        "timestamp": 1677114353,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.076
-        }
-    },
-    {
-        "id": "c535b85b-e8fc-413c-8de2-497cb1aa00c9",
-        "timestamp": 1677114354,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.101
-        }
-    },
-    {
-        "id": "ab23f743-ed69-47ea-b178-57c940521bc4",
-        "timestamp": 1677114359,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.104
-        }
-    },
-    {
-        "id": "636dc1b6-41c7-479b-9c4e-fe786e868e3d",
-        "timestamp": 1677114410,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.077
-        }
-    },
-    {
-        "id": "bf7ce8d1-5533-4450-95e6-d03b8ed1b606",
-        "timestamp": 1677114412,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.085
-        }
-    },
-    {
-        "id": "831a70d9-53cb-43e9-8dff-1a9d88dca3c9",
-        "timestamp": 1677114414,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.146
-        }
-    },
-    {
-        "id": "36f3107e-f2e9-4966-a9c2-986226d2bd24",
-        "timestamp": 1677114417,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.184
-        }
-    },
-    {
-        "id": "671f66ae-d769-4b64-b436-ed1a0ead3f4b",
-        "timestamp": 1677114418,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.262
-        }
-    },
-    {
-        "id": "61423a14-cfe5-484b-b887-957118a1f445",
-        "timestamp": 1677114473,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.043
-        }
-    },
-    {
-        "id": "a318d2d7-5296-4de9-bba8-535b785166d0",
-        "timestamp": 1677114474,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.112
-        }
-    },
-    {
-        "id": "359682dd-85ab-48e6-af4d-cab3ace316d9",
-        "timestamp": 1677114476,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.119
-        }
-    },
-    {
-        "id": "f91fda62-e3f5-4218-914e-772ef1e11e99",
-        "timestamp": 1677114530,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.002
-        }
-    },
-    {
-        "id": "996dfc03-5589-4705-bc93-e77a7ce54c93",
-        "timestamp": 1677114531,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.031
-        }
-    },
-    {
-        "id": "03418c22-854a-4563-b906-c458ec09194f",
-        "timestamp": 1677114532,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.071
-        }
-    },
-    {
-        "id": "b97e97bf-5130-44d3-90ed-9f8f1e0c05d6",
-        "timestamp": 1677114534,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.094
-        }
-    },
-    {
-        "id": "03b8dfd8-03fd-4481-a340-c6a188d4bb25",
-        "timestamp": 1677114537,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.107
-        }
-    },
-    {
-        "id": "9e598de1-1df0-4aef-841f-bc59d5952759",
-        "timestamp": 1677114590,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.097
-        }
-    },
-    {
-        "id": "19bf5081-957e-4a4e-afaf-171912a9e218",
-        "timestamp": 1677114593,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.181
-        }
-    },
-    {
-        "id": "8c0653ca-a366-4d24-b376-123565638db4",
-        "timestamp": 1677114594,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.301
-        }
-    },
-    {
-        "id": "571612a4-221d-419b-820c-6b70a0ecfe53",
-        "timestamp": 1677114595,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.373
-        }
-    },
-    {
-        "id": "069784b3-0d7e-4c80-99f9-7c6bdd3749cb",
-        "timestamp": 1677114596,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.417
-        }
-    },
-    {
-        "id": "3c31b38a-d5af-456d-8da9-8017505b73ec",
-        "timestamp": 1677114650,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.083
-        }
-    },
-    {
-        "id": "456bf877-fb8d-4c21-8937-05674fca454f",
-        "timestamp": 1677114653,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.142
-        }
-    },
-    {
-        "id": "b8eed09f-f03a-4cdc-90ef-501a76b62937",
-        "timestamp": 1677114658,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.186
-        }
-    },
-    {
-        "id": "9b1fdf4e-c595-4ca1-8b05-bef4623473a4",
-        "timestamp": 1677114710,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.023
-        }
-    },
-    {
-        "id": "0c002920-150e-478c-82cc-e99a8d0e9b1d",
-        "timestamp": 1677114711,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.046
-        }
-    },
-    {
-        "id": "53e53cc5-cf8e-46ce-8fe6-c6f28c09050d",
-        "timestamp": 1677114714,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.137
-        }
-    },
-    {
-        "id": "617898d3-fe31-43cd-bbf5-1bfd0a968b00",
-        "timestamp": 1677114717,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.202
-        }
-    },
-    {
-        "id": "702d474d-5372-46cc-a8f8-d11c96f4fb43",
-        "timestamp": 1677114719,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.226
-        }
-    },
-    {
-        "id": "ca2a128f-2a9c-49c6-b15e-f826c0cc2bc7",
-        "timestamp": 1677114770,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.103
-        }
-    },
-    {
-        "id": "ed20c88c-2c29-40d2-adb2-c9e51be33e5e",
-        "timestamp": 1677114773,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.187
-        }
-    },
-    {
-        "id": "fb2fc14a-c7e7-4266-814a-f1bb501af42f",
-        "timestamp": 1677114774,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.233
-        }
-    },
-    {
-        "id": "ad08cfd4-2994-4e18-9ce8-fa3a5070949c",
-        "timestamp": 1677114777,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.297
-        }
-    },
-    {
-        "id": "3711c9d4-cdbd-4880-82f6-440476c3cc5b",
-        "timestamp": 1677114832,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.041
-        }
-    },
-    {
-        "id": "e07da8c6-a079-4632-89f4-35abdb21def1",
-        "timestamp": 1677114834,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.088
-        }
-    },
-    {
-        "id": "bbaa777c-a456-4943-8d20-67eb01ee3cdd",
-        "timestamp": 1677114837,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.225
-        }
-    },
-    {
-        "id": "1a9ea83c-b8fc-472e-8bb4-9415ea3f4671",
-        "timestamp": 1677114839,
-        "provider": "osu_provider",
-        "drillstring_id": "ds_3",
-        "data": {
-            "bg": 0.329
-        }
-    },
-    {
-        "id": "a43d03c6-aaa7-4ec6-bf1b-8ab1474e9cd5",
-        "timestamp": 1677114891,
         "provider": "osu_provider",
         "drillstring_id": "ds_3",
         "data": {
@@ -1431,57 +1026,462 @@
         }
     },
     {
-        "id": "86d0484f-2e9d-4328-9641-db077089231e",
+        "id": "e91ff55a-cacc-4020-bcde-2bf99776cd67",
+        "timestamp": 1677114231,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.092
+        }
+    },
+    {
+        "id": "d604084a-0615-4b33-b0e3-a39d569271ed",
+        "timestamp": 1677114236,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.105
+        }
+    },
+    {
+        "id": "45fff494-04c3-41d1-a8cb-1b005961fabb",
+        "timestamp": 1677114238,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.14
+        }
+    },
+    {
+        "id": "15779c52-93a6-48f6-affc-ba64a578c95a",
+        "timestamp": 1677114291,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.149
+        }
+    },
+    {
+        "id": "72db2b3b-a8c4-413c-a0af-0b17b00533f4",
+        "timestamp": 1677114295,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.154
+        }
+    },
+    {
+        "id": "97d1175c-462a-4d75-be87-0850f10d5b2e",
+        "timestamp": 1677114299,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.186
+        }
+    },
+    {
+        "id": "76ba5496-3464-4df0-a208-627f55c79b97",
+        "timestamp": 1677114350,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.209
+        }
+    },
+    {
+        "id": "f35b9662-2005-4f22-a46e-62259dd4d6e9",
+        "timestamp": 1677114353,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.211
+        }
+    },
+    {
+        "id": "d6b28323-8095-4356-be24-b45d02250436",
+        "timestamp": 1677114354,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.22
+        }
+    },
+    {
+        "id": "f8c050fe-cbc4-4788-87ee-9a713b89a513",
+        "timestamp": 1677114359,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.221
+        }
+    },
+    {
+        "id": "a98b58af-4e36-49ec-ab5f-ead42abe7257",
+        "timestamp": 1677114410,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.247
+        }
+    },
+    {
+        "id": "366c3f9f-369e-484d-a522-bd7ce29b9ce7",
+        "timestamp": 1677114412,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.249
+        }
+    },
+    {
+        "id": "d16f78c1-f253-49a6-ab3d-049a04cff2b6",
+        "timestamp": 1677114414,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.27
+        }
+    },
+    {
+        "id": "77fdf74c-b3c4-48d6-af78-fdd8fe2222f4",
+        "timestamp": 1677114417,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.282
+        }
+    },
+    {
+        "id": "04f0a8d9-4372-4dcb-8392-fa24c37191fb",
+        "timestamp": 1677114418,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.308
+        }
+    },
+    {
+        "id": "6a83c00a-715f-4562-9631-0691d86c7d38",
+        "timestamp": 1677114473,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.322
+        }
+    },
+    {
+        "id": "d480ddb0-7767-40ae-9c6b-aca429039b2f",
+        "timestamp": 1677114474,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.345
+        }
+    },
+    {
+        "id": "bddffafa-fa7c-4d1a-acfa-4c8ca807d486",
+        "timestamp": 1677114476,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.348
+        }
+    },
+    {
+        "id": "77550c3d-37b9-47b0-a114-29e5be4855d8",
+        "timestamp": 1677114530,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.349
+        }
+    },
+    {
+        "id": "f3472d2f-080c-4d3f-bc3b-18dce5cd59a2",
+        "timestamp": 1677114531,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.358
+        }
+    },
+    {
+        "id": "ed2a5c42-c070-4cc9-bb73-4b733948ce6d",
+        "timestamp": 1677114532,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.372
+        }
+    },
+    {
+        "id": "d6b55324-06a3-464f-ad02-e306c81247e6",
+        "timestamp": 1677114534,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.379
+        }
+    },
+    {
+        "id": "7f48a421-d19b-421f-9d81-f62ed276a98f",
+        "timestamp": 1677114537,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.384
+        }
+    },
+    {
+        "id": "4f9d838b-6bea-4f26-98de-4012156fd93b",
+        "timestamp": 1677114590,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.416
+        }
+    },
+    {
+        "id": "032f04f5-19b4-4fb1-8ec3-e728cae1482f",
+        "timestamp": 1677114593,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.444
+        }
+    },
+    {
+        "id": "b2f7d6c8-0b27-46bb-bf0a-551f9f643dbd",
+        "timestamp": 1677114594,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.484
+        }
+    },
+    {
+        "id": "bf78c08a-a35a-46dc-9387-7d086baf1c10",
+        "timestamp": 1677114595,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.508
+        }
+    },
+    {
+        "id": "e1aa43fc-8ba1-4dec-943b-acb81ff32de8",
+        "timestamp": 1677114596,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.523
+        }
+    },
+    {
+        "id": "88f35f3a-075d-4cbc-af42-4b24da7b3e58",
+        "timestamp": 1677114650,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.551
+        }
+    },
+    {
+        "id": "1b62bb12-e48a-4f54-9fb1-96911ca4a451",
+        "timestamp": 1677114653,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.57
+        }
+    },
+    {
+        "id": "527eec87-dd5d-4f9d-a8b6-2bcc61c00bb3",
+        "timestamp": 1677114658,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.585
+        }
+    },
+    {
+        "id": "ddf2482a-332d-4177-9241-c7bbe0587725",
+        "timestamp": 1677114710,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.593
+        }
+    },
+    {
+        "id": "16899eda-8ea8-4bca-a7d1-7b0cedc821f5",
+        "timestamp": 1677114711,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.6
+        }
+    },
+    {
+        "id": "7761aee1-cd94-4902-b263-49e0d8ab0b2f",
+        "timestamp": 1677114714,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.631
+        }
+    },
+    {
+        "id": "007cc775-2bd2-42af-83c6-d7168ff88ae6",
+        "timestamp": 1677114717,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.652
+        }
+    },
+    {
+        "id": "7140b234-4870-459d-95c5-639ce8e49242",
+        "timestamp": 1677114719,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.66
+        }
+    },
+    {
+        "id": "930e309f-f037-4c44-86ae-b9d928c4fbda",
+        "timestamp": 1677114770,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.694
+        }
+    },
+    {
+        "id": "268f5021-2141-4912-97bd-c9b7f1bdd2c0",
+        "timestamp": 1677114773,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.722
+        }
+    },
+    {
+        "id": "b60d7f18-2705-438a-a69b-4e8ed9f2f63d",
+        "timestamp": 1677114774,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.738
+        }
+    },
+    {
+        "id": "5b7e3c70-8977-47ba-a944-7e3b584b2972",
+        "timestamp": 1677114777,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.759
+        }
+    },
+    {
+        "id": "f001d0c7-b321-4e13-88a7-7f4d815c1857",
+        "timestamp": 1677114832,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.773
+        }
+    },
+    {
+        "id": "980fbdb6-b7b1-4c3d-ad5b-549390dae04e",
+        "timestamp": 1677114834,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.788
+        }
+    },
+    {
+        "id": "d4bf671a-54e9-4def-96f0-6ebd95b20fbc",
+        "timestamp": 1677114837,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.834
+        }
+    },
+    {
+        "id": "4d1d648d-6c8d-41eb-ad68-b4e0d91ebf8a",
+        "timestamp": 1677114839,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.869
+        }
+    },
+    {
+        "id": "7977ffea-d6b6-49c8-af02-b6cc9e5fcec2",
+        "timestamp": 1677114891,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {
+            "bg": 0.887
+        }
+    },
+    {
+        "id": "85646af7-bd56-4a9d-aceb-38cd20825a29",
         "timestamp": 1677114894,
         "provider": "osu_provider",
         "drillstring_id": "ds_3",
         "data": {
-            "bg": 0.123
+            "bg": 0.91
         }
     },
     {
-        "id": "99707675-3722-42c4-b33d-ca2262ebeeca",
+        "id": "40198ac0-9558-4455-b907-3805e09e709b",
         "timestamp": 1677114895,
         "provider": "osu_provider",
         "drillstring_id": "ds_3",
         "data": {
-            "bg": 0.261
+            "bg": 0.956
         }
     },
     {
-        "id": "4f9b8481-9176-4874-96bd-0349ded9d28c",
+        "id": "b4d08413-839f-44c4-b981-cc1b95736a3f",
         "timestamp": 1677114899,
         "provider": "osu_provider",
         "drillstring_id": "ds_3",
         "data": {
-            "bg": 0.386
+            "bg": 0.998
         }
     },
     {
-        "id": "b4257b89-f564-4431-bee7-3fe13f7f3167",
+        "id": "b1c1ee51-7249-47e2-b3ea-64af2062aa11",
         "timestamp": 1677114951,
         "provider": "osu_provider",
         "drillstring_id": "ds_3",
         "data": {
-            "bg": 0.036
+            "bg": 1.01
         }
     },
     {
-        "id": "e8c5f3d7-9c3d-4346-ad66-cba5764d3250",
+        "id": "85bd3553-2d91-4fe3-b4bc-42826459e7b1",
         "timestamp": 1677115012,
         "provider": "osu_provider",
         "drillstring_id": "ds_3",
         "data": {
-            "bg": 0.123
+            "bg": 1.051
         }
     },
     {
-        "id": "cda9d885-9fdb-48a7-8551-e141d40c2779",
+        "id": "b0c89cec-702f-4db4-8f04-b1c78e36e19b",
         "timestamp": 1677115014,
         "provider": "osu_provider",
         "drillstring_id": "ds_3",
         "data": {
-            "bg": 0.203
+            "bg": 1.078
         }
     }
 ]

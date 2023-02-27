@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 from src.osu_api import Api
-from src.P03_1_app import BGApp
+from src.p03_1_app import BGApp
 
 
 class Test1(unittest.TestCase):
@@ -37,7 +37,7 @@ class Test1(unittest.TestCase):
             all(all(field in record for field in query["fields"]) for record in records)
         )
 
-    def test_ROPApp(self):
+    def test_BGApp(self):
         api = Api()
         start_ts = 1677112070
         end_ts = 1677112083
@@ -50,8 +50,8 @@ class Test1(unittest.TestCase):
                 _end_ts = end_ts
             event = {"start_ts": i, "end_ts": _end_ts}
             # print(event)
-            rop_app = BGApp(api, event)
-            records = rop_app.get_wits_data()
+            bg_app = BGApp(api, event)
+            records = bg_app.get_wits_data()
             print(records)
             # sleep for 5 second
             time.sleep(1)

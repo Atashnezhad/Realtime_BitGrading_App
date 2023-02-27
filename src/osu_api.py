@@ -15,6 +15,12 @@ class Api:
         self._path: str = kwargs.get(
             "resources_path", Path(__file__).parent / ".." / "resources"
         )
+        self._cache_address: str = self._path / "calculated_bg" / "cache.json"
+        self.empty_cache()
+
+    def empty_cache(self) -> None:
+        with open(self._cache_address, "w") as f:
+            json.dump([], f)
 
     def get_data(self, *args, **kwargs) -> Dict:
         provider = kwargs.get("provider_name", {})
@@ -90,6 +96,10 @@ class Api:
         # save data as json at provided address
         with open(address, "w") as f:
             json.dump(data, f, indent=4, sort_keys=False)
+
+        # save the last data in cache
+        with open(self._cache_address, "w") as f:
+            json.dump(data[-1], f, indent=4, sort_keys=False)
 
 
 if __name__ == "__main__":

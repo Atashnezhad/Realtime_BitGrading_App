@@ -47,7 +47,6 @@ class Wits(BaseModel):
     def check_activity(data: dict) -> bool:
         if data.get("activity") in Settings.ACCEPTED_ACTIVITIES.value:
             return True
-        print(f"Activity {data.get('activity')} is not accepted.")
 
 
 class DrillSting(BaseModel):

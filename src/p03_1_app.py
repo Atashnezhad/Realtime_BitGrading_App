@@ -7,7 +7,7 @@ from typing import Dict, List
 from src.model import BitGrade, BitGradeData, DownholeMotor, DrillSting, Wits
 from src.osu_api import Api
 
-NEW_PARAMETER_CONSTANT = 1_000_000_000_000
+BIT_WEAR_CONSTANT = 3_000_000_000_000
 
 
 class BGApp:
@@ -106,15 +106,43 @@ class BGApp:
             # calculate the bit_grade for each wits record
             bit_grade_records = [
                 self.bit_grade_model(
-                    wits_record.wob, wits_record.rpm, motor_cof, wits_record.flowrate
+                    wits_record.wob,
+                    wits_record.rpm,
+                    motor_cof,
+                    wits_record.flowrate,
+                    ds,
                 )
                 for wits_record in wits_records
             ]
 
             # make bit_grade_records cumulative
             cumulative_bit_grade_records = [
-                round(sum(bit_grade_records[: i + 1]), 3)
-                for i in range(len(bit_grade_records))
+                sum(bit_grade_records[: i + 1]) for i in range(len(bit_grade_records))
+            ]
+
+            # check the cache for the latest bit_grade for the drill_string_id
+            path = Path(__file__).parent / ".." / "resources" / "calculated_bg"
+            filename = "cache.json"
+            address = path / filename
+
+            with open(address, "r") as f:
+                cache = json.load(f)
+            # if cache is not emmpy
+            if cache:
+                cache_ds = cache.get("drillstring_id")
+                cache_bg = cache.get("data").get("bg")
+
+                if ds == cache_ds:
+                    # add the value of the latest bit_grade to the current bit_grade
+                    cumulative_bit_grade_records = [
+                        bit_grade_record + cache_bg
+                        for bit_grade_record in cumulative_bit_grade_records
+                    ]
+
+            # round the bit_grade values to 2 decimal places
+            cumulative_bit_grade_records = [
+                round(bit_grade_record, 3)
+                for bit_grade_record in cumulative_bit_grade_records
             ]
 
             bg_data_list = [
@@ -140,8 +168,8 @@ class BGApp:
             self.post_bg(bit_grade_list)
 
     @staticmethod
-    def bit_grade_model(wob, rpm, flowrate, motor_cof):
-        bg = wob * (rpm + flowrate * motor_cof) / NEW_PARAMETER_CONSTANT
+    def bit_grade_model(wob, rpm, flowrate, motor_cof, ds):
+        bg = wob * (rpm + flowrate * motor_cof) / BIT_WEAR_CONSTANT
         return bg
 
     @staticmethod
@@ -166,7 +194,7 @@ class BGApp:
 if __name__ == "__main__":
     api = Api()
     start_ts = 1677112070
-    end_ts = 1677115068 # 1677112083
+    end_ts = 1677115068  # 1677112083
 
     # empty the bg_data.json file in the resources/calculated_bg folder
     path = Path(__file__).parent / ".." / "resources" / "calculated_bg"
@@ -174,7 +202,6 @@ if __name__ == "__main__":
     address = path / filename
     with open(address, "w") as f:
         json.dump([], f)
-
 
     # make batch events between start_ts and end_ts with 60 seconds interval
     # and call the rop_app.get_wits_data() method for each batch event and print the records
