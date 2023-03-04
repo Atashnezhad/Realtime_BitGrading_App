@@ -27,6 +27,10 @@ class Api:
         if not provider:
             raise ValueError("Provider is not provided.")
 
+        asset_id = kwargs.get("asset_id", {})
+        if not asset_id:
+            raise ValueError("Asset id is not provided.")
+
         collection_name = kwargs.get("data_name", {})
         if not collection_name:
             raise ValueError("Collection name is not provided.")

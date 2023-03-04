@@ -71,6 +71,7 @@ class GenerateDummyData:
                 "timestamp": ts,
                 "provider": "osu_provider",
                 "drill_string_id": drill_string_id,
+                "asset_id": 123456789,
                 "data": {
                     "md": round(md, 3),
                     "wob": round(wob, 3),

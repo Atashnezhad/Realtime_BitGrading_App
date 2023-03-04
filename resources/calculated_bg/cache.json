@@ -1,1 +1,9 @@
-[]
+{
+    "id": "4414626b-1529-4663-8870-6d9f3fd53941",
+    "timestamp": 1677115017,
+    "provider": "osu_provider",
+    "drillstring_id": "ds_3",
+    "data": {
+        "bg": 1.235
+    }
+}

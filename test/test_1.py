@@ -1,5 +1,7 @@
+import json
 import time
 import unittest
+from itertools import groupby
 from pathlib import Path
 
 from src.osu_api import Api
@@ -21,6 +23,7 @@ class Test1(unittest.TestCase):
             provider_name="osu_provider",
             data_name="wits",
             query=query,
+            asset_id=123456789,
         )
 
         # assert the length of the records is 3
@@ -56,10 +59,49 @@ class Test1(unittest.TestCase):
             # sleep for 5 second
             time.sleep(1)
 
-    def test_bg_app_run(self):
+    def test_calculated_bg(self):
         """
-        In this test, we mock the get data and post data and bypass the Api call.
-        Note that in fact there is not Api call (because it is fake, and we read the data from the local file).
-        But for sack of practice, we still mock the Api call.
+        In this test, the app is triggered with a batch event and the app should
+        calculate the bit grade for each drill string and save the records in the database.
+        The final bit grade for each drillsting (bit) is asserted.
         """
-        pass
+        api = Api()
+        start_ts = 1677112070
+        end_ts = 1677115068  # this the final wits timestamp
+
+        # empty the bg_data.json file in the resources/calculated_bg folder
+        path = Path(__file__).parent / ".." / "resources" / "calculated_bg"
+        filename = "bg_data.json"
+        address = path / filename
+        with open(address, "w") as f:
+            json.dump([], f)
+
+        # make batch events between start_ts and end_ts with 60 seconds interval
+        # and call the rop_app.get_wits_data() method for each batch event and print the records
+        for i in range(start_ts, end_ts, 60):
+            _end_ts = i + 60
+            # check if i + 5 is less than end_ts
+            if i + 60 > end_ts:
+                _end_ts = end_ts
+            event = {"start_ts": i, "end_ts": _end_ts}
+            # print(event)
+            bg_app = BGApp(api, event)
+            bg_app.run()
+
+        # read the bg_data.json file and assert the bit grade for each drill string
+        with open(address, "r") as f:
+            records = json.load(f)
+        # group the records by drill string id
+        records = {
+            k: list(v) for k, v in groupby(records, key=lambda x: x["drillstring_id"])
+        }
+        # get the last record for each drill string in list
+        records = [v[-1] for k, v in records.items()]
+        expected_calculated_bg = [
+            1.132,
+            2.825,
+            1.235,
+        ]  # note if the data is generated these values should be edited
+        # based on new values.
+        for case, expected_bg in zip(records, expected_calculated_bg):
+            assert case.get("data").get("bg") == expected_bg

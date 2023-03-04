@@ -42,6 +42,7 @@ class BGApp:
             provider_name=SETTINGS.PROVIDER,
             data_name=SETTINGS.WITS_COLLECTION,
             query=query,
+            asset_id=123456789,
         )
 
         parsed_wits_records = [
@@ -60,6 +61,7 @@ class BGApp:
             provider_name=SETTINGS.PROVIDER,
             data_name=SETTINGS.DRILL_STRING_COLLECTION,
             query=query,
+            asset_id=123456789,
         )
         ds_records = [DrillSting(**record) for record in records]
         return ds_records
@@ -72,6 +74,7 @@ class BGApp:
             provider_name=SETTINGS.PROVIDER,
             data_name=SETTINGS.DOWN_HOLE_MOTOR_COLLECTION,
             query=query,
+            asset_id=123456789,
         )
         dhm_records = [DownholeMotor(**record) for record in records]
 
@@ -194,7 +197,7 @@ class BGApp:
 if __name__ == "__main__":
     api = Api()
     start_ts = 1677112070
-    end_ts = 1677115068  # 1677112083
+    end_ts = 1677115068  # this the final wits timestamp
 
     # empty the bg_data.json file in the resources/calculated_bg folder
     path = Path(__file__).parent / ".." / "resources" / "calculated_bg"
