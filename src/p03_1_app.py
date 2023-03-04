@@ -4,7 +4,8 @@ from itertools import groupby
 from pathlib import Path
 from typing import Dict, List
 
-from src.model import BitGrade, BitGradeData, DownholeMotor, DrillSting, Wits
+from src.model import (SETTINGS, BitGrade, BitGradeData, DownholeMotor,
+                       DrillSting, Wits)
 from src.osu_api import Api
 
 BIT_WEAR_CONSTANT = 3_000_000_000_000
@@ -38,8 +39,8 @@ class BGApp:
             "ts_max": end_ts,
         }
         records = self._api.get_data(
-            provider_name="osu_provider",
-            data_name="wits",
+            provider_name=SETTINGS.PROVIDER,
+            data_name=SETTINGS.WITS_COLLECTION,
             query=query,
         )
 
@@ -56,8 +57,8 @@ class BGApp:
             "fields": ["_drill_string_id", "down_hole_motor_id"],
         }
         records = self._api.get_data(
-            provider_name="osu_provider",
-            data_name="ds_data",
+            provider_name=SETTINGS.PROVIDER,
+            data_name=SETTINGS.DRILL_STRING_COLLECTION,
             query=query,
         )
         ds_records = [DrillSting(**record) for record in records]
@@ -68,8 +69,8 @@ class BGApp:
             "fields": ["motor_id", "motor_cof"],
         }
         records = self._api.get_data(
-            provider_name="osu_provider",
-            data_name="dhm_data",
+            provider_name=SETTINGS.PROVIDER,
+            data_name=SETTINGS.DOWN_HOLE_MOTOR_COLLECTION,
             query=query,
         )
         dhm_records = [DownholeMotor(**record) for record in records]

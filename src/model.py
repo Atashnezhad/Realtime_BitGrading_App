@@ -1,10 +1,16 @@
-from enum import Enum
-
 from pydantic import BaseModel, Field
 
+ACCEPTED_ACTIVITIES = ["rotary_drilling", "slide_drilling"]
 
-class Settings(Enum):
-    ACCEPTED_ACTIVITIES = ["rotary_drilling", "slide_drilling"]
+
+class Settings(BaseModel):
+    PROVIDER = "osu_provider"
+    WITS_COLLECTION = "wits"
+    DOWN_HOLE_MOTOR_COLLECTION = "dhm_data"
+    DRILL_STRING_COLLECTION = "ds_data"
+
+
+SETTINGS = Settings()
 
 
 class Wits(BaseModel):
@@ -45,7 +51,7 @@ class Wits(BaseModel):
 
     @staticmethod
     def check_activity(data: dict) -> bool:
-        if data.get("activity") in Settings.ACCEPTED_ACTIVITIES.value:
+        if data.get("activity") in ACCEPTED_ACTIVITIES:
             return True
 
 

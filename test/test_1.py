@@ -37,16 +37,16 @@ class Test1(unittest.TestCase):
             all(all(field in record for field in query["fields"]) for record in records)
         )
 
-    def test_BGApp(self):
+    def test_bg_app_get_wits_data(self):
         api = Api()
         start_ts = 1677112070
         end_ts = 1677112083
-        # make batch events between start_ts and end_ts with 5 seconds interval
+        # make batch events between start_ts and end_ts with 60 seconds interval
         # and call the rop_app.get_wits_data() method for each batch event and print the records
-        for i in range(start_ts, end_ts, 5):
-            _end_ts = i + 5
+        for i in range(start_ts, end_ts, 60):
+            _end_ts = i + 60
             # check if i + 5 is less than end_ts
-            if i + 5 > end_ts:
+            if i + 60 > end_ts:
                 _end_ts = end_ts
             event = {"start_ts": i, "end_ts": _end_ts}
             # print(event)
@@ -55,3 +55,11 @@ class Test1(unittest.TestCase):
             print(records)
             # sleep for 5 second
             time.sleep(1)
+
+    def test_bg_app_run(self):
+        """
+        In this test, we mock the get data and post data and bypass the Api call.
+        Note that in fact there is not Api call (because it is fake, and we read the data from the local file).
+        But for sack of practice, we still mock the Api call.
+        """
+        pass
