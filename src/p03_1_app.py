@@ -111,7 +111,6 @@ class BGApp:
                     wits_record.rpm,
                     motor_cof,
                     wits_record.flowrate,
-                    ds,
                 )
                 for wits_record in wits_records
             ]
@@ -169,7 +168,7 @@ class BGApp:
             self.post_bg(bit_grade_list)
 
     @staticmethod
-    def bit_grade_model(wob, rpm, flowrate, motor_cof, ds):
+    def bit_grade_model(wob, rpm, flowrate, motor_cof):
         bg = wob * (rpm + flowrate * motor_cof) / BIT_WEAR_CONSTANT
         return bg
 
