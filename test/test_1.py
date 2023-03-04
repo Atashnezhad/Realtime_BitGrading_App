@@ -4,6 +4,7 @@ import unittest
 from itertools import groupby
 from pathlib import Path
 
+from lambda_function import lambda_handler
 from src.osu_api import Api
 from src.p03_1_app import BGApp
 
@@ -51,7 +52,7 @@ class Test1(unittest.TestCase):
             # check if i + 5 is less than end_ts
             if i + 60 > end_ts:
                 _end_ts = end_ts
-            event = {"start_ts": i, "end_ts": _end_ts}
+            event = {"start_ts": i, "end_ts": _end_ts, "asset_id": 123456789}
             # print(event)
             bg_app = BGApp(api, event)
             records = bg_app.get_wits_data()
@@ -83,8 +84,7 @@ class Test1(unittest.TestCase):
             # check if i + 5 is less than end_ts
             if i + 60 > end_ts:
                 _end_ts = end_ts
-            event = {"start_ts": i, "end_ts": _end_ts}
-            # print(event)
+            event = {"start_ts": i, "end_ts": _end_ts, "asset_id": 123456789}
             bg_app = BGApp(api, event)
             bg_app.run()
 
@@ -101,7 +101,38 @@ class Test1(unittest.TestCase):
             1.132,
             2.825,
             1.235,
-        ]  # note if the data is generated these values should be edited
+        ]  # note if the data is re-generated using p01_2 file then these values should be edited
         # based on new values.
         for case, expected_bg in zip(records, expected_calculated_bg):
             assert case.get("data").get("bg") == expected_bg
+
+    # skip this test for now
+    @unittest.skip
+    def test_lambda_handler(self):
+        api = Api()
+        start_ts = 1677112070
+        end_ts = 1677115068  # this the final wits timestamp
+
+        # empty the bg_data.json file in the resources/calculated_bg folder
+        path = Path(__file__).parent / ".." / "resources" / "calculated_bg"
+        filename = "bg_data.json"
+        address = path / filename
+        with open(address, "w") as f:
+            json.dump([], f)
+
+        # make batch events between start_ts and end_ts with 60 seconds interval
+        # and call the rop_app.get_wits_data() method for each batch event and print the records
+        for i in range(start_ts, end_ts, 60):
+            _end_ts = i + 60
+            # check if i + 5 is less than end_ts
+            if i + 60 > end_ts:
+                _end_ts = end_ts
+
+            body = {
+                "start_ts": str(i),
+                "end_ts": str(_end_ts),
+                "asset_id": str(123456789),
+            }
+            event = {"body": body}
+
+            lambda_handler(api, event, context=None)

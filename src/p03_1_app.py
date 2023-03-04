@@ -19,6 +19,7 @@ class BGApp:
     def __init__(self, api: Api, event: Dict) -> None:
         self._api = api
         self._event = event
+        self._asset_id = event.get("asset_id", None)
 
     def get_wits_data(self) -> Dict:
         start_ts = self._event["start_ts"]
@@ -42,7 +43,7 @@ class BGApp:
             provider_name=SETTINGS.PROVIDER,
             data_name=SETTINGS.WITS_COLLECTION,
             query=query,
-            asset_id=123456789,
+            asset_id=self._asset_id,
         )
 
         parsed_wits_records = [
@@ -61,7 +62,7 @@ class BGApp:
             provider_name=SETTINGS.PROVIDER,
             data_name=SETTINGS.DRILL_STRING_COLLECTION,
             query=query,
-            asset_id=123456789,
+            asset_id=self._asset_id,
         )
         ds_records = [DrillSting(**record) for record in records]
         return ds_records
@@ -74,7 +75,7 @@ class BGApp:
             provider_name=SETTINGS.PROVIDER,
             data_name=SETTINGS.DOWN_HOLE_MOTOR_COLLECTION,
             query=query,
-            asset_id=123456789,
+            asset_id=self._asset_id,
         )
         dhm_records = [DownholeMotor(**record) for record in records]
 
@@ -213,7 +214,7 @@ if __name__ == "__main__":
         # check if i + 5 is less than end_ts
         if i + 60 > end_ts:
             _end_ts = end_ts
-        event = {"start_ts": i, "end_ts": _end_ts}
+        event = {"start_ts": i, "end_ts": _end_ts, "asset_id": 123456789}
         # print(event)
         bg_app = BGApp(api, event)
         bg_app.run()
