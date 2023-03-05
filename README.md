@@ -38,5 +38,24 @@ The cache used in this exercise is a simple file stored locally and checked to c
 Once the BG is calculated, it is added to the BG collection and posted using the API. In this case, it is saved 
 in the local resource folder.
 
+## Deployment
+
+The app is deployed using the GitHub action to AWS lambda. For that the IAM role with full access
+to AWS was maded. A lambda function was created in AWS. The CICD pipeline edploy the app
+to AWS lambda function after packing it into a zip file.
+
+
+# Triggering the App
+
+The app is triggered by an event.
+The event is a JSON file and has the following schema:
+
+```json
+{
+   "start timestamp": 123456, 
+   "end timestamp": 123456,
+   "asset_id": 123456789
+}
+```
 
 
