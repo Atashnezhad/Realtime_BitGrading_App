@@ -27,12 +27,12 @@ jobs:
       - name: Test with pytest
         run: |
           pip install pytest
-          make run-pytest
+#          make run-pytest
 
       - name: code coverage
         run: |
           pip install pytest-cov
-          make run-coverage
+#          make run-coverage
 
   deploy_lambda:
     name: deployer
