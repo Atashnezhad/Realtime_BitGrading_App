@@ -1,3 +1,6 @@
+# set the package name
+package_name = package
+
 # git automated message
 # use and add date and time to the message
 # include the date in the message and write automated git
@@ -56,3 +59,8 @@ run-all:
 	make run-pytest
 	make run-coverage
 	make git-automated
+
+# zip the src folder, lambda_function.py and requirements.txt and use the package name
+.PHONY: zip
+zip:
+	zip -r $(package_name).zip src/* lambda_function.py requirments.txt

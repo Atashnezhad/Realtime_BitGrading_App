@@ -1,0 +1,55 @@
+name: Test
+
+on:
+  push:
+    branch:
+      - master
+
+
+jobs:
+  pre-package:
+    name: run lint and pytest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: |
+          make install-requirements
+      - name: Lint with flake8
+        run: |
+          make run-flake8
+      - name: Test with pytest
+        run: |
+          pip install pytest
+          make run-pytest
+
+      - name: code coverage
+        run: |
+          pip install pytest-cov
+          make run-coverage
+
+  deploy_lambda:
+    name: deployer
+    needs: [pre-package]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-2
+      - name: deploy
+        run: |
+          make zip
+          aws lambda update-function-code --function-name=PDC_BitGrade_App --zip-file=fileb://package.zip

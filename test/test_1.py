@@ -107,7 +107,7 @@ class Test1(unittest.TestCase):
             assert case.get("data").get("bg") == expected_bg
 
     # skip this test for now
-    @unittest.skip
+    # @unittest.skip
     def test_lambda_handler(self):
         api = Api()
         start_ts = 1677112070
@@ -129,9 +129,9 @@ class Test1(unittest.TestCase):
                 _end_ts = end_ts
 
             body = {
-                "start_ts": str(i),
-                "end_ts": str(_end_ts),
-                "asset_id": str(123456789),
+                "start_ts": i,
+                "end_ts": _end_ts,
+                "asset_id": 123456789,
             }
             event = {"body": body}
 

@@ -81,7 +81,7 @@ class BGApp:
 
         return dhm_records
 
-    def run(self) -> None:
+    def run(self, _return=False) -> List:
         parsed_wits_records = self.get_wits_data()
         # group the records based on the drill_string_id
         parsed_wits_records_per_ds = {
@@ -99,10 +99,14 @@ class BGApp:
             if ds.down_hole_motor_id == dhm.motor_id
         }
 
-        self.calculate_bit_grade(parsed_wits_records_per_ds, ds_dhm_cof_map)
+        bg_list = self.calculate_bit_grade(
+            parsed_wits_records_per_ds, ds_dhm_cof_map, _return=_return
+        )
+        if _return:
+            return bg_list
 
     def calculate_bit_grade(
-        self, parsed_wits_records_per_ds: Dict, ds_dhm_cof_map: Dict
+        self, parsed_wits_records_per_ds: Dict, ds_dhm_cof_map: Dict, _return=False
     ) -> Dict:
         for ds, wits_records in parsed_wits_records_per_ds.items():
             # get the motor_cof for the drill_string_id
@@ -170,6 +174,8 @@ class BGApp:
             bit_grade_list = [case.dict() for case in bit_grade_list]
             # save the bit_grade records in the database
             self.post_bg(bit_grade_list)
+            if _return:
+                return bit_grade_list
 
     @staticmethod
     def bit_grade_model(wob, rpm, flowrate, motor_cof):
