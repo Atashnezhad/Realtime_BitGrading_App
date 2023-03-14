@@ -203,7 +203,6 @@ class GenerateDummyData:
         myclient = pymongo.MongoClient(
             f"mongodb+srv://{username}:{password}@cluster0.gvlqokj.mongodb.net/?retryWrites=true&w=majority"
         )
-
         mydb = myclient["Drilling"]
         mycol = mydb["downhole_motor"]
 

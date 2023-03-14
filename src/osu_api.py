@@ -1,6 +1,9 @@
 import json
+import os
 from pathlib import Path
 from typing import Dict
+
+import pymongo
 
 
 class Api:
@@ -48,6 +51,27 @@ class Api:
         # raed the data from the local location
         with open(self._path / f"{collection_name}.json", "r") as f:
             records = json.load(f)
+
+        if kwargs.get("read_from_mongo", "False") == "True":
+            # or read from mongoDB
+            password = os.getenv("MONGO_PASSWORD")
+            username = os.getenv("MONGO_USERNAME")
+            myclient = pymongo.MongoClient(
+                f"mongodb+srv://{username}:{password}@cluster0.gvlqokj.mongodb.net/?retryWrites=true&w=majority"
+            )
+
+            map_database_names = {
+                "wits": "wits",
+                "dhm_data": "downhole_motor",
+                "ds_data": "drillstring",
+            }
+
+            mydb = myclient["Drilling"]
+            mycol = mydb[map_database_names[collection_name]]
+
+            records = []
+            for x in mycol.find():
+                records.append(x)
 
         # for each record in the records, check if all fields are present
         # otherwise raise an error
