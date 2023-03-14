@@ -29,7 +29,6 @@ class BGApp:
             "sort": 1,
             # "limit": 3,
             "fields": [
-                "id",
                 "timestamp",
                 "provider",
                 "drill_string_id",

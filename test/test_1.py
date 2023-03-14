@@ -18,7 +18,7 @@ class Test1(unittest.TestCase):
         query = {
             "sort": -1,
             "limit": 3,
-            "fields": ["id", "timestamp", "provider", "drill_string_id", "data"],
+            "fields": ["timestamp", "provider", "drill_string_id", "data"],
         }
         records = self.api.get_data(
             provider_name="osu_provider",
@@ -98,9 +98,9 @@ class Test1(unittest.TestCase):
         # get the last record for each drill string in list
         records = [v[-1] for k, v in records.items()]
         expected_calculated_bg = [
-            1.132,
-            2.825,
-            1.235,
+            0.821,
+            2.732,
+            1.141,
         ]  # note if the data is re-generated using p01_2 file then these values should be edited
         # based on new values.
         for case, expected_bg in zip(records, expected_calculated_bg):

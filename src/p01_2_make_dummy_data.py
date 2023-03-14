@@ -1,11 +1,12 @@
 import json
+import os
 import random
-import uuid
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List
 
 import numpy as np
+import pymongo
 
 from src.enums import Activities
 
@@ -57,7 +58,7 @@ class GenerateDummyData:
         timestamps: List[int] = [
             start_ts + i for i in range(1, number_of_datapoints + 1)
         ]
-        ids: List[str] = [str(uuid.uuid4()) for _ in range(1, number_of_datapoints + 1)]
+        # ids: List[str] = [str(uuid.uuid4()) for _ in range(1, number_of_datapoints + 1)]
 
         # use Activity enum to make random activity.
         activities: List[str] = [
@@ -67,7 +68,6 @@ class GenerateDummyData:
 
         records: List[Dict[str, Any]] = [
             {
-                "id": id,
                 "timestamp": ts,
                 "provider": "osu_provider",
                 "drill_string_id": drill_string_id,
@@ -81,8 +81,8 @@ class GenerateDummyData:
                 },
                 "activity": activity,
             }
-            for id, ts, md, wob, rpm, rop, flowrate, activity in zip(
-                ids, timestamps, mds, wobs, rpms, rops, flowrates, activities
+            for ts, md, wob, rpm, rop, flowrate, activity in zip(
+                timestamps, mds, wobs, rpms, rops, flowrates, activities
             )
         ]
         return records
@@ -114,6 +114,20 @@ class GenerateDummyData:
         with open(_path / combined_file_name, "w") as f:
             json.dump(records, f, indent=4, sort_keys=False)
 
+        # post the data into the mongoDB
+        password = os.getenv("MONGO_PASSWORD")
+        username = os.getenv("MONGO_USERNAME")
+
+        myclient = pymongo.MongoClient(
+            f"mongodb+srv://{username}:{password}@cluster0.gvlqokj.mongodb.net/?retryWrites=true&w=majority"
+        )
+
+        mydb = myclient["Drilling"]
+        mycol = mydb["wits"]
+        if kwargs.get("insert_to_mongoDB"):
+            for record in records:
+                mycol.insert_one(record)
+
     @staticmethod
     def make_ds_data(**kwargs) -> None:
         """
@@ -125,21 +139,34 @@ class GenerateDummyData:
         _path = kwargs.get("path", Path(__file__).parent / ".." / "resources")
         file_name = kwargs.get("file_name", "ds_data.json")
         number_of_ds = kwargs.get("number_of_datapoints", 3)
-        ids: List[str] = [str(uuid.uuid4()) for _ in range(1, number_of_ds + 1)]
         ds_ids = [f"ds_{i}" for i in range(1, number_of_ds + 1)]
         down_hole_motor_ids: List[str] = [
             f"motor_id_{i}" for i in range(1, number_of_ds + 1)
         ]
         records: List[Dict[str, Any]] = [
             {
-                "id": id,
                 "_drill_string_id": ds_id,
                 "down_hole_motor_id": dhm_id,
             }
-            for id, ds_id, dhm_id in zip(ids, ds_ids, down_hole_motor_ids)
+            for ds_id, dhm_id in zip(ds_ids, down_hole_motor_ids)
         ]
         with open(_path / file_name, "w") as f:
             json.dump(records, f, indent=4, sort_keys=False)
+
+        # post the data into the mongoDB
+        password = os.getenv("MONGO_PASSWORD")
+        username = os.getenv("MONGO_USERNAME")
+
+        myclient = pymongo.MongoClient(
+            f"mongodb+srv://{username}:{password}@cluster0.gvlqokj.mongodb.net/?retryWrites=true&w=majority"
+        )
+
+        mydb = myclient["Drilling"]
+        mycol = mydb["drillstring"]
+
+        if kwargs.get("insert_to_mongoDB"):
+            for record in records:
+                mycol.insert_one(record)
 
     @staticmethod
     def make_dhm_data(**kwargs) -> None:
@@ -152,7 +179,6 @@ class GenerateDummyData:
         _path = kwargs.get("path", Path(__file__).parent / ".." / "resources")
         file_name = kwargs.get("file_name", "dhm_data.json")
         number_of_dhm = kwargs.get("number_of_datapoints", 3)
-        ids: List[str] = [str(uuid.uuid4()) for _ in range(1, number_of_dhm + 1)]
         dhm_ids = [f"motor_id_{i}" for i in range(1, number_of_dhm + 1)]
         motor_cof_min: float = kwargs.get("mds_min", 0)
         motor_cof_max: float = kwargs.get("mds_max", 500)
@@ -161,15 +187,29 @@ class GenerateDummyData:
         )
         records: List[Dict[str, Any]] = [
             {
-                "id": id,
                 "motor_id": dhm_id,
                 "motor_cof": motor_cof,
                 "type": "positive_displacement",
             }
-            for id, motor_cof, dhm_id in zip(ids, motor_cofs, dhm_ids)
+            for motor_cof, dhm_id in zip(motor_cofs, dhm_ids)
         ]
         with open(_path / file_name, "w") as f:
             json.dump(records, f, indent=4, sort_keys=False)
+
+        # post the data into the mongoDB
+        password = os.getenv("MONGO_PASSWORD")
+        username = os.getenv("MONGO_USERNAME")
+
+        myclient = pymongo.MongoClient(
+            f"mongodb+srv://{username}:{password}@cluster0.gvlqokj.mongodb.net/?retryWrites=true&w=majority"
+        )
+
+        mydb = myclient["Drilling"]
+        mycol = mydb["downhole_motor"]
+
+        if kwargs.get("insert_to_mongoDB"):
+            for record in records:
+                mycol.insert_one(record)
 
 
 if __name__ == "__main__":
@@ -209,8 +249,9 @@ if __name__ == "__main__":
     obj.combine_json_files(
         combined_file_name="wits.json",
         file_names=["wits_ds_1.json", "wits_ds_2.json", "wits_ds_3.json"],
+        insert_to_mongoDB=False,
     )
 
-    obj.make_ds_data()
+    obj.make_ds_data(insert_to_mongoDB=False)
 
-    obj.make_dhm_data()
+    obj.make_dhm_data(insert_to_mongoDB=False)

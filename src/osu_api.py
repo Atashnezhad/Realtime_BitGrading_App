@@ -27,10 +27,6 @@ class Api:
         if not provider:
             raise ValueError("Provider is not provided.")
 
-        asset_id = kwargs.get("asset_id", {})
-        if not asset_id:
-            raise ValueError("Asset id is not provided.")
-
         collection_name = kwargs.get("data_name", {})
         if not collection_name:
             raise ValueError("Collection name is not provided.")
@@ -53,15 +49,11 @@ class Api:
         with open(self._path / f"{collection_name}.json", "r") as f:
             records = json.load(f)
 
-        # check if all fields are present in the query
-        if not all(field in records[0] for field in fields):
-            # print available fields
-            print(f"Available fields are: {records[0].keys()}")
-            # print the specific field that is not present
-            print(
-                f"Fields that are not present: {set(fields) - set(records[0].keys())}"
-            )
-            raise ValueError("\n\nFields are not present in the data.")
+        # for each record in the records, check if all fields are present
+        # otherwise raise an error
+        for record in records:
+            if not all(field in record for field in query["fields"]):
+                raise ValueError("Fields are not present in the records.")
 
         # check if timestamp is present in the query
         if "timestamp" in records[0]:
@@ -112,7 +104,7 @@ if __name__ == "__main__":
         "provider_name": "provider_name",
         "sort": 1,
         "limit": 20,
-        "fields": ["id", "timestamp", "provider", "drill_string_id", "data"],
+        "fields": ["timestamp", "provider", "drill_string_id", "data", "activity"],
         "ts_min": 1677112070,
         "ts_max": 1677112080,
     }

@@ -1,5 +1,4 @@
 import json
-import uuid
 from datetime import datetime
 from pathlib import Path
 
@@ -17,16 +16,14 @@ if __name__ == "__main__":
     timestamps = [curr_ts + i for i in range(1, number_of_datapoints)]
 
     # make random dummy id
-    ids = [str(uuid.uuid4()) for _ in range(1, number_of_datapoints)]
 
     records = [
         {
-            "id": id,
             "timestamp": ts,
             "provider": "provider_name",
             "data": {"wob": wob, "rpm": rpm, "rop": rop},
         }
-        for id, ts, wob, rpm, rop in zip(ids, timestamps, wobs, rpms, rops)
+        for ts, wob, rpm, rop in zip(timestamps, wobs, rpms, rops)
     ]
 
     # save the data in the resources' folder.
