@@ -11,7 +11,7 @@
             "rop": 265.822,
             "flowrate": 26757.468
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114070,
@@ -25,7 +25,7 @@
             "rop": 218.71,
             "flowrate": 29602.523
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114071,
@@ -39,7 +39,7 @@
             "rop": 278.343,
             "flowrate": 22536.695
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114072,
@@ -81,7 +81,7 @@
             "rop": 4.224,
             "flowrate": 26704.155
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114075,
@@ -109,7 +109,7 @@
             "rop": 72.038,
             "flowrate": 23978.786
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114077,
@@ -123,7 +123,7 @@
             "rop": 30.242,
             "flowrate": 29530.162
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114078,
@@ -137,7 +137,7 @@
             "rop": 78.063,
             "flowrate": 27027.829
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114079,
@@ -151,7 +151,7 @@
             "rop": 53.113,
             "flowrate": 20420.058
         },
-        "activity": "circulating"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114080,
@@ -165,7 +165,7 @@
             "rop": 8.556,
             "flowrate": 29068.728
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114081,
@@ -179,7 +179,7 @@
             "rop": 272.791,
             "flowrate": 24844.728
         },
-        "activity": "tripping_in"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114082,
@@ -193,7 +193,7 @@
             "rop": 2.467,
             "flowrate": 24603.27
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114083,
@@ -207,7 +207,7 @@
             "rop": 220.825,
             "flowrate": 25664.666
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114084,
@@ -221,7 +221,7 @@
             "rop": 45.644,
             "flowrate": 21493.845
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114085,
@@ -235,7 +235,7 @@
             "rop": 273.669,
             "flowrate": 24691.66
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114086,
@@ -249,7 +249,7 @@
             "rop": 267.839,
             "flowrate": 28311.272
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114087,
@@ -263,7 +263,7 @@
             "rop": 196.17,
             "flowrate": 20154.825
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114088,
@@ -277,7 +277,7 @@
             "rop": 201.67,
             "flowrate": 22729.172
         },
-        "activity": "tripping_out"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114089,
@@ -291,7 +291,7 @@
             "rop": 1.602,
             "flowrate": 20024.546
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114090,
@@ -305,7 +305,7 @@
             "rop": 295.461,
             "flowrate": 24157.113
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114091,
@@ -319,7 +319,7 @@
             "rop": 263.35,
             "flowrate": 27283.155
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114092,
@@ -333,7 +333,7 @@
             "rop": 268.532,
             "flowrate": 27987.718
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114093,
@@ -347,7 +347,7 @@
             "rop": 197.773,
             "flowrate": 29451.898
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114094,
@@ -361,7 +361,7 @@
             "rop": 103.436,
             "flowrate": 26085.046
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114095,
@@ -389,7 +389,7 @@
             "rop": 87.455,
             "flowrate": 29241.479
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114097,
@@ -403,7 +403,7 @@
             "rop": 168.813,
             "flowrate": 27753.158
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114098,
@@ -417,7 +417,7 @@
             "rop": 29.919,
             "flowrate": 25744.285
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114099,
@@ -431,7 +431,7 @@
             "rop": 276.587,
             "flowrate": 26956.402
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114100,
@@ -445,7 +445,7 @@
             "rop": 42.231,
             "flowrate": 29243.164
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114101,
@@ -459,7 +459,7 @@
             "rop": 67.469,
             "flowrate": 27123.94
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114102,
@@ -501,7 +501,7 @@
             "rop": 185.805,
             "flowrate": 20402.782
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114105,
@@ -515,7 +515,7 @@
             "rop": 69.64,
             "flowrate": 23864.156
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114106,
@@ -529,7 +529,7 @@
             "rop": 0.283,
             "flowrate": 24063.23
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114107,
@@ -543,7 +543,7 @@
             "rop": 227.145,
             "flowrate": 21668.382
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114108,
@@ -557,7 +557,7 @@
             "rop": 295.562,
             "flowrate": 20230.855
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114109,
@@ -571,7 +571,7 @@
             "rop": 242.974,
             "flowrate": 21333.812
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114110,
@@ -585,7 +585,7 @@
             "rop": 138.062,
             "flowrate": 26546.215
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114111,
@@ -613,7 +613,7 @@
             "rop": 122.954,
             "flowrate": 29882.035
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114113,
@@ -627,7 +627,7 @@
             "rop": 157.48,
             "flowrate": 23463.635
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114114,
@@ -641,7 +641,7 @@
             "rop": 143.139,
             "flowrate": 25993.792
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114115,
@@ -655,7 +655,7 @@
             "rop": 134.287,
             "flowrate": 29371.45
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114116,
@@ -669,7 +669,7 @@
             "rop": 232.557,
             "flowrate": 21670.418
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114117,
@@ -697,7 +697,7 @@
             "rop": 95.015,
             "flowrate": 27549.787
         },
-        "activity": "tripping_in"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114119,
@@ -711,7 +711,7 @@
             "rop": 77.447,
             "flowrate": 20889.755
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114120,
@@ -725,7 +725,7 @@
             "rop": 11.324,
             "flowrate": 28612.494
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114121,
@@ -739,7 +739,7 @@
             "rop": 174.959,
             "flowrate": 28131.05
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114122,
@@ -753,7 +753,7 @@
             "rop": 68.988,
             "flowrate": 20334.03
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114123,
@@ -767,7 +767,7 @@
             "rop": 44.44,
             "flowrate": 20910.844
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114124,
@@ -781,7 +781,7 @@
             "rop": 196.149,
             "flowrate": 20491.269
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114125,
@@ -837,7 +837,7 @@
             "rop": 268.216,
             "flowrate": 22676.668
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114129,
@@ -851,7 +851,7 @@
             "rop": 280.903,
             "flowrate": 29115.969
         },
-        "activity": "circulating"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114130,
@@ -865,7 +865,7 @@
             "rop": 242.211,
             "flowrate": 23682.628
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114131,
@@ -879,7 +879,7 @@
             "rop": 190.678,
             "flowrate": 20455.502
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114132,
@@ -907,7 +907,7 @@
             "rop": 294.883,
             "flowrate": 25311.094
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114134,
@@ -921,7 +921,7 @@
             "rop": 82.241,
             "flowrate": 24082.218
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114135,
@@ -935,7 +935,7 @@
             "rop": 60.797,
             "flowrate": 22738.425
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114136,
@@ -949,7 +949,7 @@
             "rop": 132.646,
             "flowrate": 21313.232
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114137,
@@ -977,7 +977,7 @@
             "rop": 293.548,
             "flowrate": 29961.452
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114139,
@@ -991,7 +991,7 @@
             "rop": 176.53,
             "flowrate": 23295.421
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114140,
@@ -1005,7 +1005,7 @@
             "rop": 167.086,
             "flowrate": 23816.21
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114141,
@@ -1019,7 +1019,7 @@
             "rop": 196.739,
             "flowrate": 26180.375
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114142,
@@ -1033,7 +1033,7 @@
             "rop": 149.107,
             "flowrate": 27184.415
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114143,
@@ -1047,7 +1047,7 @@
             "rop": 9.619,
             "flowrate": 23920.295
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114144,
@@ -1061,7 +1061,7 @@
             "rop": 183.693,
             "flowrate": 29049.295
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114145,
@@ -1075,7 +1075,7 @@
             "rop": 214.852,
             "flowrate": 25600.04
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114146,
@@ -1089,7 +1089,7 @@
             "rop": 125.025,
             "flowrate": 24503.901
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114147,
@@ -1145,7 +1145,7 @@
             "rop": 48.425,
             "flowrate": 20400.131
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114151,
@@ -1159,7 +1159,7 @@
             "rop": 111.598,
             "flowrate": 23323.099
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114152,
@@ -1173,7 +1173,7 @@
             "rop": 254.104,
             "flowrate": 24705.447
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114153,
@@ -1187,7 +1187,7 @@
             "rop": 248.374,
             "flowrate": 23145.176
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114154,
@@ -1201,7 +1201,7 @@
             "rop": 114.847,
             "flowrate": 27001.876
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114155,
@@ -1215,7 +1215,7 @@
             "rop": 176.736,
             "flowrate": 28262.691
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114156,
@@ -1243,7 +1243,7 @@
             "rop": 72.362,
             "flowrate": 29893.333
         },
-        "activity": "circulating"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114158,
@@ -1257,7 +1257,7 @@
             "rop": 50.442,
             "flowrate": 22725.476
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114159,
@@ -1285,7 +1285,7 @@
             "rop": 185.267,
             "flowrate": 27666.227
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114161,
@@ -1299,7 +1299,7 @@
             "rop": 294.425,
             "flowrate": 23621.788
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114162,
@@ -1313,7 +1313,7 @@
             "rop": 101.327,
             "flowrate": 27341.245
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114163,
@@ -1327,7 +1327,7 @@
             "rop": 210.91,
             "flowrate": 21040.76
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114164,
@@ -1341,7 +1341,7 @@
             "rop": 66.781,
             "flowrate": 27893.335
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114165,
@@ -1355,7 +1355,7 @@
             "rop": 78.36,
             "flowrate": 25323.306
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114166,
@@ -1369,7 +1369,7 @@
             "rop": 153.571,
             "flowrate": 22922.902
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114167,
@@ -1383,7 +1383,7 @@
             "rop": 95.885,
             "flowrate": 26557.773
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114168,
@@ -1397,7 +1397,7 @@
             "rop": 50.286,
             "flowrate": 26416.2
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114169,
@@ -1411,7 +1411,7 @@
             "rop": 78.864,
             "flowrate": 22094.862
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114170,
@@ -1425,7 +1425,7 @@
             "rop": 10.725,
             "flowrate": 20303.974
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114171,
@@ -1439,7 +1439,7 @@
             "rop": 211.327,
             "flowrate": 24336.226
         },
-        "activity": "tripping_in"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114172,
@@ -1453,7 +1453,7 @@
             "rop": 147.635,
             "flowrate": 25695.119
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114173,
@@ -1467,7 +1467,7 @@
             "rop": 28.273,
             "flowrate": 28766.053
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114174,
@@ -1481,7 +1481,7 @@
             "rop": 51.508,
             "flowrate": 29282.168
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114175,
@@ -1495,7 +1495,7 @@
             "rop": 30.76,
             "flowrate": 25288.052
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114176,
@@ -1509,7 +1509,7 @@
             "rop": 183.778,
             "flowrate": 27538.035
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114177,
@@ -1523,7 +1523,7 @@
             "rop": 28.263,
             "flowrate": 24393.033
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114178,
@@ -1537,7 +1537,7 @@
             "rop": 226.285,
             "flowrate": 27460.822
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114179,
@@ -1593,7 +1593,7 @@
             "rop": 215.559,
             "flowrate": 20181.58
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114183,
@@ -1621,7 +1621,7 @@
             "rop": 246.338,
             "flowrate": 28355.355
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114185,
@@ -1635,7 +1635,7 @@
             "rop": 147.911,
             "flowrate": 23991.417
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114186,
@@ -1649,7 +1649,7 @@
             "rop": 254.035,
             "flowrate": 24479.424
         },
-        "activity": "circulating"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114187,
@@ -1663,7 +1663,7 @@
             "rop": 180.222,
             "flowrate": 28512.822
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114188,
@@ -1691,7 +1691,7 @@
             "rop": 298.05,
             "flowrate": 22881.495
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114190,
@@ -1705,7 +1705,7 @@
             "rop": 69.701,
             "flowrate": 23239.761
         },
-        "activity": "circulating"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114191,
@@ -1719,7 +1719,7 @@
             "rop": 187.184,
             "flowrate": 26788.782
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114192,
@@ -1733,7 +1733,7 @@
             "rop": 138.096,
             "flowrate": 25631.981
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114193,
@@ -1747,7 +1747,7 @@
             "rop": 11.836,
             "flowrate": 21622.296
         },
-        "activity": "tripping_in"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114194,
@@ -1761,7 +1761,7 @@
             "rop": 4.341,
             "flowrate": 23099.299
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114195,
@@ -1775,7 +1775,7 @@
             "rop": 35.769,
             "flowrate": 28999.833
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114196,
@@ -1789,7 +1789,7 @@
             "rop": 194.728,
             "flowrate": 26881.744
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114197,
@@ -1803,7 +1803,7 @@
             "rop": 170.149,
             "flowrate": 29859.743
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114198,
@@ -1831,7 +1831,7 @@
             "rop": 9.557,
             "flowrate": 29419.744
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114200,
@@ -1845,7 +1845,7 @@
             "rop": 140.791,
             "flowrate": 22161.886
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114201,
@@ -1859,7 +1859,7 @@
             "rop": 277.387,
             "flowrate": 27714.849
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114202,
@@ -1873,7 +1873,7 @@
             "rop": 119.278,
             "flowrate": 20202.175
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114203,
@@ -1887,7 +1887,7 @@
             "rop": 187.477,
             "flowrate": 26707.6
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114204,
@@ -1901,7 +1901,7 @@
             "rop": 233.946,
             "flowrate": 24692.823
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114205,
@@ -1929,7 +1929,7 @@
             "rop": 155.784,
             "flowrate": 28624.044
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114207,
@@ -1957,7 +1957,7 @@
             "rop": 117.413,
             "flowrate": 20223.017
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114209,
@@ -1971,7 +1971,7 @@
             "rop": 266.608,
             "flowrate": 26095.051
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114210,
@@ -1985,7 +1985,7 @@
             "rop": 72.068,
             "flowrate": 23678.322
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114211,
@@ -2013,7 +2013,7 @@
             "rop": 15.936,
             "flowrate": 28320.407
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114213,
@@ -2027,7 +2027,7 @@
             "rop": 238.675,
             "flowrate": 23098.398
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114214,
@@ -2041,7 +2041,7 @@
             "rop": 125.117,
             "flowrate": 29430.488
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114215,
@@ -2055,7 +2055,7 @@
             "rop": 68.735,
             "flowrate": 21796.338
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114216,
@@ -2069,7 +2069,7 @@
             "rop": 69.537,
             "flowrate": 26627.224
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114217,
@@ -2083,7 +2083,7 @@
             "rop": 270.42,
             "flowrate": 26721.051
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114218,
@@ -2097,7 +2097,7 @@
             "rop": 250.175,
             "flowrate": 22521.952
         },
-        "activity": "tripping_in"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114219,
@@ -2111,7 +2111,7 @@
             "rop": 166.059,
             "flowrate": 23247.506
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114220,
@@ -2125,7 +2125,7 @@
             "rop": 184.833,
             "flowrate": 28347.985
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114221,
@@ -2139,7 +2139,7 @@
             "rop": 142.298,
             "flowrate": 27618.053
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114222,
@@ -2153,7 +2153,7 @@
             "rop": 117.5,
             "flowrate": 23290.959
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114223,
@@ -2167,7 +2167,7 @@
             "rop": 274.643,
             "flowrate": 25339.565
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114224,
@@ -2181,7 +2181,7 @@
             "rop": 37.684,
             "flowrate": 20616.803
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114225,
@@ -2195,7 +2195,7 @@
             "rop": 125.534,
             "flowrate": 22087.459
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114226,
@@ -2209,7 +2209,7 @@
             "rop": 103.369,
             "flowrate": 24858.206
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114227,
@@ -2223,7 +2223,7 @@
             "rop": 149.445,
             "flowrate": 20859.737
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114228,
@@ -2237,7 +2237,7 @@
             "rop": 137.29,
             "flowrate": 28433.324
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114229,
@@ -2265,7 +2265,7 @@
             "rop": 41.976,
             "flowrate": 29436.337
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114231,
@@ -2307,7 +2307,7 @@
             "rop": 55.299,
             "flowrate": 25545.126
         },
-        "activity": "tripping_out"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114234,
@@ -2321,7 +2321,7 @@
             "rop": 19.45,
             "flowrate": 26002.186
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114235,
@@ -2363,7 +2363,7 @@
             "rop": 187.993,
             "flowrate": 20307.866
         },
-        "activity": "tripping_in"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114238,
@@ -2377,7 +2377,7 @@
             "rop": 218.278,
             "flowrate": 27238.028
         },
-        "activity": "circulating"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114239,
@@ -2391,7 +2391,7 @@
             "rop": 203.795,
             "flowrate": 29054.687
         },
-        "activity": "circulating"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114240,
@@ -2405,7 +2405,7 @@
             "rop": 141.15,
             "flowrate": 27955.802
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114241,
@@ -2419,7 +2419,7 @@
             "rop": 116.37,
             "flowrate": 25838.333
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114242,
@@ -2433,7 +2433,7 @@
             "rop": 112.788,
             "flowrate": 26713.035
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114243,
@@ -2447,7 +2447,7 @@
             "rop": 192.015,
             "flowrate": 29901.918
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114244,
@@ -2461,7 +2461,7 @@
             "rop": 148.438,
             "flowrate": 20906.621
         },
-        "activity": "tripping_out"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114245,
@@ -2475,7 +2475,7 @@
             "rop": 254.74,
             "flowrate": 26672.448
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114246,
@@ -2489,7 +2489,7 @@
             "rop": 262.411,
             "flowrate": 22833.977
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114247,
@@ -2503,7 +2503,7 @@
             "rop": 51.168,
             "flowrate": 26400.904
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114248,
@@ -2517,7 +2517,7 @@
             "rop": 40.87,
             "flowrate": 26076.236
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114249,
@@ -2531,7 +2531,7 @@
             "rop": 189.12,
             "flowrate": 21534.568
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114250,
@@ -2545,7 +2545,7 @@
             "rop": 90.368,
             "flowrate": 22067.466
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114251,
@@ -2559,7 +2559,7 @@
             "rop": 5.571,
             "flowrate": 26216.296
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114252,
@@ -2573,7 +2573,7 @@
             "rop": 266.593,
             "flowrate": 21282.299
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114253,
@@ -2587,7 +2587,7 @@
             "rop": 68.07,
             "flowrate": 22651.809
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114254,
@@ -2601,7 +2601,7 @@
             "rop": 278.784,
             "flowrate": 28352.455
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114255,
@@ -2615,7 +2615,7 @@
             "rop": 215.23,
             "flowrate": 23270.915
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114256,
@@ -2629,7 +2629,7 @@
             "rop": 228.796,
             "flowrate": 24880.602
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114257,
@@ -2643,7 +2643,7 @@
             "rop": 60.438,
             "flowrate": 29411.403
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114258,
@@ -2657,7 +2657,7 @@
             "rop": 70.258,
             "flowrate": 22271.491
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114259,
@@ -2671,7 +2671,7 @@
             "rop": 156.38,
             "flowrate": 23896.26
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114260,
@@ -2685,7 +2685,7 @@
             "rop": 51.63,
             "flowrate": 26064.578
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114261,
@@ -2699,7 +2699,7 @@
             "rop": 91.63,
             "flowrate": 27553.389
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114262,
@@ -2713,7 +2713,7 @@
             "rop": 96.439,
             "flowrate": 29016.534
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114263,
@@ -2755,7 +2755,7 @@
             "rop": 236.566,
             "flowrate": 22283.308
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114266,
@@ -2797,7 +2797,7 @@
             "rop": 188.806,
             "flowrate": 21415.489
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114269,
@@ -2811,7 +2811,7 @@
             "rop": 292.795,
             "flowrate": 27103.876
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114270,
@@ -2825,7 +2825,7 @@
             "rop": 99.364,
             "flowrate": 26611.306
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114271,
@@ -2839,7 +2839,7 @@
             "rop": 35.597,
             "flowrate": 20439.716
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114272,
@@ -2853,7 +2853,7 @@
             "rop": 171.116,
             "flowrate": 28365.938
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114273,
@@ -2867,7 +2867,7 @@
             "rop": 271.906,
             "flowrate": 22487.433
         },
-        "activity": "tripping_out"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114274,
@@ -2881,7 +2881,7 @@
             "rop": 235.219,
             "flowrate": 24322.271
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114275,
@@ -2909,7 +2909,7 @@
             "rop": 94.517,
             "flowrate": 24294.188
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114277,
@@ -2937,7 +2937,7 @@
             "rop": 27.373,
             "flowrate": 20656.28
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114279,
@@ -2965,7 +2965,7 @@
             "rop": 217.529,
             "flowrate": 27648.479
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114281,
@@ -3007,7 +3007,7 @@
             "rop": 5.537,
             "flowrate": 24235.858
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114284,
@@ -3021,7 +3021,7 @@
             "rop": 163.683,
             "flowrate": 27026.271
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114285,
@@ -3035,7 +3035,7 @@
             "rop": 212.037,
             "flowrate": 29427.72
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114286,
@@ -3049,7 +3049,7 @@
             "rop": 237.122,
             "flowrate": 22670.609
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114287,
@@ -3063,7 +3063,7 @@
             "rop": 58.122,
             "flowrate": 24401.442
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114288,
@@ -3077,7 +3077,7 @@
             "rop": 78.526,
             "flowrate": 27959.732
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114289,
@@ -3105,7 +3105,7 @@
             "rop": 99.18,
             "flowrate": 21105.863
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114291,
@@ -3133,7 +3133,7 @@
             "rop": 142.128,
             "flowrate": 21867.463
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114293,
@@ -3147,7 +3147,7 @@
             "rop": 239.874,
             "flowrate": 25102.159
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114294,
@@ -3161,7 +3161,7 @@
             "rop": 174.186,
             "flowrate": 25291.033
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114295,
@@ -3175,7 +3175,7 @@
             "rop": 231.927,
             "flowrate": 28762.034
         },
-        "activity": "tripping_in"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114296,
@@ -3189,7 +3189,7 @@
             "rop": 99.802,
             "flowrate": 24624.943
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114297,
@@ -3203,7 +3203,7 @@
             "rop": 249.425,
             "flowrate": 22794.424
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114298,
@@ -3245,7 +3245,7 @@
             "rop": 64.202,
             "flowrate": 21710.109
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114301,
@@ -3259,7 +3259,7 @@
             "rop": 142.658,
             "flowrate": 24258.686
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114302,
@@ -3273,7 +3273,7 @@
             "rop": 95.453,
             "flowrate": 21871.731
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114303,
@@ -3287,7 +3287,7 @@
             "rop": 80.011,
             "flowrate": 27733.04
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114304,
@@ -3301,7 +3301,7 @@
             "rop": 290.096,
             "flowrate": 24743.726
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114305,
@@ -3329,7 +3329,7 @@
             "rop": 236.198,
             "flowrate": 23610.996
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114307,
@@ -3343,7 +3343,7 @@
             "rop": 295.249,
             "flowrate": 28522.142
         },
-        "activity": "tripping_in"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114308,
@@ -3357,7 +3357,7 @@
             "rop": 5.97,
             "flowrate": 25537.74
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114309,
@@ -3371,7 +3371,7 @@
             "rop": 209.708,
             "flowrate": 27178.679
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114310,
@@ -3385,7 +3385,7 @@
             "rop": 75.874,
             "flowrate": 28970.385
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114311,
@@ -3399,7 +3399,7 @@
             "rop": 12.146,
             "flowrate": 29017.417
         },
-        "activity": "tripping_in"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114312,
@@ -3413,7 +3413,7 @@
             "rop": 120.867,
             "flowrate": 23285.091
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114313,
@@ -3427,7 +3427,7 @@
             "rop": 280.565,
             "flowrate": 29524.513
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114314,
@@ -3441,7 +3441,7 @@
             "rop": 3.53,
             "flowrate": 20248.759
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114315,
@@ -3455,7 +3455,7 @@
             "rop": 176.366,
             "flowrate": 23768.356
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114316,
@@ -3469,7 +3469,7 @@
             "rop": 150.419,
             "flowrate": 28957.989
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114317,
@@ -3497,7 +3497,7 @@
             "rop": 25.201,
             "flowrate": 22730.815
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114319,
@@ -3511,7 +3511,7 @@
             "rop": 204.458,
             "flowrate": 23026.223
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114320,
@@ -3525,7 +3525,7 @@
             "rop": 204.033,
             "flowrate": 26123.134
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114321,
@@ -3539,7 +3539,7 @@
             "rop": 200.724,
             "flowrate": 24383.328
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114322,
@@ -3553,7 +3553,7 @@
             "rop": 282.7,
             "flowrate": 27267.348
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114323,
@@ -3595,7 +3595,7 @@
             "rop": 141.325,
             "flowrate": 22044.667
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114326,
@@ -3609,7 +3609,7 @@
             "rop": 119.386,
             "flowrate": 29326.819
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114327,
@@ -3623,7 +3623,7 @@
             "rop": 93.044,
             "flowrate": 22644.929
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114328,
@@ -3637,7 +3637,7 @@
             "rop": 135.401,
             "flowrate": 21498.943
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114329,
@@ -3651,7 +3651,7 @@
             "rop": 115.258,
             "flowrate": 20899.673
         },
-        "activity": "tripping_out"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114330,
@@ -3707,7 +3707,7 @@
             "rop": 276.669,
             "flowrate": 23000.305
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114334,
@@ -3721,7 +3721,7 @@
             "rop": 144.071,
             "flowrate": 22816.53
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114335,
@@ -3735,7 +3735,7 @@
             "rop": 187.123,
             "flowrate": 26042.395
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114336,
@@ -3749,7 +3749,7 @@
             "rop": 249.055,
             "flowrate": 28167.453
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114337,
@@ -3763,7 +3763,7 @@
             "rop": 108.139,
             "flowrate": 27613.497
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114338,
@@ -3777,7 +3777,7 @@
             "rop": 129.127,
             "flowrate": 22624.845
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114339,
@@ -3805,7 +3805,7 @@
             "rop": 112.419,
             "flowrate": 29657.915
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114341,
@@ -3833,7 +3833,7 @@
             "rop": 248.679,
             "flowrate": 28797.205
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114343,
@@ -3847,7 +3847,7 @@
             "rop": 32.7,
             "flowrate": 21997.285
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114344,
@@ -3861,7 +3861,7 @@
             "rop": 32.437,
             "flowrate": 29472.843
         },
-        "activity": "tripping_out"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114345,
@@ -3875,7 +3875,7 @@
             "rop": 128.361,
             "flowrate": 23423.073
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114346,
@@ -3903,7 +3903,7 @@
             "rop": 185.728,
             "flowrate": 27071.206
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114348,
@@ -3917,7 +3917,7 @@
             "rop": 43.107,
             "flowrate": 25876.691
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114349,
@@ -3931,7 +3931,7 @@
             "rop": 156.712,
             "flowrate": 23179.393
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114350,
@@ -3945,7 +3945,7 @@
             "rop": 2.166,
             "flowrate": 25538.309
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114351,
@@ -3959,7 +3959,7 @@
             "rop": 94.979,
             "flowrate": 27307.069
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114352,
@@ -3973,7 +3973,7 @@
             "rop": 203.157,
             "flowrate": 20423.349
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114353,
@@ -3987,7 +3987,7 @@
             "rop": 145.212,
             "flowrate": 20111.993
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114354,
@@ -4001,7 +4001,7 @@
             "rop": 293.481,
             "flowrate": 24580.669
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114355,
@@ -4015,7 +4015,7 @@
             "rop": 262.231,
             "flowrate": 21318.366
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114356,
@@ -4029,7 +4029,7 @@
             "rop": 107.721,
             "flowrate": 26643.443
         },
-        "activity": "tripping_in"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114357,
@@ -4043,7 +4043,7 @@
             "rop": 13.646,
             "flowrate": 22140.525
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114358,
@@ -4057,7 +4057,7 @@
             "rop": 253.688,
             "flowrate": 24328.511
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114359,
@@ -4071,7 +4071,7 @@
             "rop": 273.37,
             "flowrate": 21976.709
         },
-        "activity": "tripping_in"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114360,
@@ -4085,7 +4085,7 @@
             "rop": 246.188,
             "flowrate": 25484.836
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114361,
@@ -4099,7 +4099,7 @@
             "rop": 38.385,
             "flowrate": 21160.535
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114362,
@@ -4113,7 +4113,7 @@
             "rop": 299.375,
             "flowrate": 20231.069
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114363,
@@ -4127,7 +4127,7 @@
             "rop": 77.575,
             "flowrate": 20511.316
         },
-        "activity": "tripping_out"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114364,
@@ -4141,7 +4141,7 @@
             "rop": 217.261,
             "flowrate": 29542.584
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114365,
@@ -4155,7 +4155,7 @@
             "rop": 272.41,
             "flowrate": 21422.862
         },
-        "activity": "tripping_out"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114366,
@@ -4169,7 +4169,7 @@
             "rop": 70.706,
             "flowrate": 27084.783
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114367,
@@ -4183,7 +4183,7 @@
             "rop": 272.478,
             "flowrate": 20679.262
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114368,
@@ -4197,7 +4197,7 @@
             "rop": 92.844,
             "flowrate": 21081.604
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114369,
@@ -4211,7 +4211,7 @@
             "rop": 292.924,
             "flowrate": 25088.763
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114370,
@@ -4225,7 +4225,7 @@
             "rop": 84.378,
             "flowrate": 24648.709
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114371,
@@ -4239,7 +4239,7 @@
             "rop": 286.031,
             "flowrate": 29515.803
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114372,
@@ -4253,7 +4253,7 @@
             "rop": 16.063,
             "flowrate": 29448.355
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114373,
@@ -4281,7 +4281,7 @@
             "rop": 159.633,
             "flowrate": 26021.018
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114375,
@@ -4295,7 +4295,7 @@
             "rop": 143.363,
             "flowrate": 24549.603
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114376,
@@ -4309,7 +4309,7 @@
             "rop": 67.048,
             "flowrate": 23561.785
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114377,
@@ -4323,7 +4323,7 @@
             "rop": 211.679,
             "flowrate": 29470.875
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114378,
@@ -4337,7 +4337,7 @@
             "rop": 57.243,
             "flowrate": 26029.088
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114379,
@@ -4351,7 +4351,7 @@
             "rop": 165.853,
             "flowrate": 25790.725
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114380,
@@ -4365,7 +4365,7 @@
             "rop": 75.974,
             "flowrate": 22319.011
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114381,
@@ -4379,7 +4379,7 @@
             "rop": 286.686,
             "flowrate": 20466.978
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114382,
@@ -4393,7 +4393,7 @@
             "rop": 8.589,
             "flowrate": 29451.886
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114383,
@@ -4407,7 +4407,7 @@
             "rop": 59.918,
             "flowrate": 23137.353
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114384,
@@ -4421,7 +4421,7 @@
             "rop": 72.693,
             "flowrate": 24425.89
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114385,
@@ -4435,7 +4435,7 @@
             "rop": 124.22,
             "flowrate": 21146.399
         },
-        "activity": "circulating"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114386,
@@ -4449,7 +4449,7 @@
             "rop": 69.819,
             "flowrate": 28369.243
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114387,
@@ -4463,7 +4463,7 @@
             "rop": 147.405,
             "flowrate": 20276.318
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114388,
@@ -4477,7 +4477,7 @@
             "rop": 261.74,
             "flowrate": 28339.908
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114389,
@@ -4491,7 +4491,7 @@
             "rop": 213.619,
             "flowrate": 21402.85
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114390,
@@ -4519,7 +4519,7 @@
             "rop": 26.701,
             "flowrate": 27297.726
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114392,
@@ -4533,7 +4533,7 @@
             "rop": 208.198,
             "flowrate": 21646.703
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114393,
@@ -4547,7 +4547,7 @@
             "rop": 49.924,
             "flowrate": 25658.18
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114394,
@@ -4589,7 +4589,7 @@
             "rop": 125.115,
             "flowrate": 28591.822
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114397,
@@ -4603,7 +4603,7 @@
             "rop": 105.141,
             "flowrate": 24035.228
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114398,
@@ -4617,7 +4617,7 @@
             "rop": 257.644,
             "flowrate": 23985.437
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114399,
@@ -4645,7 +4645,7 @@
             "rop": 169.693,
             "flowrate": 23830.657
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114401,
@@ -4659,7 +4659,7 @@
             "rop": 42.618,
             "flowrate": 28716.168
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114402,
@@ -4715,7 +4715,7 @@
             "rop": 146.428,
             "flowrate": 21448.987
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114406,
@@ -4743,7 +4743,7 @@
             "rop": 156.297,
             "flowrate": 28626.741
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114408,
@@ -4771,7 +4771,7 @@
             "rop": 173.499,
             "flowrate": 20043.74
         },
-        "activity": "circulating"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114410,
@@ -4785,7 +4785,7 @@
             "rop": 206.769,
             "flowrate": 22738.718
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114411,
@@ -4799,7 +4799,7 @@
             "rop": 32.065,
             "flowrate": 25976.29
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114412,
@@ -4813,7 +4813,7 @@
             "rop": 246.333,
             "flowrate": 27992.66
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114413,
@@ -4841,7 +4841,7 @@
             "rop": 21.705,
             "flowrate": 21105.414
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114415,
@@ -4855,7 +4855,7 @@
             "rop": 235.855,
             "flowrate": 29220.927
         },
-        "activity": "tripping_out"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114416,
@@ -4869,7 +4869,7 @@
             "rop": 113.085,
             "flowrate": 27511.484
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114417,
@@ -4883,7 +4883,7 @@
             "rop": 30.11,
             "flowrate": 25897.796
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114418,
@@ -4897,7 +4897,7 @@
             "rop": 190.134,
             "flowrate": 27691.868
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114419,
@@ -4911,7 +4911,7 @@
             "rop": 264.039,
             "flowrate": 24288.544
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114420,
@@ -4925,7 +4925,7 @@
             "rop": 266.326,
             "flowrate": 27584.557
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114421,
@@ -4939,7 +4939,7 @@
             "rop": 287.299,
             "flowrate": 23718.03
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114422,
@@ -4967,7 +4967,7 @@
             "rop": 0.642,
             "flowrate": 27290.134
         },
-        "activity": "tripping_in"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114424,
@@ -4995,7 +4995,7 @@
             "rop": 245.563,
             "flowrate": 29813.771
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114426,
@@ -5009,7 +5009,7 @@
             "rop": 109.876,
             "flowrate": 23494.852
         },
-        "activity": "tripping_out"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114427,
@@ -5023,7 +5023,7 @@
             "rop": 180.465,
             "flowrate": 29217.274
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114428,
@@ -5037,7 +5037,7 @@
             "rop": 181.895,
             "flowrate": 29329.625
         },
-        "activity": "tripping_in"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114429,
@@ -5051,7 +5051,7 @@
             "rop": 109.508,
             "flowrate": 22418.529
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114430,
@@ -5079,7 +5079,7 @@
             "rop": 150.969,
             "flowrate": 24330.745
         },
-        "activity": "tripping_in"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114432,
@@ -5093,7 +5093,7 @@
             "rop": 139.435,
             "flowrate": 29175.247
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114433,
@@ -5121,7 +5121,7 @@
             "rop": 148.05,
             "flowrate": 27443.037
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114435,
@@ -5135,7 +5135,7 @@
             "rop": 53.519,
             "flowrate": 24669.674
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114436,
@@ -5149,7 +5149,7 @@
             "rop": 153.921,
             "flowrate": 22278.008
         },
-        "activity": "tripping_out"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114437,
@@ -5163,7 +5163,7 @@
             "rop": 244.205,
             "flowrate": 21993.501
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114438,
@@ -5177,7 +5177,7 @@
             "rop": 233.058,
             "flowrate": 24254.312
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114439,
@@ -5191,7 +5191,7 @@
             "rop": 236.575,
             "flowrate": 27554.947
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114440,
@@ -5205,7 +5205,7 @@
             "rop": 212.407,
             "flowrate": 26050.715
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114441,
@@ -5219,7 +5219,7 @@
             "rop": 76.265,
             "flowrate": 26886.293
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114442,
@@ -5233,7 +5233,7 @@
             "rop": 258.625,
             "flowrate": 22823.264
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114443,
@@ -5247,7 +5247,7 @@
             "rop": 268.033,
             "flowrate": 24814.353
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114444,
@@ -5261,7 +5261,7 @@
             "rop": 58.246,
             "flowrate": 20443.953
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114445,
@@ -5289,7 +5289,7 @@
             "rop": 292.681,
             "flowrate": 29898.922
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114447,
@@ -5303,7 +5303,7 @@
             "rop": 260.497,
             "flowrate": 24068.791
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114448,
@@ -5317,7 +5317,7 @@
             "rop": 267.971,
             "flowrate": 20109.637
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114449,
@@ -5331,7 +5331,7 @@
             "rop": 265.913,
             "flowrate": 21697.926
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114450,
@@ -5345,7 +5345,7 @@
             "rop": 162.506,
             "flowrate": 26525.269
         },
-        "activity": "tripping_out"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114451,
@@ -5359,7 +5359,7 @@
             "rop": 193.921,
             "flowrate": 26120.793
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114452,
@@ -5373,7 +5373,7 @@
             "rop": 163.609,
             "flowrate": 27878.647
         },
-        "activity": "tripping_out"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114453,
@@ -5387,7 +5387,7 @@
             "rop": 15.362,
             "flowrate": 22538.84
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114454,
@@ -5401,7 +5401,7 @@
             "rop": 223.651,
             "flowrate": 27636.319
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114455,
@@ -5415,7 +5415,7 @@
             "rop": 151.6,
             "flowrate": 26879.84
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114456,
@@ -5429,7 +5429,7 @@
             "rop": 194.313,
             "flowrate": 23228.145
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114457,
@@ -5443,7 +5443,7 @@
             "rop": 150.792,
             "flowrate": 25454.881
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114458,
@@ -5457,7 +5457,7 @@
             "rop": 147.543,
             "flowrate": 21472.738
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114459,
@@ -5485,7 +5485,7 @@
             "rop": 83.614,
             "flowrate": 28811.973
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114461,
@@ -5499,7 +5499,7 @@
             "rop": 47.656,
             "flowrate": 24211.914
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114462,
@@ -5513,7 +5513,7 @@
             "rop": 58.7,
             "flowrate": 28395.667
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114463,
@@ -5527,7 +5527,7 @@
             "rop": 291.893,
             "flowrate": 25902.534
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114464,
@@ -5541,7 +5541,7 @@
             "rop": 45.934,
             "flowrate": 21918.767
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114465,
@@ -5555,7 +5555,7 @@
             "rop": 80.781,
             "flowrate": 25811.062
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114466,
@@ -5569,7 +5569,7 @@
             "rop": 177.177,
             "flowrate": 25059.833
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114467,
@@ -5583,7 +5583,7 @@
             "rop": 183.054,
             "flowrate": 23986.413
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114468,
@@ -5611,7 +5611,7 @@
             "rop": 238.115,
             "flowrate": 24167.087
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114470,
@@ -5625,7 +5625,7 @@
             "rop": 235.561,
             "flowrate": 20727.624
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114471,
@@ -5639,7 +5639,7 @@
             "rop": 71.195,
             "flowrate": 20987.691
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114472,
@@ -5653,7 +5653,7 @@
             "rop": 86.6,
             "flowrate": 24159.165
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114473,
@@ -5667,7 +5667,7 @@
             "rop": 281.396,
             "flowrate": 23053.815
         },
-        "activity": "tripping_out"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114474,
@@ -5681,7 +5681,7 @@
             "rop": 247.701,
             "flowrate": 29255.443
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114475,
@@ -5709,7 +5709,7 @@
             "rop": 24.67,
             "flowrate": 27578.581
         },
-        "activity": "tripping_in"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114477,
@@ -5723,7 +5723,7 @@
             "rop": 125.479,
             "flowrate": 25302.475
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114478,
@@ -5737,7 +5737,7 @@
             "rop": 167.791,
             "flowrate": 27040.857
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114479,
@@ -5751,7 +5751,7 @@
             "rop": 56.223,
             "flowrate": 22601.16
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114480,
@@ -5765,7 +5765,7 @@
             "rop": 134.468,
             "flowrate": 29419.05
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114481,
@@ -5779,7 +5779,7 @@
             "rop": 180.308,
             "flowrate": 25300.885
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114482,
@@ -5793,7 +5793,7 @@
             "rop": 98.213,
             "flowrate": 28313.241
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114483,
@@ -5807,7 +5807,7 @@
             "rop": 234.283,
             "flowrate": 23650.457
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114484,
@@ -5849,7 +5849,7 @@
             "rop": 251.597,
             "flowrate": 20077.596
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114487,
@@ -5863,7 +5863,7 @@
             "rop": 31.073,
             "flowrate": 24752.93
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114488,
@@ -5877,7 +5877,7 @@
             "rop": 251.319,
             "flowrate": 21928.019
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114489,
@@ -5891,7 +5891,7 @@
             "rop": 45.825,
             "flowrate": 26273.755
         },
-        "activity": "tripping_in"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114490,
@@ -5905,7 +5905,7 @@
             "rop": 24.878,
             "flowrate": 29794.199
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114491,
@@ -5919,7 +5919,7 @@
             "rop": 192.533,
             "flowrate": 24644.029
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114492,
@@ -5933,7 +5933,7 @@
             "rop": 141.581,
             "flowrate": 28174.983
         },
-        "activity": "tripping_out"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114493,
@@ -5947,7 +5947,7 @@
             "rop": 272.367,
             "flowrate": 25077.842
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114494,
@@ -5961,7 +5961,7 @@
             "rop": 108.957,
             "flowrate": 24958.4
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114495,
@@ -5975,7 +5975,7 @@
             "rop": 86.146,
             "flowrate": 29304.235
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114496,
@@ -5989,7 +5989,7 @@
             "rop": 150.22,
             "flowrate": 28899.659
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114497,
@@ -6017,7 +6017,7 @@
             "rop": 103.328,
             "flowrate": 22962.558
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114499,
@@ -6031,7 +6031,7 @@
             "rop": 208.122,
             "flowrate": 25450.084
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114500,
@@ -6045,7 +6045,7 @@
             "rop": 227.869,
             "flowrate": 22238.972
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114501,
@@ -6059,7 +6059,7 @@
             "rop": 255.895,
             "flowrate": 24439.167
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114502,
@@ -6073,7 +6073,7 @@
             "rop": 291.857,
             "flowrate": 24842.131
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114503,
@@ -6087,7 +6087,7 @@
             "rop": 79.997,
             "flowrate": 28316.4
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114504,
@@ -6101,7 +6101,7 @@
             "rop": 214.828,
             "flowrate": 28960.284
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114505,
@@ -6115,7 +6115,7 @@
             "rop": 118.277,
             "flowrate": 24146.201
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114506,
@@ -6129,7 +6129,7 @@
             "rop": 203.125,
             "flowrate": 20177.044
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114507,
@@ -6143,7 +6143,7 @@
             "rop": 142.795,
             "flowrate": 28617.738
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114508,
@@ -6157,7 +6157,7 @@
             "rop": 298.132,
             "flowrate": 21742.787
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114509,
@@ -6171,7 +6171,7 @@
             "rop": 218.671,
             "flowrate": 26218.82
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114510,
@@ -6185,7 +6185,7 @@
             "rop": 285.747,
             "flowrate": 20249.709
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114511,
@@ -6213,7 +6213,7 @@
             "rop": 270.87,
             "flowrate": 29859.603
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114513,
@@ -6241,7 +6241,7 @@
             "rop": 137.748,
             "flowrate": 24236.932
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114515,
@@ -6255,7 +6255,7 @@
             "rop": 75.537,
             "flowrate": 23071.5
         },
-        "activity": "tripping_in"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114516,
@@ -6269,7 +6269,7 @@
             "rop": 111.096,
             "flowrate": 29050.881
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114517,
@@ -6283,7 +6283,7 @@
             "rop": 6.071,
             "flowrate": 28693.401
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114518,
@@ -6297,7 +6297,7 @@
             "rop": 157.198,
             "flowrate": 22376.988
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114519,
@@ -6325,7 +6325,7 @@
             "rop": 157.575,
             "flowrate": 26271.384
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114521,
@@ -6339,7 +6339,7 @@
             "rop": 292.209,
             "flowrate": 23363.687
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114522,
@@ -6353,7 +6353,7 @@
             "rop": 273.436,
             "flowrate": 26720.844
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114523,
@@ -6367,7 +6367,7 @@
             "rop": 48.514,
             "flowrate": 20321.198
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114524,
@@ -6381,7 +6381,7 @@
             "rop": 110.665,
             "flowrate": 21333.992
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114525,
@@ -6395,7 +6395,7 @@
             "rop": 127.187,
             "flowrate": 26863.722
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114526,
@@ -6409,7 +6409,7 @@
             "rop": 108.16,
             "flowrate": 22123.707
         },
-        "activity": "tripping_in"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114527,
@@ -6437,7 +6437,7 @@
             "rop": 157.211,
             "flowrate": 20585.909
         },
-        "activity": "tripping_out"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114529,
@@ -6451,7 +6451,7 @@
             "rop": 171.63,
             "flowrate": 22154.82
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114530,
@@ -6465,7 +6465,7 @@
             "rop": 255.904,
             "flowrate": 29985.602
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114531,
@@ -6479,7 +6479,7 @@
             "rop": 241.778,
             "flowrate": 24330.761
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114532,
@@ -6493,7 +6493,7 @@
             "rop": 39.663,
             "flowrate": 27029.657
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114533,
@@ -6507,7 +6507,7 @@
             "rop": 214.174,
             "flowrate": 21826.63
         },
-        "activity": "tripping_out"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114534,
@@ -6521,7 +6521,7 @@
             "rop": 130.631,
             "flowrate": 26098.687
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114535,
@@ -6549,7 +6549,7 @@
             "rop": 15.006,
             "flowrate": 23144.766
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114537,
@@ -6563,7 +6563,7 @@
             "rop": 146.175,
             "flowrate": 28288.971
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114538,
@@ -6577,7 +6577,7 @@
             "rop": 106.631,
             "flowrate": 26034.176
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114539,
@@ -6591,7 +6591,7 @@
             "rop": 75.454,
             "flowrate": 23891.23
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114540,
@@ -6605,7 +6605,7 @@
             "rop": 208.402,
             "flowrate": 25576.424
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114541,
@@ -6619,7 +6619,7 @@
             "rop": 230.846,
             "flowrate": 25767.608
         },
-        "activity": "tripping_out"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114542,
@@ -6633,7 +6633,7 @@
             "rop": 73.437,
             "flowrate": 21655.353
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114543,
@@ -6647,7 +6647,7 @@
             "rop": 14.834,
             "flowrate": 24027.324
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114544,
@@ -6661,7 +6661,7 @@
             "rop": 254.626,
             "flowrate": 23434.306
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114545,
@@ -6689,7 +6689,7 @@
             "rop": 281.134,
             "flowrate": 27611.106
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114547,
@@ -6703,7 +6703,7 @@
             "rop": 188.286,
             "flowrate": 24825.384
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114548,
@@ -6717,7 +6717,7 @@
             "rop": 96.554,
             "flowrate": 29403.162
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114549,
@@ -6731,7 +6731,7 @@
             "rop": 73.943,
             "flowrate": 22936.764
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114550,
@@ -6745,7 +6745,7 @@
             "rop": 2.702,
             "flowrate": 24157.036
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114551,
@@ -6759,7 +6759,7 @@
             "rop": 70.641,
             "flowrate": 27869.568
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114552,
@@ -6773,7 +6773,7 @@
             "rop": 41.318,
             "flowrate": 25460.246
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114553,
@@ -6787,7 +6787,7 @@
             "rop": 183.65,
             "flowrate": 25470.281
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114554,
@@ -6801,7 +6801,7 @@
             "rop": 49.964,
             "flowrate": 20533.402
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114555,
@@ -6815,7 +6815,7 @@
             "rop": 158.589,
             "flowrate": 23985.997
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114556,
@@ -6857,7 +6857,7 @@
             "rop": 10.519,
             "flowrate": 23083.551
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114559,
@@ -6871,7 +6871,7 @@
             "rop": 11.176,
             "flowrate": 28844.965
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114560,
@@ -6885,7 +6885,7 @@
             "rop": 7.904,
             "flowrate": 26762.337
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114561,
@@ -6899,7 +6899,7 @@
             "rop": 221.737,
             "flowrate": 23409.164
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114562,
@@ -6913,7 +6913,7 @@
             "rop": 95.403,
             "flowrate": 25435.344
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114563,
@@ -6927,7 +6927,7 @@
             "rop": 238.89,
             "flowrate": 28405.359
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114564,
@@ -6941,7 +6941,7 @@
             "rop": 129.52,
             "flowrate": 28833.683
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114565,
@@ -6955,7 +6955,7 @@
             "rop": 135.899,
             "flowrate": 21603.939
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114566,
@@ -6997,7 +6997,7 @@
             "rop": 82.051,
             "flowrate": 20420.448
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114569,
@@ -7011,7 +7011,7 @@
             "rop": 36.476,
             "flowrate": 25982.378
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114570,
@@ -7039,7 +7039,7 @@
             "rop": 98.093,
             "flowrate": 23815.744
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114572,
@@ -7053,7 +7053,7 @@
             "rop": 132.747,
             "flowrate": 27400.359
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114573,
@@ -7095,7 +7095,7 @@
             "rop": 186.084,
             "flowrate": 21410.598
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114576,
@@ -7109,7 +7109,7 @@
             "rop": 163.26,
             "flowrate": 27093.239
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114577,
@@ -7123,7 +7123,7 @@
             "rop": 221.939,
             "flowrate": 28545.652
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114578,
@@ -7137,7 +7137,7 @@
             "rop": 211.781,
             "flowrate": 26858.545
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114579,
@@ -7151,7 +7151,7 @@
             "rop": 160.257,
             "flowrate": 20178.785
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114580,
@@ -7165,7 +7165,7 @@
             "rop": 203.671,
             "flowrate": 22162.329
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114581,
@@ -7207,7 +7207,7 @@
             "rop": 123.829,
             "flowrate": 27564.777
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114584,
@@ -7221,7 +7221,7 @@
             "rop": 229.274,
             "flowrate": 21105.792
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114585,
@@ -7235,7 +7235,7 @@
             "rop": 174.766,
             "flowrate": 28383.378
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114586,
@@ -7249,7 +7249,7 @@
             "rop": 21.302,
             "flowrate": 25555.09
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114587,
@@ -7263,7 +7263,7 @@
             "rop": 267.634,
             "flowrate": 26899.69
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114588,
@@ -7277,7 +7277,7 @@
             "rop": 9.235,
             "flowrate": 29714.018
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114589,
@@ -7291,7 +7291,7 @@
             "rop": 224.519,
             "flowrate": 20836.81
         },
-        "activity": "tripping_in"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114590,
@@ -7305,7 +7305,7 @@
             "rop": 227.638,
             "flowrate": 29012.24
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114591,
@@ -7319,7 +7319,7 @@
             "rop": 285.933,
             "flowrate": 21261.027
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114592,
@@ -7333,7 +7333,7 @@
             "rop": 16.24,
             "flowrate": 23929.588
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114593,
@@ -7361,7 +7361,7 @@
             "rop": 128.352,
             "flowrate": 29062.542
         },
-        "activity": "tripping_in"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114595,
@@ -7375,7 +7375,7 @@
             "rop": 99.19,
             "flowrate": 25063.717
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114596,
@@ -7389,7 +7389,7 @@
             "rop": 27.096,
             "flowrate": 25941.046
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114597,
@@ -7403,7 +7403,7 @@
             "rop": 168.796,
             "flowrate": 27081.473
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114598,
@@ -7417,7 +7417,7 @@
             "rop": 143.712,
             "flowrate": 28327.587
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114599,
@@ -7431,7 +7431,7 @@
             "rop": 31.366,
             "flowrate": 21215.112
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114600,
@@ -7445,7 +7445,7 @@
             "rop": 183.747,
             "flowrate": 28100.693
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114601,
@@ -7459,7 +7459,7 @@
             "rop": 221.386,
             "flowrate": 24812.762
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114602,
@@ -7473,7 +7473,7 @@
             "rop": 230.183,
             "flowrate": 24506.234
         },
-        "activity": "circulating"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114603,
@@ -7487,7 +7487,7 @@
             "rop": 271.612,
             "flowrate": 24238.998
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114604,
@@ -7515,7 +7515,7 @@
             "rop": 285.922,
             "flowrate": 29450.506
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114606,
@@ -7529,7 +7529,7 @@
             "rop": 259.629,
             "flowrate": 25482.038
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114607,
@@ -7557,7 +7557,7 @@
             "rop": 47.785,
             "flowrate": 21802.901
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114609,
@@ -7571,7 +7571,7 @@
             "rop": 130.617,
             "flowrate": 27241.36
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114610,
@@ -7585,7 +7585,7 @@
             "rop": 120.57,
             "flowrate": 28122.395
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114611,
@@ -7599,7 +7599,7 @@
             "rop": 172.716,
             "flowrate": 26791.288
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114612,
@@ -7613,7 +7613,7 @@
             "rop": 175.016,
             "flowrate": 26069.223
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114613,
@@ -7627,7 +7627,7 @@
             "rop": 224.996,
             "flowrate": 25648.128
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114614,
@@ -7641,7 +7641,7 @@
             "rop": 152.967,
             "flowrate": 28609.305
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114615,
@@ -7655,7 +7655,7 @@
             "rop": 31.447,
             "flowrate": 28216.466
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114616,
@@ -7683,7 +7683,7 @@
             "rop": 92.929,
             "flowrate": 28485.877
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114618,
@@ -7697,7 +7697,7 @@
             "rop": 291.389,
             "flowrate": 24140.686
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114619,
@@ -7711,7 +7711,7 @@
             "rop": 35.358,
             "flowrate": 22536.968
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114620,
@@ -7725,7 +7725,7 @@
             "rop": 287.475,
             "flowrate": 28697.686
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114621,
@@ -7739,7 +7739,7 @@
             "rop": 27.304,
             "flowrate": 24320.248
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114622,
@@ -7753,7 +7753,7 @@
             "rop": 69.311,
             "flowrate": 28083.647
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114623,
@@ -7767,7 +7767,7 @@
             "rop": 13.974,
             "flowrate": 22634.036
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114624,
@@ -7795,7 +7795,7 @@
             "rop": 255.09,
             "flowrate": 24954.592
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114626,
@@ -7823,7 +7823,7 @@
             "rop": 278.557,
             "flowrate": 27543.76
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114628,
@@ -7837,7 +7837,7 @@
             "rop": 177.09,
             "flowrate": 22760.751
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114629,
@@ -7851,7 +7851,7 @@
             "rop": 189.002,
             "flowrate": 24436.456
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114630,
@@ -7879,7 +7879,7 @@
             "rop": 89.04,
             "flowrate": 22866.592
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114632,
@@ -7893,7 +7893,7 @@
             "rop": 106.28,
             "flowrate": 27814.902
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114633,
@@ -7907,7 +7907,7 @@
             "rop": 271.786,
             "flowrate": 21515.879
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114634,
@@ -7921,7 +7921,7 @@
             "rop": 270.289,
             "flowrate": 26471.596
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114635,
@@ -7935,7 +7935,7 @@
             "rop": 292.945,
             "flowrate": 29174.259
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114636,
@@ -7949,7 +7949,7 @@
             "rop": 270.551,
             "flowrate": 26798.368
         },
-        "activity": "tripping_out"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114637,
@@ -7963,7 +7963,7 @@
             "rop": 38.212,
             "flowrate": 28110.217
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114638,
@@ -8005,7 +8005,7 @@
             "rop": 297.24,
             "flowrate": 28945.389
         },
-        "activity": "tripping_out"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114641,
@@ -8019,7 +8019,7 @@
             "rop": 141.684,
             "flowrate": 27151.056
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114642,
@@ -8033,7 +8033,7 @@
             "rop": 166.151,
             "flowrate": 26395.538
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114643,
@@ -8047,7 +8047,7 @@
             "rop": 158.932,
             "flowrate": 26637.667
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114644,
@@ -8089,7 +8089,7 @@
             "rop": 268.695,
             "flowrate": 27844.415
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114647,
@@ -8103,7 +8103,7 @@
             "rop": 240.803,
             "flowrate": 26787.132
         },
-        "activity": "tripping_out"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114648,
@@ -8117,7 +8117,7 @@
             "rop": 41.858,
             "flowrate": 24728.045
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114649,
@@ -8131,7 +8131,7 @@
             "rop": 233.03,
             "flowrate": 28997.596
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114650,
@@ -8145,7 +8145,7 @@
             "rop": 187.754,
             "flowrate": 23361.597
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114651,
@@ -8159,7 +8159,7 @@
             "rop": 122.743,
             "flowrate": 22943.217
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114652,
@@ -8173,7 +8173,7 @@
             "rop": 76.206,
             "flowrate": 28727.963
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114653,
@@ -8187,7 +8187,7 @@
             "rop": 257.919,
             "flowrate": 27969.877
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114654,
@@ -8201,7 +8201,7 @@
             "rop": 210.056,
             "flowrate": 25149.798
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114655,
@@ -8215,7 +8215,7 @@
             "rop": 164.322,
             "flowrate": 21307.347
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114656,
@@ -8229,7 +8229,7 @@
             "rop": 182.871,
             "flowrate": 22150.715
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114657,
@@ -8243,7 +8243,7 @@
             "rop": 27.32,
             "flowrate": 26562.28
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114658,
@@ -8257,7 +8257,7 @@
             "rop": 142.176,
             "flowrate": 23850.412
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114659,
@@ -8271,7 +8271,7 @@
             "rop": 58.11,
             "flowrate": 28364.732
         },
-        "activity": "tripping_out"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114660,
@@ -8299,7 +8299,7 @@
             "rop": 198.391,
             "flowrate": 28056.369
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114662,
@@ -8313,7 +8313,7 @@
             "rop": 273.377,
             "flowrate": 23775.454
         },
-        "activity": "tripping_out"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114663,
@@ -8327,7 +8327,7 @@
             "rop": 121.127,
             "flowrate": 27886.864
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114664,
@@ -8341,7 +8341,7 @@
             "rop": 62.325,
             "flowrate": 23514.417
         },
-        "activity": "tripping_in"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114665,
@@ -8383,7 +8383,7 @@
             "rop": 224.496,
             "flowrate": 23857.167
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114668,
@@ -8397,7 +8397,7 @@
             "rop": 260.627,
             "flowrate": 29035.593
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114669,
@@ -8411,7 +8411,7 @@
             "rop": 160.966,
             "flowrate": 22389.866
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114670,
@@ -8453,7 +8453,7 @@
             "rop": 104.482,
             "flowrate": 20250.041
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114673,
@@ -8467,7 +8467,7 @@
             "rop": 116.865,
             "flowrate": 27857.822
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114674,
@@ -8481,7 +8481,7 @@
             "rop": 153.389,
             "flowrate": 23213.7
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114675,
@@ -8509,7 +8509,7 @@
             "rop": 262.289,
             "flowrate": 29178.025
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114677,
@@ -8523,7 +8523,7 @@
             "rop": 40.358,
             "flowrate": 21396.423
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114678,
@@ -8537,7 +8537,7 @@
             "rop": 51.837,
             "flowrate": 25517.793
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114679,
@@ -8565,7 +8565,7 @@
             "rop": 87.223,
             "flowrate": 20651.928
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114681,
@@ -8593,7 +8593,7 @@
             "rop": 270.833,
             "flowrate": 21155.567
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114683,
@@ -8607,7 +8607,7 @@
             "rop": 288.687,
             "flowrate": 20713.67
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114684,
@@ -8621,7 +8621,7 @@
             "rop": 196.081,
             "flowrate": 27605.581
         },
-        "activity": "tripping_out"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114685,
@@ -8635,7 +8635,7 @@
             "rop": 251.448,
             "flowrate": 24855.662
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114686,
@@ -8649,7 +8649,7 @@
             "rop": 157.561,
             "flowrate": 23428.921
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114687,
@@ -8663,7 +8663,7 @@
             "rop": 62.498,
             "flowrate": 24183.689
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114688,
@@ -8677,7 +8677,7 @@
             "rop": 157.407,
             "flowrate": 29289.467
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114689,
@@ -8691,7 +8691,7 @@
             "rop": 166.525,
             "flowrate": 29107.518
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114690,
@@ -8705,7 +8705,7 @@
             "rop": 222.737,
             "flowrate": 27156.765
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114691,
@@ -8719,7 +8719,7 @@
             "rop": 65.965,
             "flowrate": 28846.824
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114692,
@@ -8733,7 +8733,7 @@
             "rop": 110.493,
             "flowrate": 23196.48
         },
-        "activity": "tripping_out"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114693,
@@ -8747,7 +8747,7 @@
             "rop": 109.208,
             "flowrate": 23811.093
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114694,
@@ -8761,7 +8761,7 @@
             "rop": 287.832,
             "flowrate": 26137.122
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114695,
@@ -8775,7 +8775,7 @@
             "rop": 133.183,
             "flowrate": 26236.259
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114696,
@@ -8789,7 +8789,7 @@
             "rop": 226.528,
             "flowrate": 24816.998
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114697,
@@ -8803,7 +8803,7 @@
             "rop": 225.243,
             "flowrate": 24006.578
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114698,
@@ -8817,7 +8817,7 @@
             "rop": 79.663,
             "flowrate": 29861.803
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114699,
@@ -8831,7 +8831,7 @@
             "rop": 171.561,
             "flowrate": 28211.236
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114700,
@@ -8845,7 +8845,7 @@
             "rop": 268.291,
             "flowrate": 24349.802
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114701,
@@ -8859,7 +8859,7 @@
             "rop": 142.559,
             "flowrate": 27272.925
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114702,
@@ -8873,7 +8873,7 @@
             "rop": 283.535,
             "flowrate": 22695.617
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114703,
@@ -8887,7 +8887,7 @@
             "rop": 64.337,
             "flowrate": 21001.693
         },
-        "activity": "tripping_out"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114704,
@@ -8943,7 +8943,7 @@
             "rop": 297.777,
             "flowrate": 28147.92
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114708,
@@ -8957,7 +8957,7 @@
             "rop": 203.818,
             "flowrate": 23591.934
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114709,
@@ -8971,7 +8971,7 @@
             "rop": 281.006,
             "flowrate": 25804.182
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114710,
@@ -8985,7 +8985,7 @@
             "rop": 248.085,
             "flowrate": 20739.632
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114711,
@@ -9013,7 +9013,7 @@
             "rop": 170.742,
             "flowrate": 28896.937
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114713,
@@ -9055,7 +9055,7 @@
             "rop": 129.635,
             "flowrate": 29987.5
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114716,
@@ -9069,7 +9069,7 @@
             "rop": 161.646,
             "flowrate": 23718.601
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114717,
@@ -9083,7 +9083,7 @@
             "rop": 133.834,
             "flowrate": 22988.031
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114718,
@@ -9125,7 +9125,7 @@
             "rop": 14.39,
             "flowrate": 26296.412
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114721,
@@ -9139,7 +9139,7 @@
             "rop": 264.614,
             "flowrate": 27951.407
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114722,
@@ -9167,7 +9167,7 @@
             "rop": 176.683,
             "flowrate": 23553.397
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114724,
@@ -9181,7 +9181,7 @@
             "rop": 41.756,
             "flowrate": 25742.704
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114725,
@@ -9195,7 +9195,7 @@
             "rop": 1.016,
             "flowrate": 28330.569
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114726,
@@ -9209,7 +9209,7 @@
             "rop": 73.587,
             "flowrate": 26881.139
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114727,
@@ -9237,7 +9237,7 @@
             "rop": 29.758,
             "flowrate": 23367.057
         },
-        "activity": "tripping_in"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114729,
@@ -9251,7 +9251,7 @@
             "rop": 272.666,
             "flowrate": 21444.757
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114730,
@@ -9265,7 +9265,7 @@
             "rop": 64.507,
             "flowrate": 22329.722
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114731,
@@ -9279,7 +9279,7 @@
             "rop": 61.378,
             "flowrate": 29054.895
         },
-        "activity": "tripping_in"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114732,
@@ -9293,7 +9293,7 @@
             "rop": 54.452,
             "flowrate": 20368.933
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114733,
@@ -9321,7 +9321,7 @@
             "rop": 231.542,
             "flowrate": 23095.694
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114735,
@@ -9335,7 +9335,7 @@
             "rop": 262.51,
             "flowrate": 26168.841
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114736,
@@ -9363,7 +9363,7 @@
             "rop": 56.46,
             "flowrate": 22182.695
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114738,
@@ -9377,7 +9377,7 @@
             "rop": 85.583,
             "flowrate": 21642.411
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114739,
@@ -9391,7 +9391,7 @@
             "rop": 142.778,
             "flowrate": 22367.98
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114740,
@@ -9419,7 +9419,7 @@
             "rop": 74.205,
             "flowrate": 22711.778
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114742,
@@ -9433,7 +9433,7 @@
             "rop": 219.494,
             "flowrate": 29476.025
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114743,
@@ -9461,7 +9461,7 @@
             "rop": 89.354,
             "flowrate": 20587.96
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114745,
@@ -9475,7 +9475,7 @@
             "rop": 136.775,
             "flowrate": 27292.664
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114746,
@@ -9489,7 +9489,7 @@
             "rop": 21.362,
             "flowrate": 23288.453
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114747,
@@ -9517,7 +9517,7 @@
             "rop": 72.991,
             "flowrate": 22795.944
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114749,
@@ -9531,7 +9531,7 @@
             "rop": 217.624,
             "flowrate": 25707.437
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114750,
@@ -9545,7 +9545,7 @@
             "rop": 20.505,
             "flowrate": 27721.525
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114751,
@@ -9559,7 +9559,7 @@
             "rop": 286.53,
             "flowrate": 29280.087
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114752,
@@ -9573,7 +9573,7 @@
             "rop": 57.904,
             "flowrate": 22611.271
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114753,
@@ -9587,7 +9587,7 @@
             "rop": 264.823,
             "flowrate": 23348.57
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114754,
@@ -9601,7 +9601,7 @@
             "rop": 242.842,
             "flowrate": 24642.664
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114755,
@@ -9615,7 +9615,7 @@
             "rop": 290.358,
             "flowrate": 29271.748
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114756,
@@ -9629,7 +9629,7 @@
             "rop": 143.367,
             "flowrate": 29013.869
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114757,
@@ -9643,7 +9643,7 @@
             "rop": 218.219,
             "flowrate": 20898.783
         },
-        "activity": "tripping_out"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114758,
@@ -9657,7 +9657,7 @@
             "rop": 111.213,
             "flowrate": 21319.298
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114759,
@@ -9671,7 +9671,7 @@
             "rop": 55.31,
             "flowrate": 24955.092
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114760,
@@ -9685,7 +9685,7 @@
             "rop": 132.923,
             "flowrate": 21066.193
         },
-        "activity": "tripping_out"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114761,
@@ -9699,7 +9699,7 @@
             "rop": 49.725,
             "flowrate": 23455.809
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114762,
@@ -9713,7 +9713,7 @@
             "rop": 294.613,
             "flowrate": 21483.854
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114763,
@@ -9727,7 +9727,7 @@
             "rop": 28.874,
             "flowrate": 26360.404
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114764,
@@ -9741,7 +9741,7 @@
             "rop": 176.764,
             "flowrate": 29494.954
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114765,
@@ -9755,7 +9755,7 @@
             "rop": 187.939,
             "flowrate": 29967.338
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114766,
@@ -9769,7 +9769,7 @@
             "rop": 161.424,
             "flowrate": 23752.411
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114767,
@@ -9783,7 +9783,7 @@
             "rop": 198.656,
             "flowrate": 25990.126
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114768,
@@ -9797,7 +9797,7 @@
             "rop": 34.854,
             "flowrate": 28562.677
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114769,
@@ -9811,7 +9811,7 @@
             "rop": 166.506,
             "flowrate": 21174.621
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114770,
@@ -9825,7 +9825,7 @@
             "rop": 86.164,
             "flowrate": 26895.644
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114771,
@@ -9839,7 +9839,7 @@
             "rop": 282.053,
             "flowrate": 24088.437
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114772,
@@ -9853,7 +9853,7 @@
             "rop": 228.621,
             "flowrate": 22061.462
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114773,
@@ -9895,7 +9895,7 @@
             "rop": 85.54,
             "flowrate": 26954.071
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114776,
@@ -9909,7 +9909,7 @@
             "rop": 58.627,
             "flowrate": 22527.427
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114777,
@@ -9937,7 +9937,7 @@
             "rop": 72.698,
             "flowrate": 21210.813
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114779,
@@ -9951,7 +9951,7 @@
             "rop": 203.633,
             "flowrate": 28646.591
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114780,
@@ -9965,7 +9965,7 @@
             "rop": 69.327,
             "flowrate": 24934.443
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114781,
@@ -9979,7 +9979,7 @@
             "rop": 152.701,
             "flowrate": 25721.469
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114782,
@@ -10007,7 +10007,7 @@
             "rop": 208.127,
             "flowrate": 24104.931
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114784,
@@ -10021,7 +10021,7 @@
             "rop": 118.389,
             "flowrate": 21925.299
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114785,
@@ -10035,7 +10035,7 @@
             "rop": 111.741,
             "flowrate": 27451.327
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114786,
@@ -10049,7 +10049,7 @@
             "rop": 136.721,
             "flowrate": 21270.563
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114787,
@@ -10063,7 +10063,7 @@
             "rop": 53.112,
             "flowrate": 21038.738
         },
-        "activity": "tripping_in"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114788,
@@ -10077,7 +10077,7 @@
             "rop": 190.2,
             "flowrate": 27101.45
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114789,
@@ -10091,7 +10091,7 @@
             "rop": 109.246,
             "flowrate": 22088.37
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114790,
@@ -10105,7 +10105,7 @@
             "rop": 255.71,
             "flowrate": 23067.728
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114791,
@@ -10119,7 +10119,7 @@
             "rop": 226.966,
             "flowrate": 24752.275
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114792,
@@ -10133,7 +10133,7 @@
             "rop": 183.154,
             "flowrate": 24493.513
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114793,
@@ -10147,7 +10147,7 @@
             "rop": 109.261,
             "flowrate": 27085.791
         },
-        "activity": "tripping_in"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114794,
@@ -10161,7 +10161,7 @@
             "rop": 62.98,
             "flowrate": 26234.318
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114795,
@@ -10175,7 +10175,7 @@
             "rop": 232.846,
             "flowrate": 26443.962
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114796,
@@ -10189,7 +10189,7 @@
             "rop": 145.923,
             "flowrate": 27140.543
         },
-        "activity": "circulating"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114797,
@@ -10203,7 +10203,7 @@
             "rop": 67.425,
             "flowrate": 22926.127
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114798,
@@ -10217,7 +10217,7 @@
             "rop": 58.552,
             "flowrate": 23223.333
         },
-        "activity": "tripping_out"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114799,
@@ -10231,7 +10231,7 @@
             "rop": 49.62,
             "flowrate": 24379.977
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114800,
@@ -10245,7 +10245,7 @@
             "rop": 233.148,
             "flowrate": 23074.622
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114801,
@@ -10259,7 +10259,7 @@
             "rop": 68.696,
             "flowrate": 29849.379
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114802,
@@ -10273,7 +10273,7 @@
             "rop": 157.993,
             "flowrate": 28140.519
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114803,
@@ -10287,7 +10287,7 @@
             "rop": 135.464,
             "flowrate": 21646.547
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114804,
@@ -10301,7 +10301,7 @@
             "rop": 173.883,
             "flowrate": 20055.942
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114805,
@@ -10329,7 +10329,7 @@
             "rop": 260.324,
             "flowrate": 22440.635
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114807,
@@ -10343,7 +10343,7 @@
             "rop": 135.323,
             "flowrate": 21142.913
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114808,
@@ -10385,7 +10385,7 @@
             "rop": 181.858,
             "flowrate": 27367.502
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114811,
@@ -10413,7 +10413,7 @@
             "rop": 195.401,
             "flowrate": 23992.993
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114813,
@@ -10427,7 +10427,7 @@
             "rop": 46.223,
             "flowrate": 25078.942
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114814,
@@ -10441,7 +10441,7 @@
             "rop": 193.961,
             "flowrate": 28102.058
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114815,
@@ -10455,7 +10455,7 @@
             "rop": 54.795,
             "flowrate": 28391.216
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114816,
@@ -10469,7 +10469,7 @@
             "rop": 225.157,
             "flowrate": 29097.183
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114817,
@@ -10497,7 +10497,7 @@
             "rop": 212.969,
             "flowrate": 26942.747
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114819,
@@ -10511,7 +10511,7 @@
             "rop": 14.36,
             "flowrate": 21118.004
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114820,
@@ -10525,7 +10525,7 @@
             "rop": 122.358,
             "flowrate": 25652.89
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114821,
@@ -10539,7 +10539,7 @@
             "rop": 211.51,
             "flowrate": 22486.918
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114822,
@@ -10553,7 +10553,7 @@
             "rop": 68.061,
             "flowrate": 24317.169
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114823,
@@ -10567,7 +10567,7 @@
             "rop": 238.586,
             "flowrate": 26340.505
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114824,
@@ -10581,7 +10581,7 @@
             "rop": 189.234,
             "flowrate": 22569.859
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114825,
@@ -10595,7 +10595,7 @@
             "rop": 176.269,
             "flowrate": 20521.851
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114826,
@@ -10609,7 +10609,7 @@
             "rop": 106.065,
             "flowrate": 20102.339
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114827,
@@ -10623,7 +10623,7 @@
             "rop": 144.735,
             "flowrate": 20221.595
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114828,
@@ -10637,7 +10637,7 @@
             "rop": 179.205,
             "flowrate": 20083.497
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114829,
@@ -10651,7 +10651,7 @@
             "rop": 141.739,
             "flowrate": 21103.551
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114830,
@@ -10665,7 +10665,7 @@
             "rop": 209.494,
             "flowrate": 22394.887
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114831,
@@ -10679,7 +10679,7 @@
             "rop": 130.109,
             "flowrate": 22212.215
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114832,
@@ -10693,7 +10693,7 @@
             "rop": 60.682,
             "flowrate": 29867.966
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114833,
@@ -10707,7 +10707,7 @@
             "rop": 64.18,
             "flowrate": 23060.061
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114834,
@@ -10721,7 +10721,7 @@
             "rop": 1.741,
             "flowrate": 21274.208
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114835,
@@ -10749,7 +10749,7 @@
             "rop": 224.675,
             "flowrate": 28579.575
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114837,
@@ -10763,7 +10763,7 @@
             "rop": 238.249,
             "flowrate": 26780.604
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114838,
@@ -10777,7 +10777,7 @@
             "rop": 60.74,
             "flowrate": 22960.821
         },
-        "activity": "tripping_out"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114839,
@@ -10791,7 +10791,7 @@
             "rop": 287.713,
             "flowrate": 25616.162
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114840,
@@ -10805,7 +10805,7 @@
             "rop": 150.721,
             "flowrate": 27148.56
         },
-        "activity": "circulating"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114841,
@@ -10833,7 +10833,7 @@
             "rop": 212.03,
             "flowrate": 26665.385
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114843,
@@ -10847,7 +10847,7 @@
             "rop": 216.73,
             "flowrate": 28708.104
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114844,
@@ -10861,7 +10861,7 @@
             "rop": 25.513,
             "flowrate": 28701.055
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114845,
@@ -10875,7 +10875,7 @@
             "rop": 65.997,
             "flowrate": 25789.366
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114846,
@@ -10889,7 +10889,7 @@
             "rop": 2.644,
             "flowrate": 24298.564
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114847,
@@ -10903,7 +10903,7 @@
             "rop": 214.838,
             "flowrate": 26415.703
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114848,
@@ -10917,7 +10917,7 @@
             "rop": 103.331,
             "flowrate": 28182.12
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114849,
@@ -10931,7 +10931,7 @@
             "rop": 235.996,
             "flowrate": 20056.521
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114850,
@@ -10945,7 +10945,7 @@
             "rop": 101.681,
             "flowrate": 29919.97
         },
-        "activity": "tripping_in"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114851,
@@ -10959,7 +10959,7 @@
             "rop": 245.8,
             "flowrate": 21828.938
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114852,
@@ -10987,7 +10987,7 @@
             "rop": 52.012,
             "flowrate": 28720.297
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114854,
@@ -11001,7 +11001,7 @@
             "rop": 102.263,
             "flowrate": 22250.404
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114855,
@@ -11015,7 +11015,7 @@
             "rop": 122.546,
             "flowrate": 24767.952
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114856,
@@ -11043,7 +11043,7 @@
             "rop": 229.094,
             "flowrate": 23950.763
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114858,
@@ -11057,7 +11057,7 @@
             "rop": 29.085,
             "flowrate": 21771.355
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114859,
@@ -11071,7 +11071,7 @@
             "rop": 105.365,
             "flowrate": 23636.277
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114860,
@@ -11113,7 +11113,7 @@
             "rop": 282.703,
             "flowrate": 29948.13
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114863,
@@ -11127,7 +11127,7 @@
             "rop": 295.895,
             "flowrate": 21147.863
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114864,
@@ -11141,7 +11141,7 @@
             "rop": 26.57,
             "flowrate": 27259.688
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114865,
@@ -11155,7 +11155,7 @@
             "rop": 87.382,
             "flowrate": 20517.455
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114866,
@@ -11169,7 +11169,7 @@
             "rop": 111.72,
             "flowrate": 20301.92
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114867,
@@ -11197,7 +11197,7 @@
             "rop": 178.778,
             "flowrate": 29654.857
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114869,
@@ -11211,7 +11211,7 @@
             "rop": 193.31,
             "flowrate": 29408.635
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114870,
@@ -11225,7 +11225,7 @@
             "rop": 227.253,
             "flowrate": 21939.278
         },
-        "activity": "tripping_out"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114871,
@@ -11239,7 +11239,7 @@
             "rop": 35.394,
             "flowrate": 21616.723
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114872,
@@ -11253,7 +11253,7 @@
             "rop": 249.963,
             "flowrate": 22405.351
         },
-        "activity": "circulating"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114873,
@@ -11267,7 +11267,7 @@
             "rop": 211.686,
             "flowrate": 25155.47
         },
-        "activity": "tripping_in"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114874,
@@ -11295,7 +11295,7 @@
             "rop": 266.921,
             "flowrate": 22215.934
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114876,
@@ -11309,7 +11309,7 @@
             "rop": 210.092,
             "flowrate": 27566.228
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114877,
@@ -11337,7 +11337,7 @@
             "rop": 128.924,
             "flowrate": 29221.313
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114879,
@@ -11365,7 +11365,7 @@
             "rop": 16.565,
             "flowrate": 24363.512
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114881,
@@ -11393,7 +11393,7 @@
             "rop": 38.573,
             "flowrate": 28179.146
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114883,
@@ -11407,7 +11407,7 @@
             "rop": 209.238,
             "flowrate": 22904.816
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114884,
@@ -11421,7 +11421,7 @@
             "rop": 151.869,
             "flowrate": 23397.145
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114885,
@@ -11435,7 +11435,7 @@
             "rop": 7.69,
             "flowrate": 29359.552
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114886,
@@ -11449,7 +11449,7 @@
             "rop": 277.424,
             "flowrate": 21647.41
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114887,
@@ -11463,7 +11463,7 @@
             "rop": 255.551,
             "flowrate": 20421.504
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114888,
@@ -11477,7 +11477,7 @@
             "rop": 157.277,
             "flowrate": 24540.553
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114889,
@@ -11491,7 +11491,7 @@
             "rop": 68.683,
             "flowrate": 28012.099
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114890,
@@ -11533,7 +11533,7 @@
             "rop": 76.628,
             "flowrate": 25332.007
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114893,
@@ -11547,7 +11547,7 @@
             "rop": 152.007,
             "flowrate": 21000.647
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114894,
@@ -11561,7 +11561,7 @@
             "rop": 289.923,
             "flowrate": 25886.89
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114895,
@@ -11575,7 +11575,7 @@
             "rop": 172.486,
             "flowrate": 27783.956
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114896,
@@ -11589,7 +11589,7 @@
             "rop": 266.979,
             "flowrate": 20933.281
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114897,
@@ -11603,7 +11603,7 @@
             "rop": 195.264,
             "flowrate": 21726.574
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114898,
@@ -11645,7 +11645,7 @@
             "rop": 141.41,
             "flowrate": 28867.344
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114901,
@@ -11659,7 +11659,7 @@
             "rop": 260.588,
             "flowrate": 26706.633
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114902,
@@ -11673,7 +11673,7 @@
             "rop": 87.473,
             "flowrate": 29820.401
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114903,
@@ -11687,7 +11687,7 @@
             "rop": 38.644,
             "flowrate": 20630.337
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114904,
@@ -11701,7 +11701,7 @@
             "rop": 256.594,
             "flowrate": 29030.011
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114905,
@@ -11715,7 +11715,7 @@
             "rop": 176.225,
             "flowrate": 28140.683
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114906,
@@ -11729,7 +11729,7 @@
             "rop": 266.728,
             "flowrate": 23142.415
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114907,
@@ -11743,7 +11743,7 @@
             "rop": 281.348,
             "flowrate": 29735.266
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114908,
@@ -11757,7 +11757,7 @@
             "rop": 16.089,
             "flowrate": 22879.377
         },
-        "activity": "tripping_in"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114909,
@@ -11771,7 +11771,7 @@
             "rop": 150.291,
             "flowrate": 28893.047
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114910,
@@ -11785,7 +11785,7 @@
             "rop": 112.489,
             "flowrate": 28807.486
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114911,
@@ -11799,7 +11799,7 @@
             "rop": 187.758,
             "flowrate": 27576.576
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114912,
@@ -11827,7 +11827,7 @@
             "rop": 84.177,
             "flowrate": 21200.027
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114914,
@@ -11869,7 +11869,7 @@
             "rop": 40.329,
             "flowrate": 27922.17
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114917,
@@ -11883,7 +11883,7 @@
             "rop": 244.22,
             "flowrate": 27581.292
         },
-        "activity": "circulating"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114918,
@@ -11897,7 +11897,7 @@
             "rop": 181.833,
             "flowrate": 29106.125
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114919,
@@ -11911,7 +11911,7 @@
             "rop": 284.861,
             "flowrate": 20148.302
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114920,
@@ -11925,7 +11925,7 @@
             "rop": 101.859,
             "flowrate": 28091.032
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114921,
@@ -11939,7 +11939,7 @@
             "rop": 32.444,
             "flowrate": 29384.621
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114922,
@@ -11953,7 +11953,7 @@
             "rop": 151.95,
             "flowrate": 27893.004
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114923,
@@ -11981,7 +11981,7 @@
             "rop": 290.858,
             "flowrate": 20812.791
         },
-        "activity": "circulating"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114925,
@@ -12009,7 +12009,7 @@
             "rop": 226.051,
             "flowrate": 26287.452
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114927,
@@ -12023,7 +12023,7 @@
             "rop": 157.531,
             "flowrate": 26296.727
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114928,
@@ -12037,7 +12037,7 @@
             "rop": 110.586,
             "flowrate": 29869.137
         },
-        "activity": "tripping_in"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114929,
@@ -12051,7 +12051,7 @@
             "rop": 19.753,
             "flowrate": 23980.432
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114930,
@@ -12065,7 +12065,7 @@
             "rop": 186.65,
             "flowrate": 23319.063
         },
-        "activity": "tripping_in"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114931,
@@ -12079,7 +12079,7 @@
             "rop": 175.566,
             "flowrate": 26244.249
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114932,
@@ -12093,7 +12093,7 @@
             "rop": 84.265,
             "flowrate": 28256.087
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114933,
@@ -12107,7 +12107,7 @@
             "rop": 273.067,
             "flowrate": 29367.739
         },
-        "activity": "circulating"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114934,
@@ -12121,7 +12121,7 @@
             "rop": 91.233,
             "flowrate": 28031.242
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114935,
@@ -12135,7 +12135,7 @@
             "rop": 134.918,
             "flowrate": 24266.74
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114936,
@@ -12149,7 +12149,7 @@
             "rop": 163.129,
             "flowrate": 26349.142
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114937,
@@ -12163,7 +12163,7 @@
             "rop": 30.07,
             "flowrate": 28562.993
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114938,
@@ -12191,7 +12191,7 @@
             "rop": 112.361,
             "flowrate": 22166.866
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114940,
@@ -12219,7 +12219,7 @@
             "rop": 116.187,
             "flowrate": 20001.577
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114942,
@@ -12247,7 +12247,7 @@
             "rop": 154.096,
             "flowrate": 21110.972
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114944,
@@ -12261,7 +12261,7 @@
             "rop": 208.363,
             "flowrate": 22438.391
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114945,
@@ -12303,7 +12303,7 @@
             "rop": 245.769,
             "flowrate": 23979.573
         },
-        "activity": "circulating"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114948,
@@ -12331,7 +12331,7 @@
             "rop": 256.646,
             "flowrate": 20556.387
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114950,
@@ -12345,7 +12345,7 @@
             "rop": 27.569,
             "flowrate": 21239.392
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114951,
@@ -12359,7 +12359,7 @@
             "rop": 250.336,
             "flowrate": 24992.115
         },
-        "activity": "tripping_out"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114952,
@@ -12373,7 +12373,7 @@
             "rop": 108.237,
             "flowrate": 23369.648
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114953,
@@ -12387,7 +12387,7 @@
             "rop": 183.663,
             "flowrate": 22958.134
         },
-        "activity": "tripping_in"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114954,
@@ -12401,7 +12401,7 @@
             "rop": 45.866,
             "flowrate": 20670.281
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114955,
@@ -12415,7 +12415,7 @@
             "rop": 19.851,
             "flowrate": 28957.192
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114956,
@@ -12429,7 +12429,7 @@
             "rop": 64.781,
             "flowrate": 26918.186
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114957,
@@ -12443,7 +12443,7 @@
             "rop": 38.356,
             "flowrate": 21216.182
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114958,
@@ -12457,7 +12457,7 @@
             "rop": 93.722,
             "flowrate": 20650.46
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114959,
@@ -12471,7 +12471,7 @@
             "rop": 154.315,
             "flowrate": 29748.725
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114960,
@@ -12485,7 +12485,7 @@
             "rop": 176.628,
             "flowrate": 26811.726
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114961,
@@ -12499,7 +12499,7 @@
             "rop": 236.96,
             "flowrate": 24174.561
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114962,
@@ -12513,7 +12513,7 @@
             "rop": 196.872,
             "flowrate": 27017.31
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114963,
@@ -12527,7 +12527,7 @@
             "rop": 182.627,
             "flowrate": 27563.318
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114964,
@@ -12541,7 +12541,7 @@
             "rop": 123.535,
             "flowrate": 27799.622
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114965,
@@ -12555,7 +12555,7 @@
             "rop": 142.143,
             "flowrate": 24778.773
         },
-        "activity": "tripping_in"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114966,
@@ -12569,7 +12569,7 @@
             "rop": 124.356,
             "flowrate": 24298.828
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114967,
@@ -12597,7 +12597,7 @@
             "rop": 69.0,
             "flowrate": 29265.571
         },
-        "activity": "tripping_in"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114969,
@@ -12611,7 +12611,7 @@
             "rop": 1.716,
             "flowrate": 26033.079
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114970,
@@ -12625,7 +12625,7 @@
             "rop": 195.396,
             "flowrate": 22031.539
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114971,
@@ -12639,7 +12639,7 @@
             "rop": 60.739,
             "flowrate": 29196.034
         },
-        "activity": "slide_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114972,
@@ -12653,7 +12653,7 @@
             "rop": 267.035,
             "flowrate": 29149.319
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114973,
@@ -12667,7 +12667,7 @@
             "rop": 257.714,
             "flowrate": 29891.842
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114974,
@@ -12681,7 +12681,7 @@
             "rop": 23.018,
             "flowrate": 28740.566
         },
-        "activity": "circulating"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114975,
@@ -12695,7 +12695,7 @@
             "rop": 31.917,
             "flowrate": 29977.844
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114976,
@@ -12709,7 +12709,7 @@
             "rop": 148.551,
             "flowrate": 22446.862
         },
-        "activity": "tripping_in"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114977,
@@ -12723,7 +12723,7 @@
             "rop": 182.767,
             "flowrate": 28422.496
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677114978,
@@ -12737,7 +12737,7 @@
             "rop": 82.473,
             "flowrate": 28230.283
         },
-        "activity": "tripping_out"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114979,
@@ -12751,7 +12751,7 @@
             "rop": 215.039,
             "flowrate": 22309.404
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114980,
@@ -12779,7 +12779,7 @@
             "rop": 97.447,
             "flowrate": 29794.205
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114982,
@@ -12821,7 +12821,7 @@
             "rop": 64.426,
             "flowrate": 20041.272
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114985,
@@ -12835,7 +12835,7 @@
             "rop": 250.342,
             "flowrate": 20210.248
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114986,
@@ -12849,7 +12849,7 @@
             "rop": 126.087,
             "flowrate": 24658.713
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114987,
@@ -12863,7 +12863,7 @@
             "rop": 173.123,
             "flowrate": 22387.147
         },
-        "activity": "tripping_in"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114988,
@@ -12877,7 +12877,7 @@
             "rop": 261.885,
             "flowrate": 26898.413
         },
-        "activity": "circulating"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114989,
@@ -12891,7 +12891,7 @@
             "rop": 259.087,
             "flowrate": 25655.643
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677114990,
@@ -12905,7 +12905,7 @@
             "rop": 111.456,
             "flowrate": 20774.858
         },
-        "activity": "tripping_out"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114991,
@@ -12919,7 +12919,7 @@
             "rop": 62.667,
             "flowrate": 21626.283
         },
-        "activity": "tripping_out"
+        "activity": "casing"
     },
     {
         "timestamp": 1677114992,
@@ -12933,7 +12933,7 @@
             "rop": 232.544,
             "flowrate": 23880.493
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114993,
@@ -12947,7 +12947,7 @@
             "rop": 129.924,
             "flowrate": 21856.041
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677114994,
@@ -12961,7 +12961,7 @@
             "rop": 57.613,
             "flowrate": 27922.223
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677114995,
@@ -13003,7 +13003,7 @@
             "rop": 7.742,
             "flowrate": 24843.429
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677114998,
@@ -13031,7 +13031,7 @@
             "rop": 186.695,
             "flowrate": 21289.373
         },
-        "activity": "tripping_out"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677115000,
@@ -13059,7 +13059,7 @@
             "rop": 93.313,
             "flowrate": 28595.277
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677115002,
@@ -13073,7 +13073,7 @@
             "rop": 96.003,
             "flowrate": 29246.125
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677115003,
@@ -13087,7 +13087,7 @@
             "rop": 101.848,
             "flowrate": 28262.577
         },
-        "activity": "rotary_drilling"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677115004,
@@ -13101,7 +13101,7 @@
             "rop": 204.048,
             "flowrate": 23340.772
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677115005,
@@ -13129,7 +13129,7 @@
             "rop": 278.735,
             "flowrate": 25491.557
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677115007,
@@ -13143,7 +13143,7 @@
             "rop": 66.756,
             "flowrate": 27218.532
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677115008,
@@ -13157,7 +13157,7 @@
             "rop": 299.902,
             "flowrate": 29933.728
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677115009,
@@ -13213,7 +13213,7 @@
             "rop": 24.254,
             "flowrate": 28322.258
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677115013,
@@ -13227,7 +13227,7 @@
             "rop": 262.48,
             "flowrate": 28463.488
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677115014,
@@ -13241,7 +13241,7 @@
             "rop": 257.625,
             "flowrate": 26784.635
         },
-        "activity": "casing"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677115015,
@@ -13255,7 +13255,7 @@
             "rop": 121.071,
             "flowrate": 29540.158
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677115016,
@@ -13269,7 +13269,7 @@
             "rop": 210.719,
             "flowrate": 25110.048
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677115017,
@@ -13283,7 +13283,7 @@
             "rop": 167.12,
             "flowrate": 29138.148
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677115018,
@@ -13297,7 +13297,7 @@
             "rop": 255.887,
             "flowrate": 29678.121
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677115019,
@@ -13325,7 +13325,7 @@
             "rop": 157.102,
             "flowrate": 23097.586
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677115021,
@@ -13339,7 +13339,7 @@
             "rop": 145.612,
             "flowrate": 21962.157
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677115022,
@@ -13353,7 +13353,7 @@
             "rop": 106.172,
             "flowrate": 25481.201
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677115023,
@@ -13367,7 +13367,7 @@
             "rop": 267.437,
             "flowrate": 24530.148
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677115024,
@@ -13381,7 +13381,7 @@
             "rop": 49.763,
             "flowrate": 28777.583
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677115025,
@@ -13395,7 +13395,7 @@
             "rop": 44.853,
             "flowrate": 21000.317
         },
-        "activity": "casing"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677115026,
@@ -13409,7 +13409,7 @@
             "rop": 173.073,
             "flowrate": 22577.401
         },
-        "activity": "tripping_in"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677115027,
@@ -13423,7 +13423,7 @@
             "rop": 197.248,
             "flowrate": 27517.989
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677115028,
@@ -13437,7 +13437,7 @@
             "rop": 58.386,
             "flowrate": 20949.866
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677115029,
@@ -13451,7 +13451,7 @@
             "rop": 117.215,
             "flowrate": 23207.644
         },
-        "activity": "slide_drilling"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677115030,
@@ -13465,7 +13465,7 @@
             "rop": 283.969,
             "flowrate": 23871.554
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677115031,
@@ -13479,7 +13479,7 @@
             "rop": 73.985,
             "flowrate": 26225.938
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677115032,
@@ -13493,7 +13493,7 @@
             "rop": 200.508,
             "flowrate": 21581.326
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677115033,
@@ -13507,7 +13507,7 @@
             "rop": 222.045,
             "flowrate": 28606.045
         },
-        "activity": "rotary_drilling"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677115034,
@@ -13521,7 +13521,7 @@
             "rop": 134.439,
             "flowrate": 24475.422
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677115035,
@@ -13535,7 +13535,7 @@
             "rop": 281.258,
             "flowrate": 29170.217
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677115036,
@@ -13549,7 +13549,7 @@
             "rop": 220.997,
             "flowrate": 24678.699
         },
-        "activity": "tripping_in"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677115037,
@@ -13563,7 +13563,7 @@
             "rop": 137.377,
             "flowrate": 22750.403
         },
-        "activity": "circulating"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677115038,
@@ -13577,7 +13577,7 @@
             "rop": 170.801,
             "flowrate": 21418.288
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677115039,
@@ -13591,7 +13591,7 @@
             "rop": 207.784,
             "flowrate": 20037.451
         },
-        "activity": "rotary_drilling"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677115040,
@@ -13605,7 +13605,7 @@
             "rop": 177.657,
             "flowrate": 25321.575
         },
-        "activity": "tripping_in"
+        "activity": "casing"
     },
     {
         "timestamp": 1677115041,
@@ -13619,7 +13619,7 @@
             "rop": 263.609,
             "flowrate": 21071.567
         },
-        "activity": "circulating"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677115042,
@@ -13633,7 +13633,7 @@
             "rop": 107.067,
             "flowrate": 23917.278
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677115043,
@@ -13675,7 +13675,7 @@
             "rop": 11.335,
             "flowrate": 21752.243
         },
-        "activity": "tripping_out"
+        "activity": "circulating"
     },
     {
         "timestamp": 1677115046,
@@ -13703,7 +13703,7 @@
             "rop": 261.017,
             "flowrate": 29467.912
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677115048,
@@ -13745,7 +13745,7 @@
             "rop": 184.393,
             "flowrate": 29600.127
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677115051,
@@ -13759,7 +13759,7 @@
             "rop": 254.766,
             "flowrate": 20377.842
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677115052,
@@ -13773,7 +13773,7 @@
             "rop": 144.08,
             "flowrate": 29776.323
         },
-        "activity": "tripping_out"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677115053,
@@ -13787,7 +13787,7 @@
             "rop": 261.123,
             "flowrate": 20046.445
         },
-        "activity": "circulating"
+        "activity": "rotary_drilling"
     },
     {
         "timestamp": 1677115054,
@@ -13801,7 +13801,7 @@
             "rop": 107.834,
             "flowrate": 28736.687
         },
-        "activity": "rotary_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677115055,
@@ -13815,7 +13815,7 @@
             "rop": 278.012,
             "flowrate": 23073.252
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677115056,
@@ -13829,7 +13829,7 @@
             "rop": 209.597,
             "flowrate": 29385.889
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677115057,
@@ -13843,7 +13843,7 @@
             "rop": 77.153,
             "flowrate": 23169.453
         },
-        "activity": "casing"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677115058,
@@ -13857,7 +13857,7 @@
             "rop": 169.225,
             "flowrate": 26543.063
         },
-        "activity": "casing"
+        "activity": "slide_drilling"
     },
     {
         "timestamp": 1677115059,
@@ -13913,7 +13913,7 @@
             "rop": 94.436,
             "flowrate": 25286.859
         },
-        "activity": "slide_drilling"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677115063,
@@ -13927,7 +13927,7 @@
             "rop": 15.705,
             "flowrate": 29279.691
         },
-        "activity": "tripping_out"
+        "activity": "tripping_in"
     },
     {
         "timestamp": 1677115064,
@@ -13941,7 +13941,7 @@
             "rop": 284.597,
             "flowrate": 24287.514
         },
-        "activity": "circulating"
+        "activity": "casing"
     },
     {
         "timestamp": 1677115065,
@@ -13955,7 +13955,7 @@
             "rop": 192.447,
             "flowrate": 28698.124
         },
-        "activity": "slide_drilling"
+        "activity": "casing"
     },
     {
         "timestamp": 1677115066,
@@ -13969,7 +13969,7 @@
             "rop": 263.076,
             "flowrate": 24489.554
         },
-        "activity": "casing"
+        "activity": "tripping_out"
     },
     {
         "timestamp": 1677115067,
@@ -13983,7 +13983,7 @@
             "rop": 202.817,
             "flowrate": 29792.483
         },
-        "activity": "tripping_in"
+        "activity": "casing"
     },
     {
         "timestamp": 1677115068,
@@ -13997,6 +13997,6 @@
             "rop": 107.095,
             "flowrate": 29598.344
         },
-        "activity": "casing"
+        "activity": "circulating"
     }
 ]

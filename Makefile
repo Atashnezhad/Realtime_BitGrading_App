@@ -63,4 +63,4 @@ run-all:
 # zip the src folder, lambda_function.py and requirements.txt and use the package name
 .PHONY: zip
 zip:
-	zip -r $(package_name).zip src/* lambda_function.py requirments.txt
+	zip -r $(package_name).zip src/* lambda_function.py requirments.txt resources/*

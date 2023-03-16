@@ -98,9 +98,9 @@ class Test1(unittest.TestCase):
         # get the last record for each drill string in list
         records = [v[-1] for k, v in records.items()]
         expected_calculated_bg = [
-            0.821,
-            2.732,
-            1.141,
+            0.912,
+            2.531,
+            1.064,
         ]  # note if the data is re-generated using p01_2 file then these values should be edited
         # based on new values.
         for case, expected_bg in zip(records, expected_calculated_bg):
