@@ -8,6 +8,9 @@ class Settings(BaseModel):
     WITS_COLLECTION = "wits"
     DOWN_HOLE_MOTOR_COLLECTION = "dhm_data"
     DRILL_STRING_COLLECTION = "ds_data"
+    CACHE_BUCKET_NAME = "bgapptestdemo"
+    CACHE_FILE_NAME = "cache.json"
+    CACHE_REGION_NAME = "us-east-2"
 
 
 SETTINGS = Settings()

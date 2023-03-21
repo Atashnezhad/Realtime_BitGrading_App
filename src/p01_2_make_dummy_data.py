@@ -125,8 +125,8 @@ class GenerateDummyData:
         mydb = myclient["Drilling"]
         mycol = mydb["wits"]
         if kwargs.get("insert_to_mongoDB"):
-            for record in records:
-                mycol.insert_one(record)
+            # insert the data into the mongoDB
+            mycol.insert_many(records)
 
     @staticmethod
     def make_ds_data(**kwargs) -> None:

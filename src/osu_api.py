@@ -3,7 +3,10 @@ import os
 from pathlib import Path
 from typing import Dict
 
+import boto3
 import pymongo
+
+from src.model import SETTINGS
 
 
 class Api:
@@ -18,12 +21,6 @@ class Api:
         self._path: str = kwargs.get(
             "resources_path", Path(__file__).parent / ".." / "resources"
         )
-        self._cache_address: str = self._path / "calculated_bg" / "cache.json"
-        self.empty_cache()
-
-    def empty_cache(self) -> None:
-        with open(self._cache_address, "w") as f:
-            json.dump([], f)
 
     def get_data(self, *args, **kwargs) -> Dict:
         provider = kwargs.get("provider_name", {})
@@ -118,8 +115,20 @@ class Api:
             json.dump(data, f, indent=4, sort_keys=False)
 
         # save the last data in cache
-        with open(self._cache_address, "w") as f:
-            json.dump(data[-1], f, indent=4, sort_keys=False)
+        # with open(self._cache_address, "w") as f:
+        #     json.dump(data[-1], f, indent=4, sort_keys=False)
+
+        # save the latest data in the S3
+        bucket_name = SETTINGS.CACHE_BUCKET_NAME
+        file_name = SETTINGS.CACHE_FILE_NAME
+        s3 = boto3.resource(
+            service_name="s3",
+            region_name=SETTINGS.CACHE_REGION_NAME,
+            aws_access_key_id=os.getenv("S3_AWS_ACCESS_KEY"),
+            aws_secret_access_key=os.getenv("S3_AWS_SECRET_ACCESS_KEY"),
+        )
+
+        s3.Object(bucket_name, file_name).put(Body=json.dumps(data[-1]))
 
 
 if __name__ == "__main__":

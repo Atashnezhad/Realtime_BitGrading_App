@@ -1,8 +1,11 @@
 import json
+import os
 import uuid
 from itertools import groupby
 from pathlib import Path
 from typing import Dict, List
+
+import boto3
 
 from src.model import (SETTINGS, BitGrade, BitGradeData, DownholeMotor,
                        DrillSting, Wits)
@@ -128,12 +131,23 @@ class BGApp:
             ]
 
             # check the cache for the latest bit_grade for the drill_string_id
-            path = Path(__file__).parent / ".." / "resources" / "calculated_bg"
-            filename = "cache.json"
-            address = path / filename
+            # path = Path(__file__).parent / ".." / "resources" / "calculated_bg"
+            # filename = "cache.json"
+            # address = path / filename
 
-            with open(address, "r") as f:
-                cache = json.load(f)
+            # with open(address, "r") as f:
+            #     cache = json.load(f)
+            bucket_name = SETTINGS.CACHE_BUCKET_NAME
+            file_name = SETTINGS.CACHE_FILE_NAME
+            s3 = boto3.resource(
+                service_name="s3",
+                region_name=SETTINGS.CACHE_REGION_NAME,
+                aws_access_key_id=os.getenv("S3_AWS_ACCESS_KEY"),
+                aws_secret_access_key=os.getenv("S3_AWS_SECRET_ACCESS_KEY"),
+            )
+            s3_object = s3.Object(bucket_name, file_name).get()
+            cache = s3_object["Body"].read().decode("utf-8")
+            cache = json.loads(cache)
             # if cache is not emmpy
             if cache:
                 cache_ds = cache.get("drillstring_id")
