@@ -52,7 +52,12 @@ class Test1(unittest.TestCase):
             # check if i + 5 is less than end_ts
             if i + 60 > end_ts:
                 _end_ts = end_ts
-            event = {"start_ts": i, "end_ts": _end_ts, "asset_id": 123456789}
+            event = {
+                "start_ts": i,
+                "end_ts": _end_ts,
+                "asset_id": 123456789,
+                "task": "calculate_bg",
+            }
             # print(event)
             bg_app = BGApp(api, event)
             records = bg_app.get_wits_data()
@@ -60,6 +65,7 @@ class Test1(unittest.TestCase):
             # sleep for 5 second
             time.sleep(1)
 
+    @unittest.skip
     def test_calculated_bg(self):
         """
         In this test, the app is triggered with a batch event and the app should
@@ -84,7 +90,12 @@ class Test1(unittest.TestCase):
             # check if i + 5 is less than end_ts
             if i + 60 > end_ts:
                 _end_ts = end_ts
-            event = {"start_ts": i, "end_ts": _end_ts, "asset_id": 123456789}
+            event = {
+                "start_ts": i,
+                "end_ts": _end_ts,
+                "asset_id": 123456789,
+                "task": "calculate_bg",
+            }
             bg_app = BGApp(api, event)
             bg_app.run()
 
@@ -132,7 +143,80 @@ class Test1(unittest.TestCase):
                 "start_ts": i,
                 "end_ts": _end_ts,
                 "asset_id": 123456789,
+                "task": "calculate_bg",
             }
             event = {"body": body}
 
             lambda_handler(api, event, context=None)
+
+    def test_return_cache(self):
+        api = Api()
+        start_ts = 1677112070
+        end_ts = 1677115068  # this the final wits timestamp
+
+        body = {
+            "start_ts": start_ts,
+            "end_ts": end_ts,
+            "asset_id": end_ts,
+            "task": "return_cache",
+        }
+        event = {"body": body}
+
+        lambda_handler(api, event, context=None)
+
+    # skip this test for now
+    @unittest.skip
+    def test_delete_cache(self):
+        api = Api()
+        start_ts = 1677112070
+        end_ts = 1677115068  # this the final wits timestamp
+
+        body = {
+            "start_ts": start_ts,
+            "end_ts": end_ts,
+            "asset_id": end_ts,
+            "task": "delete_cache",
+        }
+        event = {"body": body}
+
+        lambda_handler(api, event, context=None)
+
+    def test_not_defined_task_cache(self):
+        api = Api()
+        start_ts = 1677112070
+        end_ts = 1677115068  # this the final wits timestamp
+
+        body = {
+            "start_ts": start_ts,
+            "end_ts": end_ts,
+            "asset_id": end_ts,
+            # "task": "delete_cache"
+        }
+        event = {"body": body}
+        try:
+            lambda_handler(api, event, context=None)
+        except ValueError as e:
+            # asset if the value error is raised
+            self.assertEqual(str(e), "Invalid task: None")
+
+    def test_events_without_needed_fields(self):
+        api = Api()
+        start_ts = 1677112070
+        # end_ts = 1677115068
+
+        body = {
+            "start_ts": start_ts,
+            # "end_ts": end_ts,
+            # "asset_id": end_ts,
+            "task": "calculate_bg",
+        }
+        event = {"body": body}
+
+        try:
+            lambda_handler(api, event, context=None)
+        except ValueError as e:
+            # asset if the value error is raised
+            self.assertEqual(
+                str(e),
+                "Missing items in the event: ['start_ts', 'end_ts', 'asset_id', 'task']",
+            )

@@ -3,10 +3,11 @@ import os
 import uuid
 from itertools import groupby
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 import boto3
 
+from src.enums import BGAppTasks
 from src.model import (SETTINGS, BitGrade, BitGradeData, DownholeMotor,
                        DrillSting, Wits)
 from src.osu_api import Api
@@ -23,6 +24,30 @@ class BGApp:
         self._api = api
         self._event = event
         self._asset_id = event.get("asset_id", None)
+        self._event_task = event.get("task", None)
+
+    def run(self) -> Optional[Dict]:
+        if self._event_task == BGAppTasks.CALCULATE_BG.value:
+            item_needed = BGAppTasks.CALCULATE_BG.items_needed
+            # check if all ITEMS_NEEDED_TO_CALCULATE_BG are present in the event
+            if not all(item in self._event for item in item_needed):
+                raise ValueError(f"Missing items in the event: {item_needed}")
+            self.calculate_BG()
+        elif self._event_task == BGAppTasks.RETURN_CACHE.value:
+            item_needed = BGAppTasks.RETURN_CACHE.items_needed
+            # check if all ITEMS_NEEDED_TO_RETURN_CACHE are present in the event
+            if not all(item in self._event for item in item_needed):
+                raise ValueError(f"Missing items in the event: {item_needed}")
+            cache = self.return_cache()
+            return cache
+        elif self._event_task == BGAppTasks.DELETE_CACHE.value:
+            item_needed = BGAppTasks.DELETE_CACHE.items_needed
+            # check if all ITEMS_NEEDED_TO_RETURN_BG are present in the event
+            if not all(item in self._event for item in item_needed):
+                raise ValueError(f"Missing items in the event: {item_needed}")
+            self.delete_cache()
+        else:
+            raise ValueError(f"Invalid task: {self._event_task}")
 
     def get_wits_data(self) -> Dict:
         start_ts = self._event["start_ts"]
@@ -83,7 +108,7 @@ class BGApp:
 
         return dhm_records
 
-    def run(self, _return=False) -> List:
+    def calculate_BG(self, _return=False) -> List:
         parsed_wits_records = self.get_wits_data()
         # group the records based on the drill_string_id
         parsed_wits_records_per_ds = {
@@ -106,6 +131,36 @@ class BGApp:
         )
         if _return:
             return bg_list
+
+    def return_cache(self):
+        bucket_name = "bgapptestdemo"
+        file_name = "cache.json"
+        s3 = boto3.resource(
+            service_name="s3",
+            region_name="us-east-2",
+            aws_access_key_id=os.getenv("S3_AWS_ACCESS_KEY"),
+            aws_secret_access_key=os.getenv("S3_AWS_SECRET_ACCESS_KEY"),
+        )
+        # read the file from the bucket again and print the data
+        s3_object = s3.Object(bucket_name, file_name).get()
+        # the data in body is in json format
+        data = s3_object["Body"].read().decode("utf-8")
+        data = json.loads(data)
+        # print(data)
+        return data
+
+    def delete_cache(self):
+        bucket_name = "bgapptestdemo"
+        file_name = "cache.json"
+        s3 = boto3.resource(
+            service_name="s3",
+            region_name="us-east-2",
+            aws_access_key_id=os.getenv("S3_AWS_ACCESS_KEY"),
+            aws_secret_access_key=os.getenv("S3_AWS_SECRET_ACCESS_KEY"),
+        )
+        # if the file exists, delete it and print a message
+        s3.Object(bucket_name, file_name).delete()
+        print("File deleted")
 
     def calculate_bit_grade(
         self, parsed_wits_records_per_ds: Dict, ds_dhm_cof_map: Dict, _return=False

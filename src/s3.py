@@ -14,16 +14,19 @@ if __name__ == "__main__":
     )
 
     # check if the file exists in the bucket
-    s3.Object(bucket_name, file_name).load()
+    # s3.Object(bucket_name, file_name).load()
 
     # if the file exists, delete it and print a message
-    s3.Object(bucket_name, file_name).delete()
-    print(f"{file_name} deleted from {bucket_name}")
+    # s3.Object(bucket_name, file_name).delete()
+    # print(f"{file_name} deleted from {bucket_name}")
+
     # write a following dict into the bucket
     data = {
-        "name": "John Doe",
-        "age": 30,
-        "address": "123 Main St",
+        "id": "92a6e03f-ece0-4b59-b960-3fc8997aebda",
+        "timestamp": 1677115017,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_1",
+        "data": {"bg": 0},
     }
     s3.Object(bucket_name, file_name).put(Body=json.dumps(data))
     print(f"{file_name} written to {bucket_name}")

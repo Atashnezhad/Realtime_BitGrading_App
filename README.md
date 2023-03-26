@@ -57,5 +57,3 @@ The event is a JSON file and has the following schema:
    "asset_id": 123456789
 }
 ```
-
-

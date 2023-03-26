@@ -6,6 +6,7 @@ from src.osu_api import Api
 
 def lambda_handler(api: Api, event: Dict, context):
     event = event["body"]
-    bg_app = BGApp(api, event)
-    output = bg_app.run(_return=True)
-    print(output)
+    obj = BGApp(api, event)
+    returned_value = obj.run()
+    print(returned_value)
+
