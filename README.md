@@ -57,3 +57,15 @@ The event is a JSON file and has the following schema:
    "asset_id": 123456789
 }
 ```
+
+
+```mermaid
+sequenceDiagram
+Scheduler->>BGApp: event
+BGApp->>MongoDb: Get wits, drillstring, downhole motor
+MongoDb-->>BGApp: wits, drillstring, downhole motor
+BGApp->>S3: Get cahce
+S3-->>BGApp: cache
+BGApp->>BGApp: Calculate BG
+BGApp->>MongoDb: Post BG
+```
