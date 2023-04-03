@@ -79,7 +79,6 @@ class BitGradeData(BaseModel):
 
 
 class BitGrade(BaseModel):
-    id: str = None
     timestamp: int = None
     provider: str = None
     drillstring_id: str = None

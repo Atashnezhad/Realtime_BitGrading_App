@@ -45,10 +45,6 @@ class Api:
 
         fields = query.get("fields", {})
 
-        # raed the data from the local location
-        with open(self._path / f"{collection_name}.json", "r") as f:
-            records = json.load(f)
-
         if kwargs.get("read_from_mongo", "False") == "True":
             # or read from mongoDB
             password = os.getenv("MONGO_PASSWORD")
@@ -69,6 +65,11 @@ class Api:
             records = []
             for x in mycol.find():
                 records.append(x)
+
+        else:
+            # raed the data from the local location
+            with open(self._path / f"{collection_name}.json", "r") as f:
+                records = json.load(f)
 
         # for each record in the records, check if all fields are present
         # otherwise raise an error
@@ -110,13 +111,6 @@ class Api:
         address = kwargs.get("address", {})
         if not address:
             raise ValueError("Address is not provided.")
-        # save data as json at provided address
-        with open(address, "w") as f:
-            json.dump(data, f, indent=4, sort_keys=False)
-
-        # save the last data in cache
-        # with open(self._cache_address, "w") as f:
-        #     json.dump(data[-1], f, indent=4, sort_keys=False)
 
         # save the latest data in the S3
         bucket_name = SETTINGS.CACHE_BUCKET_NAME
@@ -130,16 +124,31 @@ class Api:
 
         s3.Object(bucket_name, file_name).put(Body=json.dumps(data[-1]))
 
+        password = os.getenv("MONGO_PASSWORD")
+        username = os.getenv("MONGO_USERNAME")
 
-if __name__ == "__main__":
-    api = Api()
-    query = {
-        "provider_name": "provider_name",
-        "sort": 1,
-        "limit": 20,
-        "fields": ["timestamp", "provider", "drill_string_id", "data", "activity"],
-        "ts_min": 1677112070,
-        "ts_max": 1677112080,
-    }
-    records = api.get_data(data_name="wits", provider_name="provider_name", query=query)
-    print(records)
+        myclient = pymongo.MongoClient(
+            f"mongodb+srv://{username}:{password}@cluster0.gvlqokj.mongodb.net/?retryWrites=true&w=majority",
+        )
+        map_database_names = {
+            "wits": "wits",
+            "dhm_data": "downhole_motor",
+            "ds_data": "drillstring",
+            "BG": "BG",
+        }
+        collection_name = "BG"
+        mydb = myclient["Drilling"]
+        mycol = mydb[map_database_names[collection_name]]
+        mycol.insert_many(data)
+
+        # for each record in the data, get the "_id" and make it str
+        # for record in data:
+        #     record["_id"] = str(record.get("_id"))
+        #
+        # # save data as json at provided address
+        # with open(address, "w") as f:
+        #     json.dump(data, f, indent=4, sort_keys=False)
+
+        # save the last data in cache
+        # with open(self._cache_address, "w") as f:
+        #     json.dump(data[-1], f, indent=4, sort_keys=False)

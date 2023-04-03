@@ -18,6 +18,7 @@ class BGAppTasks(Enum):
     CALCULATE_BG = ("calculate_bg", ["start_ts", "end_ts", "asset_id", "task"])
     RETURN_CACHE = ("return_cache", ["asset_id", "task"])
     DELETE_CACHE = ("delete_cache", ["asset_id", "task"])
+    DELETE_BG_COLLECTION = ("delete_bg_collection", ["asset_id", "task"])
 
     def __new__(cls, *args, **kwargs):
         obj = object.__new__(cls)

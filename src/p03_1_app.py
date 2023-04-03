@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Dict, List, Optional
 
 import boto3
+import pymongo
 
 from src.enums import BGAppTasks
 from src.model import (SETTINGS, BitGrade, BitGradeData, DownholeMotor,
@@ -46,8 +47,36 @@ class BGApp:
             if not all(item in self._event for item in item_needed):
                 raise ValueError(f"Missing items in the event: {item_needed}")
             self.delete_cache()
+
+        elif self._event_task == BGAppTasks.DELETE_BG_COLLECTION.value:
+            item_needed = BGAppTasks.DELETE_BG_COLLECTION.items_needed
+            # check if all ITEMS_NEEDED_TO_RETURN_BG are present in the event
+            if not all(item in self._event for item in item_needed):
+                raise ValueError(f"Missing items in the event: {item_needed}")
+            self.delete_bg_collection()
         else:
             raise ValueError(f"Invalid task: {self._event_task}")
+
+    def delete_bg_collection(self):
+        password = os.getenv("MONGO_PASSWORD")
+        username = os.getenv("MONGO_USERNAME")
+
+        myclient = pymongo.MongoClient(
+            f"mongodb+srv://{username}:{password}@cluster0.gvlqokj.mongodb.net/?retryWrites=true&w=majority",
+        )
+
+        map_database_names = {
+            "wits": "wits",
+            "dhm_data": "downhole_motor",
+            "ds_data": "drillstring",
+            "BG": "BG",
+        }
+
+        collection_name = "BG"
+        mydb = myclient["Drilling"]
+        mycol = mydb[map_database_names[collection_name]]
+        mycol.delete_many({})
+        print("BG collection is deleted.")
 
     def get_wits_data(self) -> Dict:
         start_ts = self._event["start_ts"]
@@ -65,6 +94,7 @@ class BGApp:
             ],
             "ts_min": start_ts,
             "ts_max": end_ts,
+            "read_from_mongo": "True",
         }
         records = self._api.get_data(
             provider_name=SETTINGS.PROVIDER,
@@ -84,6 +114,7 @@ class BGApp:
     def get_ds_data(self) -> Dict:
         query = {
             "fields": ["_drill_string_id", "down_hole_motor_id"],
+            "read_from_mongo": "True",
         }
         records = self._api.get_data(
             provider_name=SETTINGS.PROVIDER,
@@ -97,6 +128,7 @@ class BGApp:
     def get_downhole_motor_data(self) -> Dict:
         query = {
             "fields": ["motor_id", "motor_cof"],
+            "read_from_mongo": "True",
         }
         records = self._api.get_data(
             provider_name=SETTINGS.PROVIDER,
@@ -230,7 +262,7 @@ class BGApp:
 
             bit_grade_list = [
                 BitGrade(
-                    id=BGApp.make_dummy_id(),
+                    # id=BGApp.make_dummy_id(),
                     timestamp=wits_record.timestamp,
                     provider="osu_provider",
                     drillstring_id=ds,
@@ -267,31 +299,3 @@ class BGApp:
                 data = json.load(f) + data
 
         self._api.post_data(address=address, data=data)
-
-
-if __name__ == "__main__":
-    api = Api()
-    start_ts = 1677112070
-    end_ts = 1677115068  # this the final wits timestamp
-
-    # empty the bg_data.json file in the resources/calculated_bg folder
-    path = Path(__file__).parent / ".." / "resources" / "calculated_bg"
-    filename = "bg_data.json"
-    address = path / filename
-    with open(address, "w") as f:
-        json.dump([], f)
-
-    # make batch events between start_ts and end_ts with 60 seconds interval
-    # and call the rop_app.get_wits_data() method for each batch event and print the records
-    for i in range(start_ts, end_ts, 60):
-        _end_ts = i + 60
-        # check if i + 5 is less than end_ts
-        if i + 60 > end_ts:
-            _end_ts = end_ts
-        event = {"start_ts": i, "end_ts": _end_ts, "asset_id": 123456789}
-        # print(event)
-        bg_app = BGApp(api, event)
-        bg_app.run()
-        # print(records)
-        # sleep for 5 second
-        # time.sleep(1)

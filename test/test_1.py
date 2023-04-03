@@ -1,8 +1,11 @@
 import json
-import time
+import os
 import unittest
 from itertools import groupby
 from pathlib import Path
+
+import boto3
+import tqdm
 
 from lambda_function import lambda_handler
 from src.osu_api import Api
@@ -14,7 +17,7 @@ class Test1(unittest.TestCase):
         self.resources_path = Path(__file__).parent / ".." / "resources"
         self.api = Api(resources_path=self.resources_path)
 
-    def test_api(self):
+    def test_api_1(self):
         query = {
             "sort": -1,
             "limit": 3,
@@ -41,13 +44,40 @@ class Test1(unittest.TestCase):
             all(all(field in record for field in query["fields"]) for record in records)
         )
 
-    def test_bg_app_get_wits_data(self):
-        api = Api()
+    def test_api_2(self):
+        query = {
+            "provider_name": "provider_name",
+            "sort": 1,
+            "limit": 3,
+            "fields": ["timestamp", "provider", "drill_string_id", "data", "activity"],
+            "ts_min": 1677112070,
+            "ts_max": 1677112080,
+            "read_from_mongo": "True",
+        }
+        records = self.api.get_data(
+            data_name="wits", provider_name="provider_name", query=query
+        )
+        print(records)
+
+    def test_bg_app(self):
         start_ts = 1677112070
-        end_ts = 1677112083
+        end_ts = 1677115068  # this the final wits timestamp
+
+        # empty the bg_data.json file in the resources/calculated_bg folder
+        path = Path(__file__).parent / ".." / "resources" / "calculated_bg"
+        filename = "bg_data.json"
+        address = path / filename
+        with open(address, "w") as f:
+            json.dump([], f)
+
+        # also empty the mongoDB bg collection data
+        self.delete_bg_collection()
+        # also reset the cache in s3
+        self.reset_cache()
+
         # make batch events between start_ts and end_ts with 60 seconds interval
         # and call the rop_app.get_wits_data() method for each batch event and print the records
-        for i in range(start_ts, end_ts, 60):
+        for i in tqdm.tqdm(range(start_ts, end_ts, 60)):
             _end_ts = i + 60
             # check if i + 5 is less than end_ts
             if i + 60 > end_ts:
@@ -59,13 +89,38 @@ class Test1(unittest.TestCase):
                 "task": "calculate_bg",
             }
             # print(event)
-            bg_app = BGApp(api, event)
-            records = bg_app.get_wits_data()
-            print(records)
-            # sleep for 5 second
-            time.sleep(1)
+            bg_app = BGApp(self.api, event)
+            bg_app.run()
 
-    @unittest.skip
+    def reset_cache(self):
+        bucket_name = "bgapptestdemo"
+        file_name = "cache.json"
+        s3 = boto3.resource(
+            service_name="s3",
+            region_name="us-east-2",
+            aws_access_key_id=os.getenv("S3_AWS_ACCESS_KEY"),
+            aws_secret_access_key=os.getenv("S3_AWS_SECRET_ACCESS_KEY"),
+        )
+
+        # write a following dict into the bucket
+        data = {
+            "id": "92a6e03f-ece0-4b59-b960-3fc8997aebda",
+            "timestamp": 1677115017,
+            "provider": "osu_provider",
+            "drillstring_id": "ds_1",
+            "data": {"bg": 0},
+        }
+        s3.Object(bucket_name, file_name).put(Body=json.dumps(data))
+        print(f"{file_name} written to {bucket_name}")
+
+        # read the file from the bucket again and print the data
+        s3_object = s3.Object(bucket_name, file_name).get()
+        # the data in body is in json format
+        data = s3_object["Body"].read().decode("utf-8")
+        data = json.loads(data)
+        print(data)
+
+    # @unittest.skip
     def test_calculated_bg(self):
         """
         In this test, the app is triggered with a batch event and the app should
@@ -82,6 +137,12 @@ class Test1(unittest.TestCase):
         address = path / filename
         with open(address, "w") as f:
             json.dump([], f)
+
+        # also empty the mongoDB bg collection data
+        self.delete_bg_collection()
+
+        # before running lets reset cache and make sure that the initial bg is zero
+        self.reset_cache()
 
         # make batch events between start_ts and end_ts with 60 seconds interval
         # and call the rop_app.get_wits_data() method for each batch event and print the records
@@ -131,6 +192,11 @@ class Test1(unittest.TestCase):
         with open(address, "w") as f:
             json.dump([], f)
 
+        # also empty the mongoDB bg collection data
+        self.delete_bg_collection()
+        # before runing lets reset cache and make sure that the initial bg is zero
+        self.reset_cache()
+
         # make batch events between start_ts and end_ts with 60 seconds interval
         # and call the rop_app.get_wits_data() method for each batch event and print the records
         for i in range(start_ts, end_ts, 60):
@@ -161,11 +227,13 @@ class Test1(unittest.TestCase):
             "task": "return_cache",
         }
         event = {"body": body}
+        # before runing lets reset cache and make sure that the data is available in the cache
+        self.reset_cache()
 
         lambda_handler(api, event, context=None)
 
     # skip this test for now
-    @unittest.skip
+    # @unittest.skip
     def test_delete_cache(self):
         api = Api()
         start_ts = 1677112070
@@ -220,3 +288,22 @@ class Test1(unittest.TestCase):
                 str(e),
                 "Missing items in the event: ['start_ts', 'end_ts', 'asset_id', 'task']",
             )
+
+    def delete_bg_collection(self):
+        api = Api()
+        start_ts = 1677112070
+        end_ts = 1677115068
+
+        body = {
+            "start_ts": start_ts,
+            "end_ts": end_ts,
+            "asset_id": end_ts,
+            "task": "delete_bg_collection",
+        }
+        event = {"body": body}
+
+        try:
+            lambda_handler(api, event, context=None)
+        except ValueError as e:
+            # asset if the value error is raised
+            self.assertEqual(str(e), "Invalid task: delete_bg_collection")
