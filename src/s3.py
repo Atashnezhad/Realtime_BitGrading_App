@@ -29,11 +29,11 @@ if __name__ == "__main__":
         "data": {"bg": 0},
     }
     s3.Object(bucket_name, file_name).put(Body=json.dumps(data))
-    print(f"{file_name} written to {bucket_name}")
+    # print(f"{file_name} written to {bucket_name}")
 
     # read the file from the bucket again and print the data
     s3_object = s3.Object(bucket_name, file_name).get()
     # the data in body is in json format
     data = s3_object["Body"].read().decode("utf-8")
     data = json.loads(data)
-    print(data)
+    # print(data)

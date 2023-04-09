@@ -1,14 +1,11 @@
 import json
 import os
-import sys
 import unittest
 from itertools import groupby
 from pathlib import Path
 
 import boto3
 import tqdm
-
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from lambda_function import lambda_handler
 from src.osu_api import Api
@@ -46,21 +43,6 @@ class Test1(unittest.TestCase):
         self.assertTrue(
             all(all(field in record for field in query["fields"]) for record in records)
         )
-
-    def test_api_2(self):
-        query = {
-            "provider_name": "provider_name",
-            "sort": 1,
-            "limit": 3,
-            "fields": ["timestamp", "provider", "drill_string_id", "data", "activity"],
-            "ts_min": 1677112070,
-            "ts_max": 1677112080,
-            "read_from_mongo": "True",
-        }
-        records = self.api.get_data(
-            data_name="wits", provider_name="provider_name", query=query
-        )
-        print(records)
 
     def test_bg_app(self):
         start_ts = 1677112070
@@ -114,14 +96,14 @@ class Test1(unittest.TestCase):
             "data": {"bg": 0},
         }
         s3.Object(bucket_name, file_name).put(Body=json.dumps(data))
-        print(f"{file_name} written to {bucket_name}")
+        # print(f"{file_name} written to {bucket_name}")
 
         # read the file from the bucket again and print the data
         s3_object = s3.Object(bucket_name, file_name).get()
         # the data in body is in json format
         data = s3_object["Body"].read().decode("utf-8")
         data = json.loads(data)
-        print(data)
+        # print(data)
 
     # @unittest.skip
     def test_calculated_bg(self):
@@ -197,7 +179,7 @@ class Test1(unittest.TestCase):
 
         # also empty the mongoDB bg collection data
         self.delete_bg_collection()
-        # before runing lets reset cache and make sure that the initial bg is zero
+        # before running lets reset cache and make sure that the initial bg is zero
         self.reset_cache()
 
         # make batch events between start_ts and end_ts with 60 seconds interval
@@ -230,7 +212,7 @@ class Test1(unittest.TestCase):
             "task": "return_cache",
         }
         event = {"body": body}
-        # before runing lets reset cache and make sure that the data is available in the cache
+        # before running lets reset cache and make sure that the data is available in the cache
         self.reset_cache()
 
         lambda_handler(api, event, context=None)

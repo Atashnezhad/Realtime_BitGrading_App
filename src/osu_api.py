@@ -152,3 +152,18 @@ class Api:
         # save the last data in cache
         # with open(self._cache_address, "w") as f:
         #     json.dump(data[-1], f, indent=4, sort_keys=False)
+
+
+if __name__ == "__main__":
+    query = {
+        "provider_name": "provider_name",
+        "sort": 1,
+        "limit": 3,
+        "fields": ["timestamp", "provider", "drill_string_id", "data", "activity"],
+        "ts_min": 1677112070,
+        "ts_max": 1677112080,
+        "read_from_mongo": "True",
+    }
+    api = Api()
+    records = api.get_data(data_name="wits", provider_name="provider_name", query=query)
+    print(records)

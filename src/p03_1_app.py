@@ -76,9 +76,9 @@ class BGApp:
         mydb = myclient["Drilling"]
         mycol = mydb[map_database_names[collection_name]]
         mycol.delete_many({})
-        print("BG collection is deleted.")
+        # print("BG collection is deleted.")
 
-    def get_wits_data(self) -> Dict:
+    def get_wits_data(self) -> List[Dict]:
         start_ts = self._event["start_ts"]
         end_ts = self._event["end_ts"]
 
@@ -192,7 +192,7 @@ class BGApp:
         )
         # if the file exists, delete it and print a message
         s3.Object(bucket_name, file_name).delete()
-        print("File deleted")
+        # print("File deleted")
 
     def calculate_bit_grade(
         self, parsed_wits_records_per_ds: Dict, ds_dhm_cof_map: Dict, _return=False
