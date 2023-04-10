@@ -9,8 +9,7 @@ import boto3
 import pymongo
 
 from src.enums import BGAppTasks
-from src.model import (SETTINGS, BitGrade, BitGradeData, DownholeMotor,
-                       DrillSting, Wits)
+from src.model import SETTINGS, BitGrade, BitGradeData, DownholeMotor, DrillSting, Wits
 from src.osu_api import Api
 
 BIT_WEAR_CONSTANT = 3_000_000_000_000
@@ -194,6 +193,20 @@ class BGApp:
         s3.Object(bucket_name, file_name).delete()
         # print("File deleted")
 
+    def get_cache(self):
+        bucket_name = SETTINGS.CACHE_BUCKET_NAME
+        file_name = SETTINGS.CACHE_FILE_NAME
+        s3 = boto3.resource(
+            service_name="s3",
+            region_name=SETTINGS.CACHE_REGION_NAME,
+            aws_access_key_id=os.getenv("S3_AWS_ACCESS_KEY"),
+            aws_secret_access_key=os.getenv("S3_AWS_SECRET_ACCESS_KEY"),
+        )
+        s3_object = s3.Object(bucket_name, file_name).get()
+        cache = s3_object["Body"].read().decode("utf-8")
+        cache = json.loads(cache)
+        return cache or None
+
     def calculate_bit_grade(
         self, parsed_wits_records_per_ds: Dict, ds_dhm_cof_map: Dict, _return=False
     ) -> Dict:
@@ -217,24 +230,7 @@ class BGApp:
                 sum(bit_grade_records[: i + 1]) for i in range(len(bit_grade_records))
             ]
 
-            # check the cache for the latest bit_grade for the drill_string_id
-            # path = Path(__file__).parent / ".." / "resources" / "calculated_bg"
-            # filename = "cache.json"
-            # address = path / filename
-
-            # with open(address, "r") as f:
-            #     cache = json.load(f)
-            bucket_name = SETTINGS.CACHE_BUCKET_NAME
-            file_name = SETTINGS.CACHE_FILE_NAME
-            s3 = boto3.resource(
-                service_name="s3",
-                region_name=SETTINGS.CACHE_REGION_NAME,
-                aws_access_key_id=os.getenv("S3_AWS_ACCESS_KEY"),
-                aws_secret_access_key=os.getenv("S3_AWS_SECRET_ACCESS_KEY"),
-            )
-            s3_object = s3.Object(bucket_name, file_name).get()
-            cache = s3_object["Body"].read().decode("utf-8")
-            cache = json.loads(cache)
+            cache = self.get_cache()
             # if cache is not emmpy
             if cache:
                 cache_ds = cache.get("drillstring_id")
