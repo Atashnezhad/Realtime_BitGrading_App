@@ -17,7 +17,86 @@ class Test1(unittest.TestCase):
         self.resources_path = Path(__file__).parent / ".." / "resources"
         self.api = Api(resources_path=self.resources_path)
 
-    def test_api_1(self):
+    def return_cache(self):
+        api = Api()
+        start_ts = 1677112070
+        end_ts = 1677115068  # this the final wits timestamp
+
+        body = {
+            "start_ts": start_ts,
+            "end_ts": end_ts,
+            "asset_id": end_ts,
+            "task": "return_cache",
+        }
+        event = {"body": body}
+        # before running lets reset cache and make sure that the data is available in the cache
+        self.reset_cache()
+
+        lambda_handler(api, event, context=None)
+
+    def reset_cache(self):
+        bucket_name = "bgapptestdemo"
+        file_name = "cache.json"
+        s3 = boto3.resource(
+            service_name="s3",
+            region_name="us-east-2",
+            aws_access_key_id=os.getenv("S3_AWS_ACCESS_KEY"),
+            aws_secret_access_key=os.getenv("S3_AWS_SECRET_ACCESS_KEY"),
+        )
+
+        # write a following dict into the bucket
+        data = {
+            "id": "92a6e03f-ece0-4b59-b960-3fc8997aebda",
+            "timestamp": 1677115017,
+            "provider": "osu_provider",
+            "drillstring_id": "ds_1",
+            "data": {"bg": 0},
+        }
+        s3.Object(bucket_name, file_name).put(Body=json.dumps(data))
+        # print(f"{file_name} written to {bucket_name}")
+
+        # read the file from the bucket again and print the data
+        s3_object = s3.Object(bucket_name, file_name).get()
+        # the data in body is in json format
+        data = s3_object["Body"].read().decode("utf-8")
+        data = json.loads(data)
+        # print(data)
+
+    def delete_cache(self):
+        api = Api()
+        start_ts = 1677112070
+        end_ts = 1677115068  # this the final wits timestamp
+
+        body = {
+            "start_ts": start_ts,
+            "end_ts": end_ts,
+            "asset_id": end_ts,
+            "task": "delete_cache",
+        }
+        event = {"body": body}
+
+        lambda_handler(api, event, context=None)
+
+    def delete_bg_collection(self):
+        api = Api()
+        start_ts = 1677112070
+        end_ts = 1677115068
+
+        body = {
+            "start_ts": start_ts,
+            "end_ts": end_ts,
+            "asset_id": end_ts,
+            "task": "delete_bg_collection",
+        }
+        event = {"body": body}
+
+        try:
+            lambda_handler(api, event, context=None)
+        except ValueError as e:
+            # asset if the value error is raised
+            self.assertEqual(str(e), "Invalid task: delete_bg_collection")
+
+    def test_api(self):
         query = {
             "sort": -1,
             "limit": 3,
@@ -77,35 +156,6 @@ class Test1(unittest.TestCase):
             bg_app = BGApp(self.api, event)
             bg_app.run()
 
-    def reset_cache(self):
-        bucket_name = "bgapptestdemo"
-        file_name = "cache.json"
-        s3 = boto3.resource(
-            service_name="s3",
-            region_name="us-east-2",
-            aws_access_key_id=os.getenv("S3_AWS_ACCESS_KEY"),
-            aws_secret_access_key=os.getenv("S3_AWS_SECRET_ACCESS_KEY"),
-        )
-
-        # write a following dict into the bucket
-        data = {
-            "id": "92a6e03f-ece0-4b59-b960-3fc8997aebda",
-            "timestamp": 1677115017,
-            "provider": "osu_provider",
-            "drillstring_id": "ds_1",
-            "data": {"bg": 0},
-        }
-        s3.Object(bucket_name, file_name).put(Body=json.dumps(data))
-        # print(f"{file_name} written to {bucket_name}")
-
-        # read the file from the bucket again and print the data
-        s3_object = s3.Object(bucket_name, file_name).get()
-        # the data in body is in json format
-        data = s3_object["Body"].read().decode("utf-8")
-        data = json.loads(data)
-        # print(data)
-
-    # @unittest.skip
     def test_calculated_bg(self):
         """
         In this test, the app is triggered with a batch event and the app should
@@ -200,40 +250,6 @@ class Test1(unittest.TestCase):
 
             lambda_handler(api, event, context=None)
 
-    def test_return_cache(self):
-        api = Api()
-        start_ts = 1677112070
-        end_ts = 1677115068  # this the final wits timestamp
-
-        body = {
-            "start_ts": start_ts,
-            "end_ts": end_ts,
-            "asset_id": end_ts,
-            "task": "return_cache",
-        }
-        event = {"body": body}
-        # before running lets reset cache and make sure that the data is available in the cache
-        self.reset_cache()
-
-        lambda_handler(api, event, context=None)
-
-    # skip this test for now
-    # @unittest.skip
-    def test_delete_cache(self):
-        api = Api()
-        start_ts = 1677112070
-        end_ts = 1677115068  # this the final wits timestamp
-
-        body = {
-            "start_ts": start_ts,
-            "end_ts": end_ts,
-            "asset_id": end_ts,
-            "task": "delete_cache",
-        }
-        event = {"body": body}
-
-        lambda_handler(api, event, context=None)
-
     def test_not_defined_task_cache(self):
         api = Api()
         start_ts = 1677112070
@@ -273,22 +289,3 @@ class Test1(unittest.TestCase):
                 str(e),
                 "Missing items in the event: ['start_ts', 'end_ts', 'asset_id', 'task']",
             )
-
-    def delete_bg_collection(self):
-        api = Api()
-        start_ts = 1677112070
-        end_ts = 1677115068
-
-        body = {
-            "start_ts": start_ts,
-            "end_ts": end_ts,
-            "asset_id": end_ts,
-            "task": "delete_bg_collection",
-        }
-        event = {"body": body}
-
-        try:
-            lambda_handler(api, event, context=None)
-        except ValueError as e:
-            # asset if the value error is raised
-            self.assertEqual(str(e), "Invalid task: delete_bg_collection")

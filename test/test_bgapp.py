@@ -1,16 +1,12 @@
 import json
 import unittest
-from itertools import groupby
 from pathlib import Path
-from typing import List, Dict
-from unittest.mock import patch
+from typing import Dict, List
 from unittest import mock
 
-import boto3
 import tqdm
 
 import src.p03_1_app
-from lambda_function import lambda_handler
 from src.osu_api import Api
 from src.p03_1_app import BGApp
 
@@ -50,15 +46,42 @@ class TestApp(unittest.TestCase):
             return dhm_data
 
     def post_bg(self, *args, **kwargs) -> None:
-        print("post_bg called")
         data = args[0]
-        # get the bg out of the data
-        bgs = [record["data"]["bg"] for record in data]
-        print(bgs)
-        return None
+        # save the bg data to the resources/calculated_bg folder
+        path = self.resources_path / "calculated_bg"
+        filename = "bg_data.json"
+        address = path / filename
+        # first read it and then append the new data
+        with open(address) as f:
+            bg_data = json.load(f)
+        bg_data.extend(data)
+        with open(address, "w") as f:
+            json.dump(bg_data, f)
+        # also get the last bg data and save it to cache.json
+        cache_address = self.resources_path / "calculated_bg"
+        filename = "cache.json"
+        with open(cache_address / filename, "w") as f:
+            json.dump(data[-1], f)
 
     def get_cache(self, *args, **kwargs) -> Dict:
-        print("get_cache called")
+        cache_address = self.resources_path / "calculated_bg"
+        filename = "cache.json"
+        with open(cache_address / filename) as f:
+            cache = json.load(f)
+        return cache
+
+    def delete_cache(self):
+        cache_address = self.resources_path / "calculated_bg"
+        filename = "cache.json"
+        with open(cache_address / filename, "w") as f:
+            json.dump({}, f)
+
+    def delete_bg_data(self):
+        path = self.resources_path / "calculated_bg"
+        filename = "bg_data.json"
+        address = path / filename
+        with open(address, "w") as f:
+            json.dump([], f)
 
     @mock.patch.object(src.p03_1_app.BGApp, "get_cache")
     @mock.patch.object(src.p03_1_app.BGApp, "post_bg")
@@ -76,6 +99,11 @@ class TestApp(unittest.TestCase):
         start_ts = 1677112070
         end_ts = 1677115068  # this the final wits timestamp
 
+        # delete cache
+        self.delete_cache()
+        # delete bg data
+        self.delete_bg_data()
+
         # make batch events between start_ts and end_ts with 60 seconds interval
         # and call the rop_app.get_wits_data() method for each batch event and print the records
         # with patch.object(Api, "get_data", side_effect =self.get_data) as mock_method:
@@ -90,33 +118,16 @@ class TestApp(unittest.TestCase):
                 "asset_id": 123456789,
                 "task": "calculate_bg",
             }
-            # print(event)
             bg_app = BGApp(self.api, event)
             bg_app.run()
-            assert mock_api_get_data_method.called
-            assert mock_bgapp_post_method.called
 
-    # here we patch using context manager
-    # def test_bg_app_2(self):
-    #
-    #     start_ts = 1677112070
-    #     end_ts = 1677115068  # this the final wits timestamp
-    #
-    #     # make batch events between start_ts and end_ts with 60 seconds interval
-    #     # and call the rop_app.get_wits_data() method for each batch event and print the records
-    #     with patch.object(Api, "get_data", side_effect =self.get_data) as mock_method:
-    #         for i in tqdm.tqdm(range(start_ts, end_ts, 60)):
-    #             _end_ts = i + 60
-    #             # check if i + 5 is less than end_ts
-    #             if i + 60 > end_ts:
-    #                 _end_ts = end_ts
-    #             event = {
-    #                 "start_ts": i,
-    #                 "end_ts": _end_ts,
-    #                 "asset_id": 123456789,
-    #                 "task": "calculate_bg",
-    #             }
-    #             # print(event)
-    #             bg_app = BGApp(self.api, event)
-    #             bg_app.run()
-    #             assert mock_method.called
+        assert mock_api_get_data_method.called
+        assert mock_bgapp_post_method.called
+        assert mock_bgapp_get_cache_method.called
+
+        # assert bg_data.json is same as expected_bg_data.json
+        with open(self.resources_path / "calculated_bg" / "bg_data.json") as f:
+            bg_data = json.load(f)
+        with open(self.resources_path / "calculated_bg"  / "expected_bg_data.json") as f:
+            expected_bg_data = json.load(f)
+        assert bg_data == expected_bg_data
