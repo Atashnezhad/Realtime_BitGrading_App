@@ -58,7 +58,7 @@ class Wits(BaseModel):
             return True
 
 
-class DrillSting(BaseModel):
+class DrillString(BaseModel):
     drill_string_id: str = Field(..., alias="_drill_string_id")
     down_hole_motor_id: str = None
 

@@ -97,7 +97,7 @@ class TestApp(unittest.TestCase):
         mock_bgapp_get_cache_method.side_effect = self.get_cache
 
         start_ts = 1677112070
-        end_ts = 1677115068  # this the final wits timestamp
+        end_ts = 1677115068  # this is the final wits timestamp
 
         # delete cache
         self.delete_cache()

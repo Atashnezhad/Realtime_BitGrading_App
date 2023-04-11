@@ -53,14 +53,14 @@ class Test1(unittest.TestCase):
             "data": {"bg": 0},
         }
         s3.Object(bucket_name, file_name).put(Body=json.dumps(data))
-        # print(f"{file_name} written to {bucket_name}")
 
         # read the file from the bucket again and print the data
         s3_object = s3.Object(bucket_name, file_name).get()
         # the data in body is in json format
-        data = s3_object["Body"].read().decode("utf-8")
+        data_response = s3_object["Body"].read().decode("utf-8")
         data = json.loads(data)
-        # print(data)
+        # assert the data inserted is same as the data_response
+        self.assertEqual(data, data_response)
 
     def delete_cache(self):
         api = Api()
@@ -93,7 +93,7 @@ class Test1(unittest.TestCase):
         try:
             lambda_handler(api, event, context=None)
         except ValueError as e:
-            # asset if the value error is raised
+            # assert if the value error is raised
             self.assertEqual(str(e), "Invalid task: delete_bg_collection")
 
     def test_api(self):

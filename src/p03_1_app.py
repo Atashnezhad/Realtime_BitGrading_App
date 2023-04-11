@@ -9,7 +9,7 @@ import boto3
 import pymongo
 
 from src.enums import BGAppTasks
-from src.model import SETTINGS, BitGrade, BitGradeData, DownholeMotor, DrillSting, Wits
+from src.model import SETTINGS, BitGrade, BitGradeData, DownholeMotor, DrillString, Wits
 from src.osu_api import Api
 
 BIT_WEAR_CONSTANT = 3_000_000_000_000
@@ -121,7 +121,7 @@ class BGApp:
             query=query,
             asset_id=self._asset_id,
         )
-        ds_records = [DrillSting(**record) for record in records]
+        ds_records = [DrillString(**record) for record in records]
         return ds_records
 
     def get_downhole_motor_data(self) -> Dict:
