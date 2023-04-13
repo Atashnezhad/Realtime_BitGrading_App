@@ -9,7 +9,8 @@ import boto3
 import pymongo
 
 from src.enums import BGAppTasks
-from src.model import SETTINGS, BitGrade, BitGradeData, DownholeMotor, DrillString, Wits
+from src.model import (SETTINGS, BitGrade, BitGradeData, DownholeMotor,
+                       DrillString, Wits)
 from src.osu_api import Api
 
 BIT_WEAR_CONSTANT = 3_000_000_000_000
@@ -75,7 +76,7 @@ class BGApp:
         mydb = myclient["Drilling"]
         mycol = mydb[map_database_names[collection_name]]
         mycol.delete_many({})
-        # print("BG collection is deleted.")
+        myclient.close()
 
     def get_wits_data(self) -> List[Dict]:
         start_ts = self._event["start_ts"]

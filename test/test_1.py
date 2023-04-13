@@ -46,7 +46,6 @@ class Test1(unittest.TestCase):
 
         # write a following dict into the bucket
         data = {
-            "id": "92a6e03f-ece0-4b59-b960-3fc8997aebda",
             "timestamp": 1677115017,
             "provider": "osu_provider",
             "drillstring_id": "ds_1",
@@ -58,7 +57,7 @@ class Test1(unittest.TestCase):
         s3_object = s3.Object(bucket_name, file_name).get()
         # the data in body is in json format
         data_response = s3_object["Body"].read().decode("utf-8")
-        data = json.loads(data)
+        data_response = json.loads(data_response)
         # assert the data inserted is same as the data_response
         self.assertEqual(data, data_response)
 

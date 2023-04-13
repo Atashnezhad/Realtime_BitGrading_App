@@ -128,6 +128,6 @@ class TestApp(unittest.TestCase):
         # assert bg_data.json is same as expected_bg_data.json
         with open(self.resources_path / "calculated_bg" / "bg_data.json") as f:
             bg_data = json.load(f)
-        with open(self.resources_path / "calculated_bg"  / "expected_bg_data.json") as f:
+        with open(self.resources_path / "calculated_bg" / "expected_bg_data.json") as f:
             expected_bg_data = json.load(f)
         assert bg_data == expected_bg_data
