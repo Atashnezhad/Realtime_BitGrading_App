@@ -87,6 +87,9 @@ Note right of BGApp: if event task is get the APP_SETTING
 BGApp->>S3: get the setting
 S3-->>BGApp: setting
 
+Note right of BGApp: if event task is edit the APP_SETTING
+BGApp->>S3: edit the setting
+
 Note right of BGApp: if event task is DELETE_BG_COLLECTION
 BGApp->>MongoDB: delete the bg_collection
 
