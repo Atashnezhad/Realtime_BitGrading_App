@@ -57,7 +57,7 @@ The event is a JSON file and has the following schema:
    "asset_id": 123456789
 }
 ```
-
+# App Architecture (Scheduler)
 
 ```mermaid
 sequenceDiagram
@@ -68,4 +68,26 @@ BGApp->>S3: Get cahce
 S3-->>BGApp: cache
 BGApp->>BGApp: Calculate BG
 BGApp->>MongoDb: Post BG
+BGApp->>S3: Update cache
+```
+
+# App Architecture (Task)
+
+```mermaid
+sequenceDiagram
+Task->>BGApp: event
+Note right of BGApp: if event task is RETURN_CACHE
+BGApp->>S3: get the cache
+S3-->>BGApp: cache
+
+Note right of BGApp: if event task is DELETE_CACHE
+BGApp->>S3: delete the cache
+
+Note right of BGApp: if event task is get the APP_SETTING
+BGApp->>S3: get the setting
+S3-->>BGApp: setting
+
+Note right of BGApp: if event task is DELETE_BG_COLLECTION
+BGApp->>MongoDB: delete the bg_collection
+
 ```
