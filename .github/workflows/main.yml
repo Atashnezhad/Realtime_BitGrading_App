@@ -21,9 +21,6 @@ jobs:
       - name: Install dependencies
         run: |
           make install-requirements
-      - name: change dir
-        - run:
-            working-directory: test
       - name: Lint with flake8
         run: |
           make run-flake8
