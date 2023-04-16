@@ -10,9 +10,9 @@ jobs:
   pre-package:
     name: run lint and pytest
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: src
+#    defaults:
+#      run:
+#        working-directory: .
     steps:
       - uses: actions/checkout@v2
 
@@ -24,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: |
           make install-requirements
+      - name: change dir
+        - run:
+            working-directory: test
       - name: Lint with flake8
         run: |
           make run-flake8
