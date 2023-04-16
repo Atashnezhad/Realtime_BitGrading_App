@@ -47,16 +47,70 @@ to AWS lambda function after packing it into a zip file.
 
 # Triggering the App
 
-The app is triggered by an event.
-The event is a JSON file and has the following schema:
+### The task app is triggered by an event at the following several events are provided:
 
+* Return the cache from S3.
 ```json
 {
-   "start timestamp": 123456, 
-   "end timestamp": 123456,
-   "asset_id": 123456789
+   "start_ts": 1677112070,
+   "end_ts": 1677115068,
+   "asset_id": 123456789,
+   "task": "return_cache",
 }
 ```
+* Delete the cache from S3.
+```json
+{
+   "start_ts": 1677112070,
+   "end_ts": 1677115068,
+   "asset_id": 123456789,
+   "task": "delete_cache",
+}
+```
+* Delete the BG collection from MongoDB.
+```json
+{
+   "start_ts": 1677112070,
+   "end_ts": 1677115068,
+   "asset_id": 123456789,
+   "task": "delete_bg_collection",
+}
+```
+* Get the setting that is used in the calculation of the bit grade.
+```json
+{
+   "start_ts": 1677112070,
+   "end_ts": 1677115068,
+   "asset_id": 123456789,
+   "task": "get_app_setting",
+}
+```
+* Editing the setting that is used in the calculation of the bit grade.
+```json
+{
+   "start_ts": 1677112070,
+   "end_ts": 1677115068,
+   "asset_id": 123456789,
+   "task": "edit_app_setting",
+   "new_setting": {
+       "data": {"bit_wear_constant": 3_000_000_000_000},
+   },
+}
+```
+
+### The scheduler app is triggered by an event at the following:
+```json
+{
+    "start_ts": i,
+    "end_ts": i + 60, # seconds
+    "asset_id": 123456789,
+    "task": "calculate_bg",
+}
+
+```
+
+
+
 # App Architecture (Scheduler)
 
 ```mermaid
