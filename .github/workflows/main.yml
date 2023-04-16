@@ -21,7 +21,7 @@ jobs:
           make install-requirements
       - name: print envs
         run: |
-          make print-envs
+          make print-env
       - name: Lint with flake8
         run: |
           make run-flake8
