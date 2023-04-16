@@ -1,12 +1,12 @@
-name: Test
+name: Deploy
 
 on:
   push:
     branch:
       -master
 
-
 jobs:
+
   pre-package:
     name: run lint and pytest
     runs-on: ubuntu-latest
