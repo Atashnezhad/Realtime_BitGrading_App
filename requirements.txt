@@ -3,3 +3,4 @@ pydantic
 enums
 boto3
 tqdm
+pymongo
