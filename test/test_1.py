@@ -159,7 +159,7 @@ class Test1(unittest.TestCase):
         """
         In this test, the app is triggered with a batch event and the app should
         calculate the bit grade for each drill string and save the records in the database.
-        The final bit grade for each drillsting (bit) is asserted.
+        The final bit grade for each drillstring (bit) is asserted.
         """
         api = Api()
         start_ts = 1677112070
@@ -288,3 +288,54 @@ class Test1(unittest.TestCase):
                 str(e),
                 "Missing items in the event: ['start_ts', 'end_ts', 'asset_id', 'task']",
             )
+
+    def test_return_app_setting(self) -> None:
+        api = Api()
+        start_ts = 1677112070
+        end_ts = 1677115068
+
+        body = {
+            "start_ts": start_ts,
+            "end_ts": end_ts,
+            "asset_id": end_ts,
+            "task": "get_app_setting",
+        }
+        event = {"body": body}
+
+        app_setting = lambda_handler(api, event, context=None)
+        app_setting_data = {
+            "asset_id": 123456789,
+            "data": {
+                "bit_wear_constant": 3_000_000_000_000,
+            },
+        }
+        self.assertEqual(app_setting, app_setting_data)
+
+    def test_edit_app_setting(self) -> None:
+        api = Api()
+        start_ts = 1677112070
+        end_ts = 1677115068
+        # write a new app setting
+        body = {
+            "start_ts": start_ts,
+            "end_ts": end_ts,
+            "asset_id": 123456789,
+            "task": "edit_app_setting",
+            "new_setting": {
+                "data": {"bit_wear_constant": 3_000_000_000_000},
+            },
+        }
+        event = {"body": body}
+        lambda_handler(api, event, context=None)
+
+        # now get the app setting and assert the new value
+        body = {
+            "start_ts": start_ts,
+            "end_ts": end_ts,
+            "asset_id": end_ts,
+            "task": "get_app_setting",
+        }
+        event = {"body": body}
+
+        new_app_setting = lambda_handler(api, event, context=None)
+        assert new_app_setting["data"]["bit_wear_constant"] == 3_000_000_000_000

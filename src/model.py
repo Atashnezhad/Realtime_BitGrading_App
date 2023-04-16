@@ -10,7 +10,8 @@ class Settings(BaseModel):
     DRILL_STRING_COLLECTION = "ds_data"
     CACHE_BUCKET_NAME = "bgapptestdemo"
     CACHE_FILE_NAME = "cache.json"
-    CACHE_REGION_NAME = "us-east-2"
+    REGION_NAME = "us-east-2"
+    APP_SETTING = "app_setting.json"
 
 
 SETTINGS = Settings()
@@ -29,7 +30,7 @@ class Wits(BaseModel):
         allow_population_by_field_name = True
 
     @staticmethod
-    def parse_wits(data: dict) -> dict:
+    def parse_wits(data: dict) -> "Wits":
         accepted_format = dict(
             timestamp=data.get("timestamp", None),
             drill_string_id=data.get("drill_string_id", None),

@@ -117,7 +117,7 @@ class Api:
         file_name = SETTINGS.CACHE_FILE_NAME
         s3 = boto3.resource(
             service_name="s3",
-            region_name=SETTINGS.CACHE_REGION_NAME,
+            region_name=SETTINGS.REGION_NAME,
             aws_access_key_id=os.getenv("S3_AWS_ACCESS_KEY"),
             aws_secret_access_key=os.getenv("S3_AWS_SECRET_ACCESS_KEY"),
         )

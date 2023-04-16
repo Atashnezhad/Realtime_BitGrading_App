@@ -3,7 +3,7 @@ import os
 import uuid
 from itertools import groupby
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 import boto3
 import pymongo
@@ -12,8 +12,6 @@ from src.enums import BGAppTasks
 from src.model import (SETTINGS, BitGrade, BitGradeData, DownholeMotor,
                        DrillString, Wits)
 from src.osu_api import Api
-
-BIT_WEAR_CONSTANT = 3_000_000_000_000
 
 
 class BGApp:
@@ -28,7 +26,20 @@ class BGApp:
         self._event_task = event.get("task", None)
 
     def run(self) -> Optional[Dict]:
-        if self._event_task == BGAppTasks.CALCULATE_BG.value:
+        if self._event_task == BGAppTasks.APP_SETTING.value:
+            item_needed = BGAppTasks.APP_SETTING.items_needed
+            # check if all ITEMS_NEEDED_TO_SETTING are present in the event
+            if not all(item in self._event for item in item_needed):
+                raise ValueError(f"Missing items in the event: {item_needed}")
+            app_setting = self.return_setting()
+            return app_setting
+        elif self._event_task == BGAppTasks.EDIT_APP_SETTING.value:
+            item_needed = BGAppTasks.EDIT_APP_SETTING.items_needed
+            # check if all ITEMS_NEEDED_TO_SETTING are present in the event
+            if not all(item in self._event for item in item_needed):
+                raise ValueError(f"Missing items in the event: {item_needed}")
+            self.edit_setting()
+        elif self._event_task == BGAppTasks.CALCULATE_BG.value:
             item_needed = BGAppTasks.CALCULATE_BG.items_needed
             # check if all ITEMS_NEEDED_TO_CALCULATE_BG are present in the event
             if not all(item in self._event for item in item_needed):
@@ -39,7 +50,7 @@ class BGApp:
             # check if all ITEMS_NEEDED_TO_RETURN_CACHE are present in the event
             if not all(item in self._event for item in item_needed):
                 raise ValueError(f"Missing items in the event: {item_needed}")
-            cache = self.return_cache()
+            cache = self.get_cache()
             return cache
         elif self._event_task == BGAppTasks.DELETE_CACHE.value:
             item_needed = BGAppTasks.DELETE_CACHE.items_needed
@@ -47,7 +58,6 @@ class BGApp:
             if not all(item in self._event for item in item_needed):
                 raise ValueError(f"Missing items in the event: {item_needed}")
             self.delete_cache()
-
         elif self._event_task == BGAppTasks.DELETE_BG_COLLECTION.value:
             item_needed = BGAppTasks.DELETE_BG_COLLECTION.items_needed
             # check if all ITEMS_NEEDED_TO_RETURN_BG are present in the event
@@ -56,6 +66,33 @@ class BGApp:
             self.delete_bg_collection()
         else:
             raise ValueError(f"Invalid task: {self._event_task}")
+
+    def edit_setting(self):
+        bucket_name = "bgapptestdemo"
+        file_name = "app_setting.json"
+        s3 = boto3.resource(
+            service_name="s3",
+            region_name="us-east-2",
+            aws_access_key_id=os.getenv("S3_AWS_ACCESS_KEY"),
+            aws_secret_access_key=os.getenv("S3_AWS_SECRET_ACCESS_KEY"),
+        )
+        _data = {"asset_id": self._asset_id, "data": self._event["new_setting"]["data"]}
+
+        s3.Object(bucket_name, file_name).put(Body=json.dumps(_data))
+
+    def return_setting(self) -> Dict or None:
+        bucket_name = SETTINGS.CACHE_BUCKET_NAME
+        file_name = SETTINGS.APP_SETTING
+        s3 = boto3.resource(
+            service_name="s3",
+            region_name=SETTINGS.REGION_NAME,
+            aws_access_key_id=os.getenv("S3_AWS_ACCESS_KEY"),
+            aws_secret_access_key=os.getenv("S3_AWS_SECRET_ACCESS_KEY"),
+        )
+        s3_object = s3.Object(bucket_name, file_name).get()
+        app_setting = s3_object["Body"].read().decode("utf-8")
+        app_setting = json.loads(app_setting)
+        return app_setting or None
 
     def delete_bg_collection(self):
         password = os.getenv("MONGO_PASSWORD")
@@ -78,7 +115,7 @@ class BGApp:
         mycol.delete_many({})
         myclient.close()
 
-    def get_wits_data(self) -> List[Dict]:
+    def get_wits_data(self) -> List[Wits]:
         start_ts = self._event["start_ts"]
         end_ts = self._event["end_ts"]
 
@@ -111,7 +148,7 @@ class BGApp:
 
         return parsed_wits_records
 
-    def get_ds_data(self) -> Dict:
+    def get_ds_data(self) -> List[DrillString]:
         query = {
             "fields": ["_drill_string_id", "down_hole_motor_id"],
             "read_from_mongo": "True",
@@ -125,7 +162,7 @@ class BGApp:
         ds_records = [DrillString(**record) for record in records]
         return ds_records
 
-    def get_downhole_motor_data(self) -> Dict:
+    def get_downhole_motor_data(self) -> List[DownholeMotor]:
         query = {
             "fields": ["motor_id", "motor_cof"],
             "read_from_mongo": "True",
@@ -164,22 +201,22 @@ class BGApp:
         if _return:
             return bg_list
 
-    def return_cache(self):
-        bucket_name = "bgapptestdemo"
-        file_name = "cache.json"
-        s3 = boto3.resource(
-            service_name="s3",
-            region_name="us-east-2",
-            aws_access_key_id=os.getenv("S3_AWS_ACCESS_KEY"),
-            aws_secret_access_key=os.getenv("S3_AWS_SECRET_ACCESS_KEY"),
-        )
-        # read the file from the bucket again and print the data
-        s3_object = s3.Object(bucket_name, file_name).get()
-        # the data in body is in json format
-        data = s3_object["Body"].read().decode("utf-8")
-        data = json.loads(data)
-        # print(data)
-        return data
+    # def return_cache(self):
+    #     bucket_name = "bgapptestdemo"
+    #     file_name = "cache.json"
+    #     s3 = boto3.resource(
+    #         service_name="s3",
+    #         region_name="us-east-2",
+    #         aws_access_key_id=os.getenv("S3_AWS_ACCESS_KEY"),
+    #         aws_secret_access_key=os.getenv("S3_AWS_SECRET_ACCESS_KEY"),
+    #     )
+    #     # read the file from the bucket again and print the data
+    #     s3_object = s3.Object(bucket_name, file_name).get()
+    #     # the data in body is in json format
+    #     data = s3_object["Body"].read().decode("utf-8")
+    #     data = json.loads(data)
+    #     # print(data)
+    #     return data
 
     def delete_cache(self):
         bucket_name = "bgapptestdemo"
@@ -199,7 +236,7 @@ class BGApp:
         file_name = SETTINGS.CACHE_FILE_NAME
         s3 = boto3.resource(
             service_name="s3",
-            region_name=SETTINGS.CACHE_REGION_NAME,
+            region_name=SETTINGS.REGION_NAME,
             aws_access_key_id=os.getenv("S3_AWS_ACCESS_KEY"),
             aws_secret_access_key=os.getenv("S3_AWS_SECRET_ACCESS_KEY"),
         )
@@ -210,7 +247,7 @@ class BGApp:
 
     def calculate_bit_grade(
         self, parsed_wits_records_per_ds: Dict, ds_dhm_cof_map: Dict, _return=False
-    ) -> Dict:
+    ) -> List[Dict[str, Any]]:
         for ds, wits_records in parsed_wits_records_per_ds.items():
             # get the motor_cof for the drill_string_id
             motor_cof = ds_dhm_cof_map[ds]
@@ -274,16 +311,18 @@ class BGApp:
             if _return:
                 return bit_grade_list
 
-    @staticmethod
-    def bit_grade_model(wob, rpm, flowrate, motor_cof):
-        bg = wob * (rpm + flowrate * motor_cof) / BIT_WEAR_CONSTANT
+    def bit_grade_model(self, wob, rpm, flowrate, motor_cof):
+        # get the bit wear constant from app settings
+        app_setting = self.return_setting()
+        bit_wear_constant = app_setting.get("data").get("bit_wear_constant")
+        bg = wob * (rpm + flowrate * motor_cof) / bit_wear_constant
         return bg
 
     @staticmethod
     def make_dummy_id():
         return str(uuid.uuid4())
 
-    def post_bg(self, data: List[BitGrade]) -> None:
+    def post_bg(self, data: List[Dict[str, Any]]) -> None:
         path = Path(__file__).parent / ".." / "resources" / "calculated_bg"
         # if path does not exist, create it
         if not path.exists():

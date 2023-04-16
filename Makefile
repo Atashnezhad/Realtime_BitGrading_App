@@ -42,7 +42,7 @@ run-black:
 # run the pytest script
 .PHONY: run-pytest
 run-pytest:
-	pytest test/*.py
+	pytest test/test_*.py
 
 # run code coverage and exclude p01_1_make_dummy_data.py and p01_2_make_dummy_data.py
 .PHONY: run-coverage

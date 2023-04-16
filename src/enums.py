@@ -19,6 +19,8 @@ class BGAppTasks(Enum):
     RETURN_CACHE = ("return_cache", ["asset_id", "task"])
     DELETE_CACHE = ("delete_cache", ["asset_id", "task"])
     DELETE_BG_COLLECTION = ("delete_bg_collection", ["asset_id", "task"])
+    APP_SETTING = ("get_app_setting", ["asset_id", "task"])
+    EDIT_APP_SETTING = ("edit_app_setting", ["asset_id", "task", "new_setting"])
 
     def __new__(cls, *args, **kwargs):
         obj = object.__new__(cls)
@@ -34,3 +36,4 @@ if __name__ == "__main__":
     print(BGAppTasks.RETURN_CACHE.value)
     print(BGAppTasks.DELETE_CACHE.value)
     print(BGAppTasks.CALCULATE_BG.items_needed)
+    print(BGAppTasks.SETTING.items_needed)
