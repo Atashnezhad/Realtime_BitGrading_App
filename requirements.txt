@@ -1,3 +1,5 @@
 numpy
 pydantic
 enums
+boto3
+tqdm
