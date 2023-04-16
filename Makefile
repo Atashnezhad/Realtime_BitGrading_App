@@ -21,6 +21,7 @@ git-automated:
 # install requirements.txt
 .PHONY: install-requirements
 install-requirements:
+	pip install --upgrade pip
 	# install the requirements.txt
 	pip install -r requirements.txt
 	pip install -r requirements-test.txt
@@ -64,3 +65,9 @@ run-all:
 .PHONY: zip
 zip:
 	zip -r $(package_name).zip src/* lambda_function.py requirments.txt resources/*
+
+
+# print environment variables
+.PHONY: print-env
+print-env:
+	printenv
