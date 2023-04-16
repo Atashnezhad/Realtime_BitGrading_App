@@ -10,6 +10,9 @@ jobs:
   pre-package:
     name: run lint and pytest
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src
     steps:
       - uses: actions/checkout@v2
 
