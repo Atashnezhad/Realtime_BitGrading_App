@@ -4,3 +4,4 @@ enums
 boto3
 tqdm
 pymongo
+fastapi
