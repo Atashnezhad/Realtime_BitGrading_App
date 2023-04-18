@@ -1,26 +1,19 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
-from app.model.model import predict_pipeline
-from app.model.model import __version__ as model_version
-
+from typing import Dict
+from src.osu_api import Api
+from src.p03_1_app import BGApp
 
 app = FastAPI()
 
 
-class TextIn(BaseModel):
-    text: str
-
-
-class PredictionOut(BaseModel):
-    language: str
-
-
 @app.get("/")
 def home():
-    return {"health_check": "OK", "model_version": model_version}
+    return {"health_check": "OK"}
 
 
-@app.post("/predict", response_model=PredictionOut)
-def predict(payload: TextIn):
-    language = predict_pipeline(payload.text)
-    return {"language": language}
+@app.post("/predict")
+def lambda_handler(api: Api, event: Dict, context=None):
+    event = event["body"]
+    obj = BGApp(api, event)
+    returned_value = obj.run()
+    return returned_value
