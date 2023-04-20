@@ -201,23 +201,6 @@ class BGApp:
         if _return:
             return bg_list
 
-    # def return_cache(self):
-    #     bucket_name = "bgapptestdemo"
-    #     file_name = "cache.json"
-    #     s3 = boto3.resource(
-    #         service_name="s3",
-    #         region_name="us-east-2",
-    #         aws_access_key_id=os.getenv("S3_AWS_ACCESS_KEY"),
-    #         aws_secret_access_key=os.getenv("S3_AWS_SECRET_ACCESS_KEY"),
-    #     )
-    #     # read the file from the bucket again and print the data
-    #     s3_object = s3.Object(bucket_name, file_name).get()
-    #     # the data in body is in json format
-    #     data = s3_object["Body"].read().decode("utf-8")
-    #     data = json.loads(data)
-    #     # print(data)
-    #     return data
-
     def delete_cache(self):
         bucket_name = "bgapptestdemo"
         file_name = "cache.json"
@@ -296,7 +279,6 @@ class BGApp:
 
             bit_grade_list = [
                 BitGrade(
-                    # id=BGApp.make_dummy_id(),
                     timestamp=wits_record.timestamp,
                     provider="osu_provider",
                     drillstring_id=ds,
@@ -317,10 +299,6 @@ class BGApp:
         bit_wear_constant = app_setting.get("data").get("bit_wear_constant")
         bg = wob * (rpm + flowrate * motor_cof) / bit_wear_constant
         return bg
-
-    @staticmethod
-    def make_dummy_id():
-        return str(uuid.uuid4())
 
     def post_bg(self, data: List[Dict[str, Any]]) -> None:
         path = Path(__file__).parent / ".." / "resources" / "calculated_bg"

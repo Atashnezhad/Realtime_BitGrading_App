@@ -13,7 +13,7 @@ def url():
 # skip this test for now
 @pytest.mark.skip
 def test_server_get(url):
-    url = "http://127.0.0.1:8080"
+    # url = "http://127.0.0.1:8080"
     response = requests.get(url)
     print("\n", response.json())
     assert response.status_code == 200

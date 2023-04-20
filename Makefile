@@ -86,3 +86,13 @@ run-app:
 # stop the port 8000
 .PHONY: stop-port
 	stop-port: sudo lsof -t -i tcp:8000 | xargs kill -9
+
+# make pytest coverage
+.PHONY: run-pytest-coverage
+run-pytest-coverage:
+	pytest --cov=src --cov-report=html test/test_*.py
+
+# show the coverage report
+.PHONY: show-coverage
+show-coverage:
+	open htmlcov/index.html
