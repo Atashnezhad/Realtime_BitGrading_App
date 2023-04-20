@@ -57,7 +57,7 @@ run-coverage:
 run-all:
 	make run-black
 	make run-flake8
-	make run-pytest
+	#make run-pytest
 	make run-coverage
 	make git-automated
 
@@ -71,3 +71,28 @@ zip:
 .PHONY: print-env
 print-env:
 	printenv
+
+# reset path variables
+#.PHONY: reset-path
+#reset-path:
+#	export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+#   export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+# run the app using uvicorn
+.PHONY: run-app
+run-app:
+	uvicorn main:app --reload --port 8080
+
+# stop the port 8000
+.PHONY: stop-port
+	stop-port: sudo lsof -t -i tcp:8000 | xargs kill -9
+
+# make pytest coverage
+.PHONY: run-pytest-coverage
+run-pytest-coverage:
+	pytest --cov=src --cov-report=html test/test_*.py
+
+# show the coverage report
+.PHONY: show-coverage
+show-coverage:
+	open htmlcov/index.html
