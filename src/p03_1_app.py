@@ -1,6 +1,6 @@
 import json
+import logging
 import os
-import uuid
 from itertools import groupby
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -12,6 +12,10 @@ from src.enums import BGAppTasks
 from src.model import (SETTINGS, BitGrade, BitGradeData, DownholeMotor,
                        DrillString, Wits)
 from src.osu_api import Api
+
+# Initialize the logger
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
 
 
 class BGApp:
@@ -26,6 +30,7 @@ class BGApp:
         self._event_task = event.get("task", None)
 
     def run(self) -> Optional[Dict]:
+        logger.info(f"Running the task {self._event_task}")
         if self._event_task == BGAppTasks.APP_SETTING.value:
             item_needed = BGAppTasks.APP_SETTING.items_needed
             # check if all ITEMS_NEEDED_TO_SETTING are present in the event
@@ -313,3 +318,4 @@ class BGApp:
                 data = json.load(f) + data
 
         self._api.post_data(address=address, data=data)
+        logger.info("Bit grade records saved in the database")
