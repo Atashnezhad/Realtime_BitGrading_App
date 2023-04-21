@@ -208,7 +208,7 @@ class TestTasks(unittest.TestCase):
         body = {
             "start_ts": start_ts,
             "end_ts": end_ts,
-            "asset_id": end_ts,
+            "asset_id": 123456789,
             # "task": "delete_cache"
         }
         event = {"body": body}
@@ -222,18 +222,17 @@ class TestTasks(unittest.TestCase):
         start_ts = 1677112070
         # end_ts = 1677115068
 
-        body = {
+        event = {
             "start_ts": start_ts,
             # "end_ts": end_ts,
-            # "asset_id": end_ts,
+            # "asset_id": 123456789,
             "task": "calculate_bg",
         }
-        event = {"body": body}
 
         try:
             lambda_handler(event, context=None)
         except ValueError as e:
-            # asset if the value error is raised
+            # assert if the value error is raised
             self.assertEqual(
                 str(e),
                 "Missing items in the event: ['start_ts', 'end_ts', 'asset_id', 'task']",
@@ -243,13 +242,12 @@ class TestTasks(unittest.TestCase):
         start_ts = 1677112070
         end_ts = 1677115068
 
-        body = {
+        event = {
             "start_ts": start_ts,
             "end_ts": end_ts,
             "asset_id": end_ts,
             "task": "get_app_setting",
         }
-        event = {"body": body}
 
         app_setting = lambda_handler(event, context=None)
         app_setting_data = {
@@ -264,7 +262,7 @@ class TestTasks(unittest.TestCase):
         start_ts = 1677112070
         end_ts = 1677115068
         # write a new app setting
-        body = {
+        event = {
             "start_ts": start_ts,
             "end_ts": end_ts,
             "asset_id": 123456789,
@@ -273,17 +271,16 @@ class TestTasks(unittest.TestCase):
                 "data": {"bit_wear_constant": 30_000_000_000_000},
             },
         }
-        event = {"body": body}
+
         lambda_handler(event, context=None)
 
         # now get the app setting and assert the new value
-        body = {
+        event = {
             "start_ts": start_ts,
             "end_ts": end_ts,
             "asset_id": end_ts,
             "task": "get_app_setting",
         }
-        event = {"body": body}
 
         new_app_setting = lambda_handler(event, context=None)
         assert new_app_setting["data"]["bit_wear_constant"] == 30_000_000_000_000
