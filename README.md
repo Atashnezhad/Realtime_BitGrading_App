@@ -154,3 +154,21 @@ Note right of BGApp: if event task is DELETE_BG_COLLECTION
 BGApp->>MongoDB: delete the bg_collection
 
 ```
+
+To add layer to the lambda function run the following commands in AWS 
+cloud shell ([reference](https://www.linkedin.com/pulse/add-external-python-libraries-aws-lambda-using-layers-gabe-olokun/))
+
+```bash
+mkdir packages
+cd packages
+python3 -m venv venv
+source venv/bin/activate
+mkdir python
+cd python
+pip install "Your library" -t .
+rm -rf *dist-info
+cd ..
+zip -r my-first-lambda-package.zip python
+aws s3 cp my-first-lambda-package.zip s3://your-s3-bucket-name/
+```
+and connect the layer to the lambda function.

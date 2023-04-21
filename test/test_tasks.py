@@ -19,7 +19,6 @@ class TestTasks(unittest.TestCase):
         self.api = Api(resources_path=self.resources_path)
 
     def return_cache(self):
-        api = Api()
         start_ts = 1677112070
         end_ts = 1677115068  # this the final wits timestamp
 
@@ -32,7 +31,7 @@ class TestTasks(unittest.TestCase):
         event = {"body": body}
         # before running lets reset cache and make sure that the data is available in the cache
         self.reset_cache()
-        lambda_handler(api, event, context=None)
+        lambda_handler(event, context=None)
 
     def reset_cache(self):
         bucket_name = "bgapptestdemo"
@@ -62,7 +61,6 @@ class TestTasks(unittest.TestCase):
         self.assertEqual(data, data_response)
 
     def delete_cache(self):
-        api = Api()
         start_ts = 1677112070
         end_ts = 1677115068  # this the final wits timestamp
 
@@ -74,10 +72,9 @@ class TestTasks(unittest.TestCase):
         }
         event = {"body": body}
 
-        lambda_handler(api, event, context=None)
+        lambda_handler(event, context=None)
 
     def delete_bg_collection(self):
-        api = Api()
         start_ts = 1677112070
         end_ts = 1677115068
 
@@ -88,10 +85,9 @@ class TestTasks(unittest.TestCase):
             "task": "delete_bg_collection",
         }
         event = {"body": body}
-        lambda_handler(api, event, context=None)
+        lambda_handler(event, context=None)
 
     def run_using_lambda_handler(self):
-        api = Api()
         start_ts = 1677112070
         end_ts = 1677115068  # this the final wits timestamp
 
@@ -123,7 +119,7 @@ class TestTasks(unittest.TestCase):
             }
             event = {"body": body}
 
-            lambda_handler(api, event, context=None)
+            lambda_handler(event, context=None)
 
     def run_calculated_bg(self):
         """
@@ -206,7 +202,6 @@ class TestTasks(unittest.TestCase):
         )
 
     def test_not_defined_task_cache(self):
-        api = Api()
         start_ts = 1677112070
         end_ts = 1677115068  # this the final wits timestamp
 
@@ -218,13 +213,12 @@ class TestTasks(unittest.TestCase):
         }
         event = {"body": body}
         try:
-            lambda_handler(api, event, context=None)
+            lambda_handler(event, context=None)
         except ValueError as e:
             # asset if the value error is raised
             self.assertEqual(str(e), "Invalid task: None")
 
     def test_events_without_needed_fields(self):
-        api = Api()
         start_ts = 1677112070
         # end_ts = 1677115068
 
@@ -237,7 +231,7 @@ class TestTasks(unittest.TestCase):
         event = {"body": body}
 
         try:
-            lambda_handler(api, event, context=None)
+            lambda_handler(event, context=None)
         except ValueError as e:
             # asset if the value error is raised
             self.assertEqual(
@@ -246,7 +240,6 @@ class TestTasks(unittest.TestCase):
             )
 
     def test_return_app_setting(self) -> None:
-        api = Api()
         start_ts = 1677112070
         end_ts = 1677115068
 
@@ -258,7 +251,7 @@ class TestTasks(unittest.TestCase):
         }
         event = {"body": body}
 
-        app_setting = lambda_handler(api, event, context=None)
+        app_setting = lambda_handler(event, context=None)
         app_setting_data = {
             "asset_id": 123456789,
             "data": {
@@ -268,7 +261,6 @@ class TestTasks(unittest.TestCase):
         self.assertEqual(app_setting, app_setting_data)
 
     def test_edit_app_setting(self) -> None:
-        api = Api()
         start_ts = 1677112070
         end_ts = 1677115068
         # write a new app setting
@@ -282,7 +274,7 @@ class TestTasks(unittest.TestCase):
             },
         }
         event = {"body": body}
-        lambda_handler(api, event, context=None)
+        lambda_handler(event, context=None)
 
         # now get the app setting and assert the new value
         body = {
@@ -293,5 +285,5 @@ class TestTasks(unittest.TestCase):
         }
         event = {"body": body}
 
-        new_app_setting = lambda_handler(api, event, context=None)
+        new_app_setting = lambda_handler(event, context=None)
         assert new_app_setting["data"]["bit_wear_constant"] == 30_000_000_000_000
