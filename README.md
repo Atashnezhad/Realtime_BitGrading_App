@@ -13,7 +13,9 @@ Collections are as follows:
 
 Initially, data sets are generated through a script and saved locally. The process is then repeated using an Object-Oriented Programming (OOP) approach, providing more flexibility and scalability to demonstrate the difference between the two methods.
 
-For the purpose of this exercise, a dummy API was developed and utilized to simulate a real API. The API offers two methods: one for getting data and another for posting data. The app uses the API to retrieve and send data.
+A dummy API was developed and utilized to simulate a real API. 
+The API offers two methods: one for getting data and another for posting data. 
+The app uses the API to retrieve and send data to mongoDB and S3. The S3 is used to keep and retrieve the cache.
 
 When triggered by an event, the app executes the following calculations:
 
@@ -34,9 +36,13 @@ Note that each drill string is considered representative of a new bit.
 9. Calculates the cumulative PDC bit grade for each drillstring ID. 
 Note that in most cases, there is only one drillstring ID per wits. However, in some cases, there can be two drillstring IDs, and the cumulative PDC bit grade is calculated for each separately.
 The app checks the cache and retrieves the latest BG posted for a specific drillstring ID. 
-The cache used in this exercise is a simple file stored locally and checked to calculate the BG.
+The cache used in this exercise is a simple file stored locally and in the cloud (S3) and checked to calculate the BG.
 Once the BG is calculated, it is added to the BG collection and posted using the API. In this case, it is saved 
 in the local resource folder.
+
+The main file in the root directory is used to test the app using FastAPI.
+A seperate test server file is used to trigger the app. 
+The FastAPI server is ran using the coomand provided in the make file.
 
 ## Deployment
 
@@ -93,7 +99,7 @@ to AWS lambda function after packing it into a zip file.
    "asset_id": 123456789,
    "task": "edit_app_setting",
    "new_setting": {
-       "data": {"bit_wear_constant": 3_000_000_000_000},
+       "data": {"bit_wear_constant": "3_000_000_000_000"},
    },
 }
 ```
@@ -101,8 +107,8 @@ to AWS lambda function after packing it into a zip file.
 ### The scheduler app is triggered by an event at the following:
 ```json
 {
-    "start_ts": i,
-    "end_ts": i + 60, # seconds
+    "start_ts": "i",
+    "end_ts": "i + 60, # seconds"
     "asset_id": 123456789,
     "task": "calculate_bg",
 }
