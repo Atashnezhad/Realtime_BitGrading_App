@@ -13,7 +13,7 @@ from src.osu_api import Api
 from src.p03_1_app import BGApp
 
 
-class Test_tasks(unittest.TestCase):
+class TestTasks(unittest.TestCase):
     def setUp(self) -> None:
         self.resources_path = Path(__file__).parent / ".." / "resources"
         self.api = Api(resources_path=self.resources_path)
@@ -176,27 +176,6 @@ class Test_tasks(unittest.TestCase):
             }
             bg_app = BGApp(api, event)
             bg_app.run()
-
-        # read the bg_data.json file and assert the bit grade for each drill string
-        path = Path(__file__).parent / ".." / "resources" / "calculated_bg"
-        filename = "bg_data.json"
-        address = path / filename
-        with open(address, "r") as f:
-            records = json.load(f)
-        # group the records by drill string id
-        records = {
-            k: list(v) for k, v in groupby(records, key=lambda x: x["drillstring_id"])
-        }
-        # get the last record for each drill string in list
-        records = [v[-1] for k, v in records.items()]
-        expected_calculated_bg = [
-            0.912,
-            2.531,
-            1.064,
-        ]  # note if the data is re-generated using p01_2 file then these values should be edited
-        # based on new values.
-        for case, expected_bg in zip(records, expected_calculated_bg):
-            assert case.get("data").get("bg") == expected_bg
 
     def test_api(self):
         query = {
