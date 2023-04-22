@@ -1,12 +1,9 @@
 import json
 import os
 import unittest
-from itertools import groupby
 from pathlib import Path
 
 import boto3
-import pytest
-import tqdm
 
 from lambda_function import lambda_handler
 from src.osu_api import Api

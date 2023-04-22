@@ -4,8 +4,6 @@ from pathlib import Path
 from typing import Dict, List
 from unittest import mock
 
-import tqdm
-
 import src.p03_1_app
 from src.osu_api import Api
 from src.p03_1_app import BGApp
@@ -107,7 +105,7 @@ class TestApp(unittest.TestCase):
         # make batch events between start_ts and end_ts with 60 seconds interval
         # and call the rop_app.get_wits_data() method for each batch event and print the records
         # with patch.object(Api, "get_data", side_effect =self.get_data) as mock_method:
-        for i in tqdm.tqdm(range(start_ts, end_ts, 60)):
+        for i in range(start_ts, end_ts, 60):
             _end_ts = i + 60
             # check if i + 5 is less than end_ts
             if i + 60 > end_ts:

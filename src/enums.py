@@ -32,8 +32,8 @@ class BGAppTasks(Enum):
 if __name__ == "__main__":  # pragma: no cover
     # print(obj.get("ITEMS_NEEDED_TO_CALCULATE_BG"))
     # print(BGAppTasks.get_objects().get("ITEMS_NEEDED_TO_CALCULATE_BG"))
-    print(BGAppTasks.CALCULATE_BG.value)
-    print(BGAppTasks.RETURN_CACHE.value)
-    print(BGAppTasks.DELETE_CACHE.value)
-    print(BGAppTasks.CALCULATE_BG.items_needed)
-    print(BGAppTasks.SETTING.items_needed)
+    print(BGAppTasks.CALCULATE_BG.value)  # pragma: no cover
+    print(BGAppTasks.RETURN_CACHE.value)  # pragma: no cover
+    print(BGAppTasks.DELETE_CACHE.value)  # pragma: no cover
+    print(BGAppTasks.CALCULATE_BG.items_needed)  # pragma: no cover
+    print(BGAppTasks.RETURN_APP_SETTING.items_needed)  # pragma: no cover
