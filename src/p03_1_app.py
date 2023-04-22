@@ -31,8 +31,8 @@ class BGApp:
 
     def run(self) -> Optional[Dict]:
         logger.info(f"Running the task {self._event_task}")
-        if self._event_task == BGAppTasks.APP_SETTING.value:
-            item_needed = BGAppTasks.APP_SETTING.items_needed
+        if self._event_task == BGAppTasks.RETURN_APP_SETTING.value:
+            item_needed = BGAppTasks.RETURN_APP_SETTING.items_needed
             # check if all ITEMS_NEEDED_TO_SETTING are present in the event
             if not all(item in self._event for item in item_needed):
                 raise ValueError(f"Missing items in the event: {item_needed}")
@@ -87,7 +87,7 @@ class BGApp:
 
     def return_setting(self) -> Dict or None:
         bucket_name = SETTINGS.CACHE_BUCKET_NAME
-        file_name = SETTINGS.APP_SETTING
+        file_name = SETTINGS.RETURN_APP_SETTING
         s3 = boto3.resource(
             service_name="s3",
             region_name=SETTINGS.REGION_NAME,

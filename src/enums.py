@@ -19,7 +19,7 @@ class BGAppTasks(Enum):
     RETURN_CACHE = ("return_cache", ["asset_id", "task"])
     DELETE_CACHE = ("delete_cache", ["asset_id", "task"])
     DELETE_BG_COLLECTION = ("delete_bg_collection", ["asset_id", "task"])
-    APP_SETTING = ("get_app_setting", ["asset_id", "task"])
+    RETURN_APP_SETTING = ("get_app_setting", ["asset_id", "task"])
     EDIT_APP_SETTING = ("edit_app_setting", ["asset_id", "task", "new_setting"])
 
     def __new__(cls, *args, **kwargs):
@@ -29,7 +29,7 @@ class BGAppTasks(Enum):
         return obj
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     # print(obj.get("ITEMS_NEEDED_TO_CALCULATE_BG"))
     # print(BGAppTasks.get_objects().get("ITEMS_NEEDED_TO_CALCULATE_BG"))
     print(BGAppTasks.CALCULATE_BG.value)

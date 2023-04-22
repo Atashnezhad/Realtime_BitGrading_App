@@ -155,6 +155,7 @@ BGApp->>MongoDB: delete the bg_collection
 
 ```
 
+## Lambda layers
 To add layer to the lambda function run the following commands in AWS 
 cloud shell ([reference](https://www.linkedin.com/pulse/add-external-python-libraries-aws-lambda-using-layers-gabe-olokun/))
 

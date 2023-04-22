@@ -11,7 +11,7 @@ class Settings(BaseModel):
     CACHE_BUCKET_NAME = "bgapptestdemo"
     CACHE_FILE_NAME = "cache.json"
     REGION_NAME = "us-east-2"
-    APP_SETTING = "app_setting.json"
+    RETURN_APP_SETTING = "app_setting.json"
 
 
 SETTINGS = Settings()
