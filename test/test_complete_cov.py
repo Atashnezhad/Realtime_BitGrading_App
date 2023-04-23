@@ -1,7 +1,7 @@
 import json
+from pathlib import Path
 
 import pytest
-from pathlib import Path
 
 from src.osu_api import Api
 
@@ -70,9 +70,9 @@ def records_func():
 
 
 def test_raise_value_error_query_no_sort(api, mocker):
-
-    mocker.patch("src.osu_api.pymongo.collection.Collection.find",
-                 side_effect=records_func)
+    mocker.patch(
+        "src.osu_api.pymongo.collection.Collection.find", side_effect=records_func
+    )
     # mocker.patch.object(Api, "get_data", side_effect=records)
 
     query = {
@@ -93,10 +93,34 @@ def test_raise_value_error_query_no_sort(api, mocker):
     assert records[0]["timestamp"] > records[1]["timestamp"]
 
 
-def test_raise_value_error_query_no_limit(api, mocker):
+def test_raise_value_error_query_sort_asc(api, mocker):
+    mocker.patch(
+        "src.osu_api.pymongo.collection.Collection.find", side_effect=records_func
+    )
+    # mocker.patch.object(Api, "get_data", side_effect=records)
 
-    mocker.patch("src.osu_api.pymongo.collection.Collection.find",
-                 side_effect=records_func)
+    query = {
+        "sort": 1,
+        "limit": 3,
+        "fields": ["timestamp", "provider", "drill_string_id", "data"],
+    }
+
+    records = api.get_data(
+        provider_name="osu_provider",
+        data_name="wits",
+        query=query,
+        asset_id=123456789,
+        read_from_mongo="True",
+    )
+
+    # check if the records are sorted by timestamp descending order
+    assert records[0]["timestamp"] < records[1]["timestamp"]
+
+
+def test_raise_value_error_query_no_limit(api, mocker):
+    mocker.patch(
+        "src.osu_api.pymongo.collection.Collection.find", side_effect=records_func
+    )
 
     query = {
         "sort": -1,
@@ -114,3 +138,83 @@ def test_raise_value_error_query_no_limit(api, mocker):
 
     # check if the len of records is 10
     assert len(records) == 10
+
+
+def not_all_fields():
+    # raed the data from the local location
+    path = Path(__file__).parent / ".." / "resources"
+    collection_name = "wits_not_all_fields_present"
+    with open(path / f"{collection_name}.json", "r") as f:
+        records = json.load(f)
+        return records
+
+
+def test_raise_value_error_not_all_fields_present(api, mocker):
+    mocker.patch(
+        "src.osu_api.pymongo.collection.Collection.find", side_effect=not_all_fields
+    )
+
+    with pytest.raises(ValueError) as e:
+        query = {
+            "sort": -1,
+            # "limit": 3,
+            "fields": ["timestamp", "provider", "drill_string_id", "data"],
+        }
+
+        api.get_data(
+            provider_name="osu_provider",
+            data_name="wits",
+            query=query,
+            asset_id=123456789,
+            read_from_mongo="True",
+        )
+
+        assert str(e.value) == "Not all fields are present in the records."
+
+
+def test_ts_min_max_eq(api, mocker):
+    mocker.patch(
+        "src.osu_api.pymongo.collection.Collection.find", side_effect=records_func
+    )
+
+    with pytest.raises(ValueError) as e:
+        query = {
+            "sort": -1,
+            # "limit": 3,
+            "fields": ["timestamp", "provider", "drill_string_id", "data"],
+            "ts_min": 123456789,
+            "ts_max": 123456789,
+        }
+
+        api.get_data(
+            provider_name="osu_provider",
+            data_name="wits",
+            query=query,
+            asset_id=123456789,
+            read_from_mongo="True",
+        )
+
+        assert str(e.value) == "ts_min and ts_max are equal."
+
+
+def test_post(api, query, mocker):
+    # module class module class method!
+    mongodb_find_mocker = mocker.patch(
+        "src.osu_api.pymongo.collection.Collection.find", side_effect=records_func
+    )
+    mongodb_insert_many_mocker = mocker.patch(
+        "src.osu_api.pymongo.collection.Collection.insert_many", return_value=None
+    )
+
+    records = api.get_data(
+        provider_name="osu_provider",
+        data_name="wits",
+        query=query,
+        asset_id=123456789,
+        read_from_mongo="True",
+    )
+
+    api.post_data(data=records)
+    mongodb_find_mocker.assert_called_once()
+    # assert that the insert_many method is called
+    mongodb_insert_many_mocker.assert_called_once()

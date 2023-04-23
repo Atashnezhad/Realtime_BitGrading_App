@@ -67,7 +67,7 @@ class Api:
                 records.append(x)
 
         else:
-            # raed the data from the local location
+            # read the data from the local location
             with open(self._path / f"{collection_name}.json", "r") as f:
                 records = json.load(f)
 
@@ -75,7 +75,7 @@ class Api:
         # otherwise raise an error
         for record in records:
             if not all(field in record for field in query["fields"]):
-                raise ValueError("Fields are not present in the records.")
+                raise ValueError("Not all fields are present in the records.")
 
         # check if timestamp is present in the query
         if "timestamp" in records[0]:
@@ -108,9 +108,9 @@ class Api:
 
     def post_data(self, *args, **kwargs) -> None:
         data = kwargs.get("data", {})
-        address = kwargs.get("address", {})
-        if not address:
-            raise ValueError("Address is not provided.")
+        # address = kwargs.get("address", {})
+        # if not address:
+        #     raise ValueError("Address is not provided.")
 
         # save the latest data in the S3
         bucket_name = SETTINGS.CACHE_BUCKET_NAME
@@ -141,18 +141,6 @@ class Api:
         mycol = mydb[map_database_names[collection_name]]
         mycol.insert_many(data)
 
-        # for each record in the data, get the "_id" and make it str
-        # for record in data:
-        #     record["_id"] = str(record.get("_id"))
-        #
-        # # save data as json at provided address
-        # with open(address, "w") as f:
-        #     json.dump(data, f, indent=4, sort_keys=False)
-
-        # save the last data in cache
-        # with open(self._cache_address, "w") as f:
-        #     json.dump(data[-1], f, indent=4, sort_keys=False)
-
 
 if __name__ == "__main__":
     query = {  # pragma: no cover
@@ -165,5 +153,7 @@ if __name__ == "__main__":
         "read_from_mongo": "True",
     }
     api = Api()  # pragma: no cover
-    records = api.get_data(data_name="wits", provider_name="provider_name", query=query)  # pragma: no cover
+    records = api.get_data(
+        data_name="wits", provider_name="provider_name", query=query
+    )  # pragma: no cover
     print(records)  # pragma: no cover

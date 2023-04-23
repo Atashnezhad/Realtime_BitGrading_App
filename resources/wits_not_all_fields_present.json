@@ -1,0 +1,44 @@
+[
+    {
+        "timestamp": 1677112069,
+        "provider": "osu_provider",
+        "drill_string_id": "ds_1",
+        "asset_id": 123456789,
+        "data": {
+            "md": 0.0,
+            "wob": 18727.006,
+            "rpm": 189.665,
+            "rop": 271.876,
+            "flowrate": 6248.741
+        },
+        "activity": "circulating"
+    },
+    {
+        "timestamp": 1677112070,
+        "provider": "osu_provider",
+        "drill_string_id": "ds_1",
+        "asset_id": 123456789,
+        "data": {
+            "md": 10.0,
+            "wob": 47535.715,
+            "rpm": 305.531,
+            "rop": 74.864,
+            "flowrate": 5717.46
+        },
+        "activity": "tripping_out"
+    },
+    {
+        "timestamp": 1677112071,
+        "drill_string_id": "ds_1",
+        "asset_id": 123456789,
+        "data": {
+            "md": 20.0,
+            "wob": 36599.697,
+            "rpm": 256.279,
+            "rop": 81.585,
+            "flowrate": 8328.304
+        },
+        "activity": "slide_drilling"
+    }
+
+]

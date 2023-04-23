@@ -103,3 +103,4 @@ run-pytest-coverage:
 .PHONY: show-coverage
 show-coverage:
 	open htmlcov/index.html
+	
