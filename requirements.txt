@@ -6,3 +6,4 @@ tqdm
 pymongo
 fastapi
 requests
+pip install pytest-mock
