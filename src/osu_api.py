@@ -155,7 +155,7 @@ class Api:
 
 
 if __name__ == "__main__":
-    query = {
+    query = {  # pragma: no cover
         "provider_name": "provider_name",
         "sort": 1,
         "limit": 3,
@@ -164,6 +164,6 @@ if __name__ == "__main__":
         "ts_max": 1677112080,
         "read_from_mongo": "True",
     }
-    api = Api()
-    records = api.get_data(data_name="wits", provider_name="provider_name", query=query)
-    print(records)
+    api = Api()  # pragma: no cover
+    records = api.get_data(data_name="wits", provider_name="provider_name", query=query)  # pragma: no cover
+    print(records)  # pragma: no cover

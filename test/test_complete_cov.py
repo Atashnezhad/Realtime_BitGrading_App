@@ -91,3 +91,26 @@ def test_raise_value_error_query_no_sort(api, mocker):
 
     # check if the records are sorted by timestamp descending order
     assert records[0]["timestamp"] > records[1]["timestamp"]
+
+
+def test_raise_value_error_query_no_limit(api, mocker):
+
+    mocker.patch("src.osu_api.pymongo.collection.Collection.find",
+                 side_effect=records_func)
+
+    query = {
+        "sort": -1,
+        # "limit": 3,
+        "fields": ["timestamp", "provider", "drill_string_id", "data"],
+    }
+
+    records = api.get_data(
+        provider_name="osu_provider",
+        data_name="wits",
+        query=query,
+        asset_id=123456789,
+        read_from_mongo="True",
+    )
+
+    # check if the len of records is 10
+    assert len(records) == 10
