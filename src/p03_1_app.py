@@ -294,7 +294,9 @@ class BGApp:
 
             bit_grade_list = [case.dict() for case in bit_grade_list]
             # save the bit_grade records in the database
-            self.post_bg(bit_grade_list)
+            if bit_grade_list:
+                logger.info("Saving bit_grade records in the database")
+                self.post_bg(bit_grade_list)
             if _return:
                 return bit_grade_list
 
