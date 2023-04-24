@@ -197,6 +197,34 @@ def test_ts_min_max_eq(api, mocker):
         assert str(e.value) == "ts_min and ts_max are equal."
 
 
+def test_query_with_ts_min_max(api, mocker):
+    mocker.patch(
+        "src.osu_api.pymongo.collection.Collection.find", side_effect=records_func
+    )
+
+    query = {
+        "sort": -1,
+        "limit": 11,
+        "fields": ["timestamp", "provider", "drill_string_id", "data"],
+        "ts_min": 1677112069,
+        "ts_max": 1677112079,
+    }
+
+    records = api.get_data(
+        provider_name="osu_provider",
+        data_name="wits",
+        query=query,
+        asset_id=123456789,
+        read_from_mongo="True",
+    )
+
+    assert len(records) == 10
+    # check if the records timestamp is between ts_min and ts_max for all records
+    for record in records:
+        assert record["timestamp"] >= 1677112069
+        assert record["timestamp"] <= 1677112079
+
+
 def test_post(api, query, mocker):
     # module class module class method!
     mongodb_find_mocker = mocker.patch(
