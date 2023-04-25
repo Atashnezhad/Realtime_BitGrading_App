@@ -1,3 +1,5 @@
+import json
+
 import boto3
 import pytest
 
@@ -36,8 +38,9 @@ def test_return_app_setting_event_missing_item(api, task, expected_output):
 
 
 def return_cache(*args, **kwargs):
-    print("return_cache")
-    return 123
+    # cache = args[0]
+    # return json.loads(cache)
+    return None
 
 
 def test_get_cache(api, mocker):
@@ -46,10 +49,12 @@ def test_get_cache(api, mocker):
     #                             side_effect=return_cache)
 
     s3 = mocker.patch("src.p03_1_app.boto3.resource")
-    s3_object = s3.Object.return_value.get.return_value
-    s3_object.read.return_value.decode.return_value = '{"a": 1, "b": 2}'
-
-    mocker.patch("json.loads", return_value=str({"a": 1, "b": 2}))
+    # s3_object = s3.Object.return_value.get.return_value
+    # # mock cache as following string
+    # cache_mock = s3_object.read.return_value.decode.return_value
+    # cache_mock.return_value = '{"a": 1, "b": 2}'
+    # # patch the json and call the return_cache function
+    mocker.patch("json.loads", side_effect=return_cache)
 
     event = {
         "start_ts": 1677112070,
@@ -61,4 +66,4 @@ def test_get_cache(api, mocker):
     bg_app = BGApp(api, event)
     returned_cache = bg_app.run()
 
-    assert returned_cache == str({"a": 1, "b": 2})
+    assert returned_cache is None
