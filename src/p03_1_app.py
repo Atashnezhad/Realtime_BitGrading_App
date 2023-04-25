@@ -9,8 +9,7 @@ import boto3
 import pymongo
 
 from src.enums import BGAppTasks
-from src.model import (SETTINGS, BitGrade, BitGradeData, DownholeMotor,
-                       DrillString, Wits)
+from src.model import SETTINGS, BitGrade, BitGradeData, DownholeMotor, DrillString, Wits
 from src.osu_api import Api
 
 # Initialize the logger

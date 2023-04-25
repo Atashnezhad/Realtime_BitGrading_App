@@ -2,7 +2,6 @@ import json
 
 import boto3
 import pytest
-
 from src.osu_api import Api
 from src.p03_1_app import BGApp
 
@@ -18,8 +17,8 @@ def api():
         ("get_app_setting", "Missing items in the event: asset_id"),
         ("edit_app_setting", "Missing items in the event: asset_id"),
         ("return_cache", "Missing items in the event: asset_id"),
-        ('delete_cache', 'Missing items in the event: asset_id'),
-        ('delete_bg_collection', 'Missing items in the event: asset_id'),
+        ("delete_cache", "Missing items in the event: asset_id"),
+        ("delete_bg_collection", "Missing items in the event: asset_id"),
     ],
 )
 def test_return_app_setting_event_missing_item(api, task, expected_output):
@@ -44,7 +43,7 @@ class DecodeObject:
                 "timestamp": 1677115067,
                 "provider": "osu_provider",
                 "drillstring_id": "ds_3",
-                "data": {"bg": 0.712}
+                "data": {"bg": 0.712},
             }
         )
 
@@ -57,7 +56,7 @@ class DecodeObject:
             "timestamp": 1677115067,
             "provider": "osu_provider",
             "drillstring_id": "ds_3",
-            "data": {"bg": 0.712}
+            "data": {"bg": 0.712},
         }
 
 
@@ -75,10 +74,8 @@ class CustomObject:
 
 
 def test_get_cache(api, mocker):
-
     boto3_resource = mocker.patch("src.p03_1_app.boto3.resource")
-    boto3_resource.return_value.Object.return_value.get.return_value = \
-        CustomObject()
+    boto3_resource.return_value.Object.return_value.get.return_value = CustomObject()
 
     event = {
         "start_ts": 1677112070,
@@ -95,8 +92,9 @@ def test_get_cache(api, mocker):
 
 # another way is to just mock the get_cache method from the BGApp class
 def test_get_cache_2(api, mocker):
-    mocker.patch("src.p03_1_app.BGApp.get_cache",
-                 return_value=DecodeObject.expected_json())
+    mocker.patch(
+        "src.p03_1_app.BGApp.get_cache", return_value=DecodeObject.expected_json()
+    )
 
     event = {
         "start_ts": 1677112070,
@@ -116,8 +114,8 @@ def return_cache(*args):
         "timestamp": 1677115067,
         "provider": "osu_provider",
         "drillstring_id": "ds_3",
-        "data": {"bg": 0.712}
-        }
+        "data": {"bg": 0.712},
+    }
 
 
 # or just mock the json.loads method
