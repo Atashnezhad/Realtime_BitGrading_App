@@ -23,7 +23,7 @@ def test_return_app_setting_event_missing_item(api, task, expected_output):
             "start_ts": 1677112070,
             "end_ts": 1677112070 + 60,
             # "asset_id": 123456789,
-            "task": "get_app_setting",
+            "task": task,
         }
 
         bg_app = BGApp(api, event)
