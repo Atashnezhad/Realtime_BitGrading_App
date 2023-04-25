@@ -75,24 +75,10 @@ class CustomObject:
 
 
 def test_get_cache(api, mocker):
-    # mocker_boto3 = mocker.patch("src.p03_1_app.boto3.resource",
-    #                             side_effect=return_cache)
 
     boto3_resource = mocker.patch("src.p03_1_app.boto3.resource")
     boto3_resource.return_value.Object.return_value.get.return_value = \
         CustomObject()
-    # boto3_resource.return_value.Object.return_value.get.return_value = \
-    #     {
-    #         "Body": {
-    #             "timestamp": '1677115067',
-    #             "provider": "osu_provider",
-    #             "drillstring_id": "ds_3",
-    #             "data": '{"bg": 0.712}'
-    #         }
-    #     }
-
-    # patch the json and call the return_cache function
-    # mocker.patch("json.loads", side_effect=return_cache)
 
     event = {
         "start_ts": 1677112070,
@@ -105,3 +91,47 @@ def test_get_cache(api, mocker):
     returned_cache = bg_app.run()
 
     assert returned_cache == DecodeObject.expected_json()
+
+
+# another way is to just mock the get_cache method from the BGApp class
+def test_get_cache_2(api, mocker):
+    mocker.patch("src.p03_1_app.BGApp.get_cache",
+                 return_value=DecodeObject.expected_json())
+
+    event = {
+        "start_ts": 1677112070,
+        "end_ts": 1677112070 + 60,
+        "asset_id": 123456789,
+        "task": "return_cache",
+    }
+
+    bg_app = BGApp(api, event)
+    returned_cache = bg_app.run()
+
+    assert returned_cache == DecodeObject.expected_json()
+
+
+def return_cache(*args):
+    return {
+        "timestamp": 1677115067,
+        "provider": "osu_provider",
+        "drillstring_id": "ds_3",
+        "data": {"bg": 0.712}
+        }
+
+
+# or just mock the json.loads method
+def test_get_cache_3(api, mocker):
+    mocker.patch("src.p03_1_app.boto3", return_value=None)
+    # patch the json and call the return_cache function
+    mocker.patch("json.loads", side_effect=return_cache)
+    event = {
+        "start_ts": 1677112070,
+        "end_ts": 1677112070 + 60,
+        "asset_id": 123456789,
+        "task": "return_cache",
+    }
+
+    bg_app = BGApp(api, event)
+    returned_cache = bg_app.run()
+    assert returned_cache == return_cache()
