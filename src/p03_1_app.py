@@ -202,6 +202,7 @@ class BGApp:
         bg_list = self.calculate_bit_grade(
             parsed_wits_records_per_ds, ds_dhm_cof_map, _return=_return
         )
+        logger.info("Bg calculated")
         if _return:
             return bg_list
 
@@ -216,7 +217,7 @@ class BGApp:
         )
         # if the file exists, delete it and print a message
         s3.Object(bucket_name, file_name).delete()
-        # print("File deleted")
+        logger.info("Cache deleted")
 
     def get_cache(self):
         bucket_name = SETTINGS.CACHE_BUCKET_NAME

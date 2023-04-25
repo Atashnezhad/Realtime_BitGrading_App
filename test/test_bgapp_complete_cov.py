@@ -73,7 +73,7 @@ class CustomObject:
             raise KeyError(f"Invalid key: {key}")
 
 
-def test_get_cache(api, mocker):
+def test_get_cache_1(api, mocker):
     boto3_resource = mocker.patch("src.p03_1_app.boto3.resource")
     boto3_resource.return_value.Object.return_value.get.return_value = CustomObject()
 
@@ -93,7 +93,8 @@ def test_get_cache(api, mocker):
 # another way is to just mock the get_cache method from the BGApp class
 def test_get_cache_2(api, mocker):
     mocker.patch(
-        "src.p03_1_app.BGApp.get_cache", return_value=DecodeObject.expected_json()
+        "src.p03_1_app.BGApp.get_cache",
+        return_value=DecodeObject.expected_json()
     )
 
     event = {
@@ -133,3 +134,55 @@ def test_get_cache_3(api, mocker):
     bg_app = BGApp(api, event)
     returned_cache = bg_app.run()
     assert returned_cache == return_cache()
+
+
+def test_delete_cache(api, mocker):
+    boto3_resources_mocker = mocker.patch("src.p03_1_app.boto3.resource")
+    s3_object_mocker = boto3_resources_mocker.return_value.Object.return_value
+    event = {
+        "start_ts": 1677112070,
+        "end_ts": 1677112070 + 60,
+        "asset_id": 123456789,
+        "task": "delete_cache",
+    }
+
+    bg_app = BGApp(api, event)
+    bg_app.run()
+    # assert the get method was called
+    s3_object_mocker.delete.assert_called_once()
+
+
+@pytest.mark.skip(reason="needs edit")
+def test(api, mocker):
+    with mocker.patch("src.p03_1_app.boto3.resource") as boto3_resources_mocker:
+        # s3_object_mocker = boto3_resources_mocker.return_value.Object.return_value
+        event = {
+            "start_ts": 1677112070,
+            "end_ts": 1677112070 + 60,
+            "asset_id": 123456789,
+            "task": "delete_cache",
+        }
+
+        bg_app = BGApp(api, event)
+        bg_app.run()
+
+        # assert the delete method was called
+        boto3_resources_mocker.delete.assert_called_once()
+
+
+def test_delete_bg_collection(api, mocker):
+
+    pymongo_mocker = mocker.patch("src.p03_1_app.pymongo")
+    pymongo_mocker.return_value.delete_many.return_value = None
+    event = {
+        "start_ts": 1677112070,
+        "end_ts": 1677112070 + 60,
+        "asset_id": 123456789,
+        "task": "delete_bg_collection",
+    }
+
+    bg_app = BGApp(api, event)
+    bg_app.run()
+
+    # assert the delete_many method was called
+    pymongo_mocker.delete_many.assert_called_once()
