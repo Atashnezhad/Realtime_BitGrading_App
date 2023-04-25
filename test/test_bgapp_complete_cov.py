@@ -37,24 +37,62 @@ def test_return_app_setting_event_missing_item(api, task, expected_output):
         assert str(e.value) == expected_output
 
 
-def return_cache(*args, **kwargs):
-    # cache = args[0]
-    # return json.loads(cache)
-    return None
+class DecodeObject:
+    def __init__(self, *args):
+        self._body = json.dumps(
+            {
+                "timestamp": 1677115067,
+                "provider": "osu_provider",
+                "drillstring_id": "ds_3",
+                "data": {"bg": 0.712}
+            }
+        )
+
+    def decode(self, *args):
+        return self._body
+
+    @staticmethod
+    def expected_json():
+        return {
+            "timestamp": 1677115067,
+            "provider": "osu_provider",
+            "drillstring_id": "ds_3",
+            "data": {"bg": 0.712}
+        }
+
+
+class BodyObject:
+    def read(self):
+        return DecodeObject()
+
+
+class CustomObject:
+    def __getitem__(self, key):
+        if key == "Body":
+            return BodyObject()
+        else:
+            raise KeyError(f"Invalid key: {key}")
 
 
 def test_get_cache(api, mocker):
-
     # mocker_boto3 = mocker.patch("src.p03_1_app.boto3.resource",
     #                             side_effect=return_cache)
 
-    s3 = mocker.patch("src.p03_1_app.boto3.resource")
-    # s3_object = s3.Object.return_value.get.return_value
-    # # mock cache as following string
-    # cache_mock = s3_object.read.return_value.decode.return_value
-    # cache_mock.return_value = '{"a": 1, "b": 2}'
-    # # patch the json and call the return_cache function
-    mocker.patch("json.loads", side_effect=return_cache)
+    boto3_resource = mocker.patch("src.p03_1_app.boto3.resource")
+    boto3_resource.return_value.Object.return_value.get.return_value = \
+        CustomObject()
+    # boto3_resource.return_value.Object.return_value.get.return_value = \
+    #     {
+    #         "Body": {
+    #             "timestamp": '1677115067',
+    #             "provider": "osu_provider",
+    #             "drillstring_id": "ds_3",
+    #             "data": '{"bg": 0.712}'
+    #         }
+    #     }
+
+    # patch the json and call the return_cache function
+    # mocker.patch("json.loads", side_effect=return_cache)
 
     event = {
         "start_ts": 1677112070,
@@ -66,4 +104,4 @@ def test_get_cache(api, mocker):
     bg_app = BGApp(api, event)
     returned_cache = bg_app.run()
 
-    assert returned_cache is None
+    assert returned_cache == DecodeObject.expected_json()
