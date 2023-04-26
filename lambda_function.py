@@ -1,7 +1,8 @@
-from typing import Dict
-from src.p03_1_app import BGApp
-from src.osu_api import Api
 import logging
+from typing import Dict
+
+from src.osu_api import Api
+from src.p03_1_app import BGApp
 
 # Initialize the logger
 logger = logging.getLogger()

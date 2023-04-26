@@ -2,6 +2,7 @@ import json
 
 import boto3
 import pytest
+
 from src.osu_api import Api
 from src.p03_1_app import BGApp
 
@@ -93,8 +94,7 @@ def test_get_cache_1(api, mocker):
 # another way is to just mock the get_cache method from the BGApp class
 def test_get_cache_2(api, mocker):
     mocker.patch(
-        "src.p03_1_app.BGApp.get_cache",
-        return_value=DecodeObject.expected_json()
+        "src.p03_1_app.BGApp.get_cache", return_value=DecodeObject.expected_json()
     )
 
     event = {
@@ -178,8 +178,10 @@ def delete_function(*args):
 
 
 def test_delete_bg_collection(api, mocker):
-    mocker_delete_many = mocker.patch("src.p03_1_app.pymongo.collection.Collection.delete_many",
-                                      side_effect=delete_function)
+    mocker_delete_many = mocker.patch(
+        "src.p03_1_app.pymongo.collection.Collection.delete_many",
+        side_effect=delete_function,
+    )
     event = {
         "start_ts": 1677112070,
         "end_ts": 1677112070 + 60,

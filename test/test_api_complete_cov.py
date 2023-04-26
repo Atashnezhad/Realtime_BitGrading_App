@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 
 import pytest
+
 from src.osu_api import Api
 
 
@@ -70,8 +71,7 @@ def records_func():
 
 def test_raise_value_error_query_no_sort(api, mocker):
     mocker.patch(
-        "src.osu_api.pymongo.collection.Collection.find",
-        side_effect=records_func
+        "src.osu_api.pymongo.collection.Collection.find", side_effect=records_func
     )
     # mocker.patch.object(Api, "get_data", side_effect=records)
 

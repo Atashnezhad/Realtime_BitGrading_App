@@ -1,6 +1,7 @@
 import json
 
 from fastapi import FastAPI
+
 from src.osu_api import Api
 from src.p03_1_app import BGApp
 
