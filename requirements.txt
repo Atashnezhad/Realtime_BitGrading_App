@@ -1,9 +1,11 @@
-numpy
-pydantic
+numpy~=1.24.2
+pydantic~=1.10.7
 enums
-boto3
+boto3~=1.26.114
 tqdm
-pymongo
-fastapi
-requests
+pymongo~=4.3.3
+fastapi~=0.95.1
+requests~=2.28.2
 pytest-mock
+
+pytest~=7.3.1

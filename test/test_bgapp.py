@@ -81,18 +81,31 @@ class TestApp(unittest.TestCase):
         with open(address, "w") as f:
             json.dump([], f)
 
+    @staticmethod
+    def return_setting() -> Dict:
+        setting = {
+            "asset_id": 123456789,
+            "data": {
+                "bit_wear_constant": 30_000_000_000_000,
+            },
+        }
+        return setting
+
+    @mock.patch.object(src.p03_1_app.BGApp, "return_setting")
     @mock.patch.object(src.p03_1_app.BGApp, "get_cache")
     @mock.patch.object(src.p03_1_app.BGApp, "post_bg")
     @mock.patch.object(Api, "get_data")
     def test_bg_app(
-        self,
-        mock_api_get_data_method,
-        mock_bgapp_post_method,
-        mock_bgapp_get_cache_method,
+            self,
+            mock_api_get_data_method,
+            mock_bgapp_post_method,
+            mock_bgapp_get_cache_method,
+            mock_bgapp_return_setting_method,
     ):
         mock_api_get_data_method.side_effect = self.get_data
         mock_bgapp_post_method.side_effect = self.post_bg
         mock_bgapp_get_cache_method.side_effect = self.get_cache
+        mock_bgapp_return_setting_method.side_effect = TestApp.return_setting
 
         start_ts = 1677112070
         end_ts = 1677115068  # this is the final wits timestamp
