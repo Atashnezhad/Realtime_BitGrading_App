@@ -170,10 +170,16 @@ def test(api, mocker):
         boto3_resources_mocker.delete.assert_called_once()
 
 
-def test_delete_bg_collection(api, mocker):
+def delete_function(*args):
+    return {
+        "deleted_count": 1,
+        "acknowledged": True,
+    }
 
-    pymongo_mocker = mocker.patch("src.p03_1_app.pymongo")
-    pymongo_mocker.return_value.delete_many.return_value = None
+
+def test_delete_bg_collection(api, mocker):
+    mocker_delete_many = mocker.patch("src.p03_1_app.pymongo.collection.Collection.delete_many",
+                                      side_effect=delete_function)
     event = {
         "start_ts": 1677112070,
         "end_ts": 1677112070 + 60,
@@ -184,5 +190,5 @@ def test_delete_bg_collection(api, mocker):
     bg_app = BGApp(api, event)
     bg_app.run()
 
-    # assert the delete_many method was called
-    pymongo_mocker.delete_many.assert_called_once()
+    # assert the delete method was called
+    mocker_delete_many.assert_called_once()
