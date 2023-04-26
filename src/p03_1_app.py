@@ -9,8 +9,7 @@ import boto3
 import pymongo
 
 from src.enums import BGAppTasks
-from src.model import (SETTINGS, BitGrade, BitGradeData, DownholeMotor,
-                       DrillString, Wits)
+from src.model import SETTINGS, BitGrade, BitGradeData, DownholeMotor, DrillString, Wits
 from src.osu_api import Api
 
 # Initialize the logger
@@ -102,10 +101,9 @@ class BGApp:
     def delete_bg_collection(self):
         password = os.getenv("MONGO_PASSWORD")
         username = os.getenv("MONGO_USERNAME")
-        end_point = os.getenv("MONGO_ENDPOINT")
 
         myclient = pymongo.MongoClient(
-            f"mongodb+srv://{username}:{password}@{end_point}",
+            f"mongodb+srv://{username}:{password}@cluster0.gvlqokj.mongodb.net/?retryWrites=true&w=majority",
         )
 
         map_database_names = {

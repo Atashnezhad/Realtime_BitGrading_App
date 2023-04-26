@@ -117,10 +117,9 @@ class GenerateDummyData:
         # post the data into the mongoDB
         password = os.getenv("MONGO_PASSWORD")
         username = os.getenv("MONGO_USERNAME")
-        endpoint = os.getenv("MONGO_ENDPOINT")
 
         myclient = pymongo.MongoClient(
-            f"mongodb+srv://{username}:{password}@{endpoint}"
+            f"mongodb+srv://{username}:{password}@cluster0.gvlqokj.mongodb.net/?retryWrites=true&w=majority"
         )
 
         mydb = myclient["Drilling"]
@@ -157,10 +156,9 @@ class GenerateDummyData:
         # post the data into the mongoDB
         password = os.getenv("MONGO_PASSWORD")
         username = os.getenv("MONGO_USERNAME")
-        endpoint = os.getenv("MONGO_ENDPOINT")
 
         myclient = pymongo.MongoClient(
-            f"mongodb+srv://{username}:{password}@{endpoint}"
+            f"mongodb+srv://{username}:{password}@cluster0.gvlqokj.mongodb.net/?retryWrites=true&w=majority"
         )
 
         mydb = myclient["Drilling"]
@@ -201,10 +199,9 @@ class GenerateDummyData:
         # post the data into the mongoDB
         password = os.getenv("MONGO_PASSWORD")
         username = os.getenv("MONGO_USERNAME")
-        endpoint = os.getenv("MONGO_ENDPOINT")
 
         myclient = pymongo.MongoClient(
-            f"mongodb+srv://{username}:{password}@{endpoint}"
+            f"mongodb+srv://{username}:{password}@cluster0.gvlqokj.mongodb.net/?retryWrites=true&w=majority"
         )
         mydb = myclient["Drilling"]
         mycol = mydb["downhole_motor"]

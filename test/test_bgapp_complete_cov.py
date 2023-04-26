@@ -7,7 +7,7 @@ from src.osu_api import Api
 from src.p03_1_app import BGApp
 
 
-@pytest.fixture(autouse=True, scope="module")
+@pytest.fixture
 def api():
     return Api()
 
@@ -22,7 +22,7 @@ def api():
         ("delete_bg_collection", "Missing items in the event: asset_id"),
     ],
 )
-def test_return_app_setting_event_missing_item(task, expected_output):
+def test_return_app_setting_event_missing_item(api, task, expected_output):
     with pytest.raises(ValueError) as e:
         event = {
             "start_ts": 1677112070,
@@ -74,7 +74,7 @@ class CustomObject:
             raise KeyError(f"Invalid key: {key}")
 
 
-def test_get_cache_1(mocker):
+def test_get_cache_1(api, mocker):
     boto3_resource = mocker.patch("src.p03_1_app.boto3.resource")
     boto3_resource.return_value.Object.return_value.get.return_value = CustomObject()
 
@@ -92,7 +92,7 @@ def test_get_cache_1(mocker):
 
 
 # another way is to just mock the get_cache method from the BGApp class
-def test_get_cache_2(mocker):
+def test_get_cache_2(api, mocker):
     mocker.patch(
         "src.p03_1_app.BGApp.get_cache", return_value=DecodeObject.expected_json()
     )
@@ -120,7 +120,7 @@ def return_cache(*args):
 
 
 # or just mock the json.loads method
-def test_get_cache_3(mocker):
+def test_get_cache_3(api, mocker):
     mocker.patch("src.p03_1_app.boto3", return_value=None)
     # patch the json and call the return_cache function
     mocker.patch("json.loads", side_effect=return_cache)
@@ -136,7 +136,7 @@ def test_get_cache_3(mocker):
     assert returned_cache == return_cache()
 
 
-def test_delete_cache(mocker):
+def test_delete_cache(api, mocker):
     boto3_resources_mocker = mocker.patch("src.p03_1_app.boto3.resource")
     s3_object_mocker = boto3_resources_mocker.return_value.Object.return_value
     event = {
@@ -153,7 +153,7 @@ def test_delete_cache(mocker):
 
 
 @pytest.mark.skip(reason="needs edit")
-def test(mocker):
+def test(api, mocker):
     with mocker.patch("src.p03_1_app.boto3.resource") as boto3_resources_mocker:
         # s3_object_mocker = boto3_resources_mocker.return_value.Object.return_value
         event = {
@@ -177,7 +177,7 @@ def delete_function(*args):
     }
 
 
-def test_delete_bg_collection(mocker):
+def test_delete_bg_collection(api, mocker):
     mocker_delete_many = mocker.patch(
         "src.p03_1_app.pymongo.collection.Collection.delete_many",
         side_effect=delete_function,
