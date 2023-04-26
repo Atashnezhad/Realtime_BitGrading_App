@@ -194,3 +194,25 @@ def test_delete_bg_collection(api, mocker):
 
     # assert the delete method was called
     mocker_delete_many.assert_called_once()
+
+
+def post_data(*args, **kwargs):
+    return {
+        "deleted_count": 1,
+        "acknowledged": True,
+    }
+
+
+def test_post_data(api, mocker):
+    mocker.patch("src.p03_1_app.Api.post_data", side_effect=post_data)
+    event = {
+        "start_ts": 1677112070,
+        "end_ts": 1677112070 + 60,
+        "asset_id": 123456789,
+        "task": "delete_bg_collection",
+    }
+
+    bg_app = BGApp(api, event)
+    data = []
+    bg_app.post_bg(data)
+
