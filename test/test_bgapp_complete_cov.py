@@ -216,15 +216,16 @@ def test_post_data(api, mocker):
     data = []
     bg_app.post_bg(data)
     assert post_mocker.call_count == 1
-    assert post_mocker.call_with({
-        "post_count": 1,
-        "acknowledged": True,
-    })
+    assert post_mocker.call_with(
+        {
+            "post_count": 1,
+            "acknowledged": True,
+        }
+    )
 
 
 def test_post_data_2(api, mocker):
-    with mocker.patch("src.p03_1_app.Api.post_data",
-                      side_effect=post_data) as post_mocker:
+    with mocker.patch.object(Api, "post_data", side_effect=post_data) as post_mocker:
         event = {
             "start_ts": 1677112070,
             "end_ts": 1677112070 + 60,
@@ -238,4 +239,4 @@ def test_post_data_2(api, mocker):
         assert api.post_data.call_count == 1
         data = post_data()
         assert api.post_data.call_with(data)
-
+        assert post_mocker is None
