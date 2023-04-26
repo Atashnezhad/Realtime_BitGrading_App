@@ -31,9 +31,10 @@ if __name__ == "__main__":
 
     password = os.getenv("MONGO_PASSWORD")
     username = os.getenv("MONGO_USERNAME")
+    endpoint = os.getenv("MONGO_ENDPOINT")
 
     myclient = pymongo.MongoClient(
-        f"mongodb+srv://{username}:{password}@cluster0.gvlqokj.mongodb.net/?retryWrites=true&w=majority",
+        f"mongodb+srv://{username}:{password}@{endpoint}",
         # connectTimeoutMS=30000
     )
 
