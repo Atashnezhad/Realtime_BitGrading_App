@@ -237,7 +237,11 @@ class TestTasks(unittest.TestCase):
                 "Missing items in the event: ['start_ts', 'end_ts', 'asset_id', 'task']",
             )
 
-    def test_return_app_setting(self) -> None:
+    @patch("src.p03_1_app.boto3")
+    def test_return_app_setting(self, boto3_mock) -> None:
+
+        boto3_mock.resource().Object().get()["Body"].read().decode.return_value = \
+            '{"asset_id": 123456789, "data": {"bit_wear_constant": 30000000000000}}'
         start_ts = 1677112070
         end_ts = 1677115068
 
@@ -249,17 +253,16 @@ class TestTasks(unittest.TestCase):
         }
 
         app_setting = lambda_handler(event, context=None)
-        app_setting_data = {
+        expected_app_setting_data = {
             "asset_id": 123456789,
             "data": {
                 "bit_wear_constant": 30_000_000_000_000,
             },
         }
-        self.assertEqual(app_setting, app_setting_data)
+        self.assertEqual(app_setting, expected_app_setting_data)
 
-    @patch("src.p03_1_app.json")
     @patch("src.p03_1_app.boto3")
-    def test_edit_app_setting(self, boto3_mock, json_mock) -> None:
+    def test_edit_app_setting(self, boto3_mock) -> None:
 
         start_ts = 1677112070
         end_ts = 1677115068
@@ -275,6 +278,9 @@ class TestTasks(unittest.TestCase):
         }
 
         lambda_handler(event, context=None)
+        boto3_mock.resource().Object().put.assert_called_once()
+        boto3_mock.resource().Object().put.assert_called_with(Body='{"asset_id": 123456789, "data": {'
+                                                                   '"bit_wear_constant": 30000000000000}}')
 
         # now get the app setting and assert the new value
         event = {
@@ -284,12 +290,10 @@ class TestTasks(unittest.TestCase):
             "task": "get_app_setting",
         }
 
+        boto3_mock.resource().Object().get()["Body"].read().decode.return_value = \
+            '{"asset_id": 123456789, "data": {"bit_wear_constant": 30000000000000}}'
         new_app_setting = lambda_handler(event, context=None)
-        # assert new_app_setting["data"]["bit_wear_constant"] == 30_000_000_000_000
-
-        # assert json_mock loads method was called once
-        json_mock.loads.assert_called_once()
-
-        boto3_mock.resource().Object().put.assert_called_once()
-
-        boto3_mock.resource().Object.assert_called_with()
+        # assert the get is called 6 times
+        assert boto3_mock.resource().Object().get.call_count == 2
+        boto3_mock.resource().Object().get.return_value = new_app_setting
+        assert new_app_setting["data"]["bit_wear_constant"] == 30_000_000_000_000
