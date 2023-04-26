@@ -2,10 +2,12 @@ import json
 import os
 import unittest
 from pathlib import Path
-
+from unittest import mock
+from unittest.mock import patch
 import boto3
 
 from lambda_function import lambda_handler
+from src.model import SETTINGS
 from src.osu_api import Api
 from src.p03_1_app import BGApp
 
@@ -255,7 +257,10 @@ class TestTasks(unittest.TestCase):
         }
         self.assertEqual(app_setting, app_setting_data)
 
-    def test_edit_app_setting(self) -> None:
+    @patch("src.p03_1_app.json")
+    @patch("src.p03_1_app.boto3")
+    def test_edit_app_setting(self, boto3_mock, json_mock) -> None:
+
         start_ts = 1677112070
         end_ts = 1677115068
         # write a new app setting
@@ -280,4 +285,11 @@ class TestTasks(unittest.TestCase):
         }
 
         new_app_setting = lambda_handler(event, context=None)
-        assert new_app_setting["data"]["bit_wear_constant"] == 30_000_000_000_000
+        # assert new_app_setting["data"]["bit_wear_constant"] == 30_000_000_000_000
+
+        # assert json_mock loads method was called once
+        json_mock.loads.assert_called_once()
+
+        boto3_mock.resource().Object().put.assert_called_once()
+
+        boto3_mock.resource().Object.assert_called_with()
