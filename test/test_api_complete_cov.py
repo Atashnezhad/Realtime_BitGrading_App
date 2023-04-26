@@ -225,7 +225,7 @@ def test_query_with_ts_min_max(api, mocker):
         assert record["timestamp"] <= 1677112079
 
 
-@pytest.mark.skip(reason="test_post is not implemented")
+# @pytest.mark.skip(reason="test_post is not implemented")
 def test_post(api, query, mocker):
     # module class module class method!
     mongodb_find_mocker = mocker.patch(
