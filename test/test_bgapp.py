@@ -96,11 +96,11 @@ class TestApp(unittest.TestCase):
     @mock.patch.object(src.p03_1_app.BGApp, "post_bg")
     @mock.patch.object(Api, "get_data")
     def test_bg_app(
-            self,
-            mock_api_get_data_method,
-            mock_bgapp_post_method,
-            mock_bgapp_get_cache_method,
-            mock_bgapp_return_setting_method,
+        self,
+        mock_api_get_data_method,
+        mock_bgapp_post_method,
+        mock_bgapp_get_cache_method,
+        mock_bgapp_return_setting_method,
     ):
         mock_api_get_data_method.side_effect = self.get_data
         mock_bgapp_post_method.side_effect = self.post_bg

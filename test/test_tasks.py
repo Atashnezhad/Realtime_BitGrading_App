@@ -4,6 +4,7 @@ import unittest
 from pathlib import Path
 from unittest import mock
 from unittest.mock import patch
+
 import boto3
 
 from lambda_function import lambda_handler
@@ -239,9 +240,11 @@ class TestTasks(unittest.TestCase):
 
     @patch("src.p03_1_app.boto3")
     def test_return_app_setting(self, boto3_mock) -> None:
-
-        boto3_mock.resource().Object().get()["Body"].read().decode.return_value = \
+        boto3_mock.resource().Object().get()[
+            "Body"
+        ].read().decode.return_value = (
             '{"asset_id": 123456789, "data": {"bit_wear_constant": 30000000000000}}'
+        )
         start_ts = 1677112070
         end_ts = 1677115068
 
@@ -263,7 +266,6 @@ class TestTasks(unittest.TestCase):
 
     @patch("src.p03_1_app.boto3")
     def test_edit_app_setting(self, boto3_mock) -> None:
-
         start_ts = 1677112070
         end_ts = 1677115068
         # write a new app setting
@@ -279,8 +281,10 @@ class TestTasks(unittest.TestCase):
 
         lambda_handler(event, context=None)
         boto3_mock.resource().Object().put.assert_called_once()
-        boto3_mock.resource().Object().put.assert_called_with(Body='{"asset_id": 123456789, "data": {'
-                                                                   '"bit_wear_constant": 30000000000000}}')
+        boto3_mock.resource().Object().put.assert_called_with(
+            Body='{"asset_id": 123456789, "data": {'
+            '"bit_wear_constant": 30000000000000}}'
+        )
 
         # now get the app setting and assert the new value
         event = {
@@ -290,8 +294,11 @@ class TestTasks(unittest.TestCase):
             "task": "get_app_setting",
         }
 
-        boto3_mock.resource().Object().get()["Body"].read().decode.return_value = \
+        boto3_mock.resource().Object().get()[
+            "Body"
+        ].read().decode.return_value = (
             '{"asset_id": 123456789, "data": {"bit_wear_constant": 30000000000000}}'
+        )
         new_app_setting = lambda_handler(event, context=None)
         # assert the get is called 6 times
         assert boto3_mock.resource().Object().get.call_count == 2

@@ -215,4 +215,3 @@ def test_post_data(api, mocker):
     bg_app = BGApp(api, event)
     data = []
     bg_app.post_bg(data)
-
