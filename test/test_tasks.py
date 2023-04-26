@@ -4,7 +4,6 @@ import unittest
 from pathlib import Path
 
 import boto3
-
 from lambda_function import lambda_handler
 from src.osu_api import Api
 from src.p03_1_app import BGApp
