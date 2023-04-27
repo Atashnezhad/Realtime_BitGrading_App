@@ -1,3 +1,4 @@
+![GitHub CI](https://github.com/Atashnezhad/Realtime_BitGrading_App/actions/workflows/main.yml/badge.svg)
 # A realtime PDC bit grade App
 
 In this exercise a realtime PDC bit grade App is developed.
@@ -173,3 +174,4 @@ zip -r my-first-lambda-package.zip python
 aws s3 cp my-first-lambda-package.zip s3://your-s3-bucket-name/
 ```
 and connect the layer to the lambda function.
+
