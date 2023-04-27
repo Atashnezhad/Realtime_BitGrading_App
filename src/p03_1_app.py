@@ -83,6 +83,7 @@ class BGApp:
         _data = {"asset_id": self._asset_id, "data": self._event["new_setting"]["data"]}
 
         s3.Object(bucket_name, file_name).put(Body=json.dumps(_data))
+        logger.info(f"Successfully updated the setting for {self._asset_id}")
 
     def return_setting(self) -> Dict or None:
         bucket_name = SETTINGS.CACHE_BUCKET_NAME
@@ -96,6 +97,7 @@ class BGApp:
         s3_object = s3.Object(bucket_name, file_name).get()
         app_setting = s3_object["Body"].read().decode("utf-8")
         app_setting = json.loads(app_setting)
+        logger.info(f"Successfully returned the setting for {self._asset_id}")
         return app_setting or None
 
     def delete_bg_collection(self):
@@ -118,6 +120,7 @@ class BGApp:
         mycol = mydb[map_database_names[collection_name]]
         mycol.delete_many({})
         myclient.close()
+        logger.info(f"Successfully deleted the collection {collection_name}")
 
     def get_wits_data(self) -> List[Wits]:
         start_ts = self._event["start_ts"]
@@ -231,6 +234,7 @@ class BGApp:
         s3_object = s3.Object(bucket_name, file_name).get()
         cache = s3_object["Body"].read().decode("utf-8")
         cache = json.loads(cache)
+        logger.info("Cache retrieved")
         return cache or None
 
     def calculate_bit_grade(
