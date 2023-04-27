@@ -9,7 +9,8 @@ import boto3
 import pymongo
 
 from src.enums import BGAppTasks
-from src.model import SETTINGS, BitGrade, BitGradeData, DownholeMotor, DrillString, Wits
+from src.model import (SETTINGS, BitGrade, BitGradeData, DownholeMotor,
+                       DrillString, Wits)
 from src.osu_api import Api
 
 # Initialize the logger
@@ -145,6 +146,7 @@ class BGApp:
             data_name=SETTINGS.WITS_COLLECTION,
             query=query,
             asset_id=self._asset_id,
+            read_from_mongo=True,
         )
 
         parsed_wits_records = [
