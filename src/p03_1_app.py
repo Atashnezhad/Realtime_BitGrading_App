@@ -146,7 +146,6 @@ class BGApp:
             data_name=SETTINGS.WITS_COLLECTION,
             query=query,
             asset_id=self._asset_id,
-            read_from_mongo=True,
         )
 
         parsed_wits_records = [

@@ -3,10 +3,49 @@ import unittest
 from pathlib import Path
 from typing import Dict, List
 from unittest import mock
+from unittest.mock import patch
+
+import pymongo
 
 import src.p03_1_app
 from src.osu_api import Api
 from src.p03_1_app import BGApp
+
+
+class MongoDBMock:
+    def __init__(self, *args, **kwargs) -> None:
+        self.collection_name = None
+        self.resources_path = Path(__file__).parent / ".." / "resources"
+
+    def __getitem__(self, item):
+        if item == "Drilling":
+            return self
+        if item == "wits":
+            self.collection_name = "wits"
+            return self
+        if item == "downhole_motor":
+            self.collection_name = "dhm_data"
+            return self
+        if item == "drillstring":
+            self.collection_name = "ds_data"
+            return self
+
+    def find(self, *args, **kwargs):
+        if self.collection_name == "wits":
+            # read the wits data from the resources folder
+            with open(self.resources_path / "wits.json") as f:
+                wits_data = json.load(f)
+                return wits_data
+        elif self.collection_name == "dhm_data":
+            # read the dhm data from the resources folder
+            with open(self.resources_path / "dhm_data.json") as f:
+                dhm_data = json.load(f)
+                return dhm_data
+        elif self.collection_name == "ds_data":
+            # read the ds data from the resources folder
+            with open(self.resources_path / "ds_data.json") as f:
+                ds_data = json.load(f)
+                return ds_data
 
 
 class TestApp(unittest.TestCase):
@@ -94,7 +133,7 @@ class TestApp(unittest.TestCase):
     @mock.patch.object(src.p03_1_app.BGApp, "return_setting")
     @mock.patch.object(src.p03_1_app.BGApp, "get_cache")
     @mock.patch.object(src.p03_1_app.BGApp, "post_bg")
-    @mock.patch.object(Api, "get_data")
+    @mock.patch.object(pymongo, "MongoClient")
     def test_bg_app(
         self,
         mock_api_get_data_method,
@@ -102,7 +141,8 @@ class TestApp(unittest.TestCase):
         mock_bgapp_get_cache_method,
         mock_bgapp_return_setting_method,
     ):
-        mock_api_get_data_method.side_effect = self.get_data
+
+        mock_api_get_data_method.side_effect = MongoDBMock
         mock_bgapp_post_method.side_effect = self.post_bg
         mock_bgapp_get_cache_method.side_effect = self.get_cache
         mock_bgapp_return_setting_method.side_effect = TestApp.return_setting

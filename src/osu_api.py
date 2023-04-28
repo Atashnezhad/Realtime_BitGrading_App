@@ -45,7 +45,7 @@ class Api:
 
         fields = query.get("fields", {})
 
-        if kwargs.get("read_from_mongo", "False") == "True":
+        if kwargs.get("query").get("read_from_mongo", "False") == "True":
             # or read from mongoDB
             password = os.getenv("MONGO_PASSWORD")
             username = os.getenv("MONGO_USERNAME")
