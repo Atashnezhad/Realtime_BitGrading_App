@@ -313,16 +313,16 @@ class BGApp:
         return bg
 
     def post_bg(self, data: List[Dict[str, Any]]) -> None:
-        path = Path(__file__).parent / ".." / "resources" / "calculated_bg"
-        # if path does not exist, create it
-        if not path.exists():
-            path.mkdir(parents=True, exist_ok=True)
-        filename = "bg_data.json"
-        address = path / filename
-        # if file is available, read it and append the new data to it
-        if address.exists():
-            with open(address, "r") as f:
-                data = json.load(f) + data
+        # path = Path(__file__).parent / ".." / "resources" / "calculated_bg"
+        # # if path does not exist, create it
+        # if not path.exists():
+        #     path.mkdir(parents=True, exist_ok=True)
+        # filename = "bg_data.json"
+        # address = path / filename
+        # # if file is available, read it and append the new data to it
+        # if address.exists():
+        #     with open(address, "r") as f:
+        #         data = json.load(f) + data
 
-        self._api.post_data(address=address, data=data)
+        self._api.post_data(data=data)
         logger.info("Bit grade records saved in the database")

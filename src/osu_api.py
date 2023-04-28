@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 from pathlib import Path
 from typing import Dict
@@ -6,6 +7,9 @@ from typing import Dict
 import boto3
 import pymongo
 
+# Initialize the logger
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
 from src.model import SETTINGS
 
 
@@ -123,6 +127,7 @@ class Api:
         )
 
         s3.Object(bucket_name, file_name).put(Body=json.dumps(data[-1]))
+        logger.info(f"Data is saved in the S3 bucket {bucket_name}.")
 
         password = os.getenv("MONGO_PASSWORD")
         username = os.getenv("MONGO_USERNAME")

@@ -1,6 +1,7 @@
+import json
 import logging
 from typing import Dict
-import json
+
 from src.osu_api import Api
 from src.p03_1_app import BGApp
 
