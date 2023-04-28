@@ -242,7 +242,8 @@ class BGApp:
                 logger.info("Cache retrieved")
                 return cache
         except JSONDecodeError as e:
-            logger.info(f"File {file_name} not found in bucket {bucket_name}")
+            logger.info(f"File {file_name} not found in bucket {bucket_name} with {e}")
+
             return None
 
     def calculate_bit_grade(
