@@ -13,6 +13,7 @@ from src.model import SETTINGS
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
+
 class Api:
     """
     API class
