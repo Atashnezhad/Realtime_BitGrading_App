@@ -141,7 +141,6 @@ class TestApp(unittest.TestCase):
         mock_bgapp_get_cache_method,
         mock_bgapp_return_setting_method,
     ):
-
         mock_api_get_data_method.side_effect = MongoDBMock
         mock_bgapp_post_method.side_effect = self.post_bg
         mock_bgapp_get_cache_method.side_effect = self.get_cache

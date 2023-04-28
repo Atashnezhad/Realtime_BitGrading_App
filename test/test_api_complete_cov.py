@@ -17,7 +17,7 @@ def query():
         "sort": -1,
         "limit": 3,
         "fields": ["timestamp", "provider", "drill_string_id", "data"],
-        "read_from_mongo": True
+        "read_from_mongo": True,
     }
     return query
 

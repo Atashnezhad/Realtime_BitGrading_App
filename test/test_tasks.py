@@ -206,15 +206,14 @@ class TestTasks(unittest.TestCase):
         end_ts = 1677115068  # this the final wits timestamp
 
         event = {
-            "Body":
-                json.dumps(
-                    {
-                        "start_ts": start_ts,
-                        "end_ts": end_ts,
-                        "asset_id": 123456789,
-                        # "task": "calculate_bg",
-                    }
-                )
+            "Body": json.dumps(
+                {
+                    "start_ts": start_ts,
+                    "end_ts": end_ts,
+                    "asset_id": 123456789,
+                    # "task": "calculate_bg",
+                }
+            )
         }
         try:
             lambda_handler(event, context=None)
@@ -227,15 +226,14 @@ class TestTasks(unittest.TestCase):
         # end_ts = 1677115068
 
         event = {
-            "Body":
-                json.dumps(
-                    {
-                        "start_ts": start_ts,
-                        # "end_ts": end_ts,
-                        # "asset_id": 123456789,
-                        "task": "calculate_bg",
-                    }
-                )
+            "Body": json.dumps(
+                {
+                    "start_ts": start_ts,
+                    # "end_ts": end_ts,
+                    # "asset_id": 123456789,
+                    "task": "calculate_bg",
+                }
+            )
         }
 
         try:
@@ -257,15 +255,14 @@ class TestTasks(unittest.TestCase):
         start_ts = 1677112070
         end_ts = 1677115068
         event = {
-            "Body":
-                json.dumps(
-                    {
-                        "start_ts": start_ts,
-                        "end_ts": end_ts,
-                        "asset_id": end_ts,
-                        "task": "get_app_setting",
-                    }
-                )
+            "Body": json.dumps(
+                {
+                    "start_ts": start_ts,
+                    "end_ts": end_ts,
+                    "asset_id": end_ts,
+                    "task": "get_app_setting",
+                }
+            )
         }
         # event = json.dumps(event["Body"])
 
@@ -284,35 +281,36 @@ class TestTasks(unittest.TestCase):
         end_ts = 1677115068
         # write a new app setting
         event = {
-            "Body":
-                json.dumps(
-                    {
-                        "start_ts": start_ts,
-                        "end_ts": end_ts,
-                        "asset_id": 123456789,
-                        "task": "edit_app_setting",
-                        "new_setting": {
-                            "data": {"bit_wear_constant": 30_000_000_000_000},
-                        },
-                    }
-                )
+            "Body": json.dumps(
+                {
+                    "start_ts": start_ts,
+                    "end_ts": end_ts,
+                    "asset_id": 123456789,
+                    "task": "edit_app_setting",
+                    "new_setting": {
+                        "data": {"bit_wear_constant": 30_000_000_000_000},
+                    },
+                }
+            )
         }
 
         lambda_handler(event, context=None)
         boto3_mock.resource().Object().put.assert_called_once()
         boto3_mock.resource().Object().put.assert_called_with(
             Body='{"asset_id": 123456789, "data": {'
-                 '"bit_wear_constant": 30000000000000}}'
+            '"bit_wear_constant": 30000000000000}}'
         )
 
         # now get the app setting and assert the new value
         event = {
-            "Body":
-                json.dumps(
-                    {"start_ts": start_ts,
-                     "end_ts": end_ts,
-                     "asset_id": end_ts,
-                     "task": "get_app_setting"})
+            "Body": json.dumps(
+                {
+                    "start_ts": start_ts,
+                    "end_ts": end_ts,
+                    "asset_id": end_ts,
+                    "task": "get_app_setting",
+                }
+            )
         }
 
         boto3_mock.resource().Object().get()[
