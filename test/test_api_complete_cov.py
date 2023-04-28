@@ -261,7 +261,7 @@ def side_eff():
 # todo: fix this test
 def test_s3_cache_empty_raise_exception(api, mocker):
     mock_boto3 = mocker.patch("src.p03_1_app.boto3.resource")
-    mock_json_loads = mocker.patch("src.p03_1_app.json.loads")
+    # mock_json_loads = mocker.patch("src.p03_1_app.json.loads")
     mock_bucket = mock_boto3.return_value.Bucket.return_value
     mock_object = mock_bucket.Object.return_value
     mock_object.get.side_effect = side_eff
