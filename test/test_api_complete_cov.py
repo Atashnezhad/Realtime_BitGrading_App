@@ -253,8 +253,17 @@ def test_post(api, query, mocker):
     mongodb_insert_many_mocker.assert_called_once()
 
 
-def test_get_cache_raise_exception(api, query, mocker):
-    mocker_cache = mocker.patch("src.p03_1_app.boto3")
+def side_eff():
+    print("side effect")
+    return None
+
+
+def test_s3_cache_empty_raise_exception(api, mocker):
+    mock_boto3 = mocker.patch("src.p03_1_app.boto3.resource")
+    mock_bucket = mock_boto3.return_value.Bucket.return_value
+    mock_object = mock_bucket.Object.return_value
+    mock_object.get.side_effect = side_eff
+
     mock_logger_info = mocker.patch("src.p03_1_app.logger.info")
     event = dict()
     obj = BGApp(api, event)

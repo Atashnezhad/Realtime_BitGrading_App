@@ -264,7 +264,6 @@ class TestTasks(unittest.TestCase):
                 }
             )
         }
-        # event = json.dumps(event["Body"])
 
         app_setting = lambda_handler(event, context=None)
         expected_app_setting_data = {
