@@ -2,6 +2,7 @@ import json
 import logging
 import os
 from itertools import groupby
+from json import JSONDecodeError
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -240,7 +241,7 @@ class BGApp:
                 cache = json.loads(cache)
                 logger.info("Cache retrieved")
                 return cache
-        except:
+        except JSONDecodeError as e:
             logger.info(f"File {file_name} not found in bucket {bucket_name}")
             return None
 
