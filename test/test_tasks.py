@@ -206,7 +206,7 @@ class TestTasks(unittest.TestCase):
         end_ts = 1677115068  # this the final wits timestamp
 
         event = {
-            "Body": json.dumps(
+            "body": json.dumps(
                 {
                     "start_ts": start_ts,
                     "end_ts": end_ts,
@@ -226,7 +226,7 @@ class TestTasks(unittest.TestCase):
         # end_ts = 1677115068
 
         event = {
-            "Body": json.dumps(
+            "body": json.dumps(
                 {
                     "start_ts": start_ts,
                     # "end_ts": end_ts,
@@ -255,7 +255,7 @@ class TestTasks(unittest.TestCase):
         start_ts = 1677112070
         end_ts = 1677115068
         event = {
-            "Body": json.dumps(
+            "body": json.dumps(
                 {
                     "start_ts": start_ts,
                     "end_ts": end_ts,
@@ -281,7 +281,7 @@ class TestTasks(unittest.TestCase):
         end_ts = 1677115068
         # write a new app setting
         event = {
-            "Body": json.dumps(
+            "body": json.dumps(
                 {
                     "start_ts": start_ts,
                     "end_ts": end_ts,
@@ -303,7 +303,7 @@ class TestTasks(unittest.TestCase):
 
         # now get the app setting and assert the new value
         event = {
-            "Body": json.dumps(
+            "body": json.dumps(
                 {
                     "start_ts": start_ts,
                     "end_ts": end_ts,

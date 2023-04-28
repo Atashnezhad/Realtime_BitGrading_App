@@ -11,7 +11,7 @@ logger.setLevel(logging.INFO)
 
 
 def lambda_handler(event: Dict, context=None):
-    event = json.loads(event["Body"])
+    event = json.loads(event["body"])
     logger.info(f"Lambda function executed successfully with event {event}")
     api = Api()
     obj = BGApp(api, event)
