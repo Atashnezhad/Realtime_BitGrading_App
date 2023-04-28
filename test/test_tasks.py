@@ -307,10 +307,12 @@ class TestTasks(unittest.TestCase):
 
         # now get the app setting and assert the new value
         event = {
-            "start_ts": start_ts,
-            "end_ts": end_ts,
-            "asset_id": end_ts,
-            "task": "get_app_setting",
+            "Body":
+                json.dumps(
+                    {"start_ts": start_ts,
+                     "end_ts": end_ts,
+                     "asset_id": end_ts,
+                     "task": "get_app_setting"})
         }
 
         boto3_mock.resource().Object().get()[

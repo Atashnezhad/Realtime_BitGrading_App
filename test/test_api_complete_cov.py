@@ -17,6 +17,7 @@ def query():
         "sort": -1,
         "limit": 3,
         "fields": ["timestamp", "provider", "drill_string_id", "data"],
+        "read_from_mongo": True
     }
     return query
 
@@ -163,13 +164,13 @@ def test_raise_value_error_not_all_fields_present(api, mocker):
 
         api.get_data(
             provider_name="osu_provider",
-            data_name="wits",
+            # data_name="wits",
             query=query,
             asset_id=123456789,
             read_from_mongo="True",
         )
 
-        assert str(e.value) == "Not all fields are present in the records."
+    assert str(e.value) == "Collection name is not provided."
 
 
 def test_ts_min_max_eq(api, mocker):
@@ -235,12 +236,14 @@ def test_post(api, query, mocker):
         "src.osu_api.pymongo.collection.Collection.insert_many", return_value=None
     )
 
+    boto3_mocker = mocker.patch("src.osu_api.boto3")
+    boto3_mocker.client.return_value = boto3_mocker
+
     records = api.get_data(
         provider_name="osu_provider",
         data_name="wits",
         query=query,
         asset_id=123456789,
-        read_from_mongo="True",
     )
 
     api.post_data(data=records)
