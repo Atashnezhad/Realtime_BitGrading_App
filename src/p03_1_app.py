@@ -224,6 +224,7 @@ class BGApp:
         logger.info("Cache deleted")
 
     def get_cache(self):
+
         bucket_name = SETTINGS.CACHE_BUCKET_NAME
         file_name = SETTINGS.CACHE_FILE_NAME
         s3 = boto3.resource(
@@ -232,14 +233,19 @@ class BGApp:
             aws_access_key_id=os.getenv("S3_AWS_ACCESS_KEY"),
             aws_secret_access_key=os.getenv("S3_AWS_SECRET_ACCESS_KEY"),
         )
-        s3_object = s3.Object(bucket_name, file_name).get()
-        cache = s3_object["Body"].read().decode("utf-8")
-        cache = json.loads(cache)
-        logger.info("Cache retrieved")
-        return cache or None
+
+        try:
+            s3_object = s3.Object(bucket_name, file_name).get()
+            cache = s3_object["Body"].read().decode("utf-8")
+            cache = json.loads(cache)
+            logger.info("Cache retrieved")
+            return cache
+        except:
+            logger.info(f"File {file_name} not found in bucket {bucket_name}")
+            return None
 
     def calculate_bit_grade(
-        self, parsed_wits_records_per_ds: Dict, ds_dhm_cof_map: Dict, _return=False
+            self, parsed_wits_records_per_ds: Dict, ds_dhm_cof_map: Dict, _return=False
     ) -> List[Dict[str, Any]]:
         for ds, wits_records in parsed_wits_records_per_ds.items():
             # get the motor_cof for the drill_string_id
