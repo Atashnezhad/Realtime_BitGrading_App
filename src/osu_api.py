@@ -7,11 +7,11 @@ from typing import Dict
 import boto3
 import pymongo
 
+from src.model import SETTINGS
+
 # Initialize the logger
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
-from src.model import SETTINGS
-
 
 class Api:
     """
