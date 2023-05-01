@@ -1,7 +1,10 @@
 import json
 from pathlib import Path
 
+import boto3
+import botocore
 import pytest
+from botocore.stub import Stubber
 
 from src.osu_api import Api
 from src.p03_1_app import BGApp
@@ -253,22 +256,57 @@ def test_post(api, query, mocker):
     mongodb_insert_many_mocker.assert_called_once()
 
 
-def side_eff():
-    print("side effect")
-    return None
+class Boto3Obj:
+    def __init__(self, *args, **kwargs):
+        print("boto3_obj init")
+        pass
+
+    def __getitem__(self, item):
+        print("boto3_obj getitem")
+        return self
+
+    def Object(self, *args, **kwargs):
+        print("boto3_obj Object")
+        return self
+
+    def get(self, *args, **kwargs):
+        print("boto3_obj get")
+        return self
+
+    def read(self, *args, **kwargs):
+        print("boto3_obj read")
+        return self
+
+    def decode(self, *args, **kwargs):
+        # Create a mock S3 client
+        s3_client = botocore.session.get_session().create_client("s3")
+        stubber = Stubber(s3_client)
+
+        # Set up the expected API call and response
+        bucket = "my-bucket"
+        key = "my-key"
+        stubber.add_client_error(
+            "get_object",
+            expected_params={"Bucket": bucket, "Key": key},
+            service_error_code="NoSuchKey",
+        )
+
+        # Start the stubber and make the API call
+        stubber.activate()
+        s3_object = s3_client.get_object(Bucket=bucket, Key=key)
+
+        # Read the object and decode the contents
+        data = s3_object["Body"].read().decode("utf-8")
+        return data
 
 
-# todo: fix this test
-def test_s3_cache_empty_raise_exception(api, mocker):
-    mock_boto3 = mocker.patch("src.p03_1_app.boto3.resource")
-    mock_json_loads = mocker.patch("src.p03_1_app.json.loads")
-    mock_bucket = mock_boto3.return_value.Bucket.return_value
-    mock_object = mock_bucket.Object.return_value
-    mock_object.get.side_effect = side_eff
+def test_s3_return_empty_raise_exception_nosuchkey(api, mocker):
+    mock_boto3 = mocker.patch.object(boto3, "resource", side_effect=Boto3Obj)
 
-    mock_logger_info = mocker.patch("src.p03_1_app.logger.info")
-    event = dict()
-    obj = BGApp(api, event)
-    obj.get_cache()
-    mock_logger_info.assert_called_once()
-    mock_json_loads.assert_called_once()
+    with pytest.raises(Exception) as e:
+        event = dict()
+        obj = BGApp(api, event)
+        obj.get_cache()
+        # mock_logger_info.assert_called_once()
+        mock_boto3.assert_called_once()
+        assert str(e.value) == "NoSuchKey"

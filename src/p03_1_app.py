@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 import boto3
+import botocore
 import pymongo
 
 from src.enums import BGAppTasks
@@ -237,14 +238,18 @@ class BGApp:
         try:
             s3_object = s3.Object(bucket_name, file_name).get()
             cache = s3_object["Body"].read().decode("utf-8")
-            if cache:
-                cache = json.loads(cache)
-                logger.info("Cache retrieved")
-                return cache
-        except JSONDecodeError as e:
-            logger.info(f"File {file_name} not found in bucket {bucket_name} with {e}")
 
-            return None
+        except botocore.exceptions.ClientError as e:
+            if e.response["Error"]["Code"] == "NoSuchKey":
+                logger.info("Objectn cahce not found in S3 bucket.")
+                raise e
+            else:
+                logger.info("Error reading object from S3 bucket.")
+                raise e
+        if cache:
+            cache = json.loads(cache)
+            logger.info("Cache retrieved")
+            return cache
 
     def calculate_bit_grade(
         self, parsed_wits_records_per_ds: Dict, ds_dhm_cof_map: Dict, _return=False
@@ -331,6 +336,5 @@ class BGApp:
         # if address.exists():
         #     with open(address, "r") as f:
         #         data = json.load(f) + data
-
         self._api.post_data(data=data)
         logger.info("Bit grade records saved in the database")
