@@ -12,7 +12,7 @@ import pymongo
 
 from src.enums import BGAppTasks
 from src.model import (SETTINGS, BitGrade, BitGradeData, DownholeMotor,
-                       DrillString, Wits)
+                       DrillString, EmptyCacheInS3, InvalidCacheInS3, Wits)
 from src.osu_api import Api
 
 # Initialize the logger
@@ -238,18 +238,24 @@ class BGApp:
         try:
             s3_object = s3.Object(bucket_name, file_name).get()
             cache = s3_object["Body"].read().decode("utf-8")
-
+        except botocore.exceptions.NoSuchKey:
+            logger.info("Cache object not found in S3 bucket.")
+            raise EmptyCacheInS3("Object not found in S3 bucket.")
         except botocore.exceptions.ClientError as e:
-            if e.response["Error"]["Code"] == "NoSuchKey":
-                logger.info("Objectn cahce not found in S3 bucket.")
-                raise e
-            else:
-                logger.info("Error reading object from S3 bucket.")
-                raise e
+            logger.info("Error reading cache object from S3 bucket: %s", e)
+            raise
+
         if cache:
-            cache = json.loads(cache)
-            logger.info("Cache retrieved")
+            try:
+                cache = json.loads(cache)
+            except json.JSONDecodeError:
+                logger.error("Invalid JSON string in cache object.")
+                raise InvalidCacheInS3("Cache object contains invalid JSON string.")
+            logger.info("Cache retrieved from S3 bucket.")
             return cache
+        else:
+            logger.info("Cache object in S3 bucket is empty.")
+            return None
 
     def calculate_bit_grade(
         self, parsed_wits_records_per_ds: Dict, ds_dhm_cof_map: Dict, _return=False

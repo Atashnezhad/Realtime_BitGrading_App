@@ -84,3 +84,12 @@ class BitGrade(BaseModel):
     provider: str = None
     drillstring_id: str = None
     data: BitGradeData
+
+
+# TODO: add more exceptions
+class EmptyCacheInS3(Exception):
+    pass
+
+
+class InvalidCacheInS3(Exception):
+    pass
