@@ -238,12 +238,9 @@ class BGApp:
         try:
             s3_object = s3.Object(bucket_name, file_name).get()
             cache = s3_object["Body"].read().decode("utf-8")
-        except botocore.exceptions.NoSuchKey:
+        except Exception:
             logger.info("Cache object not found in S3 bucket.")
-            raise EmptyCacheInS3("Object not found in S3 bucket.")
-        except botocore.exceptions.ClientError as e:
-            logger.info("Error reading cache object from S3 bucket: %s", e)
-            raise
+            raise EmptyCacheInS3("Cache object not found in S3 bucket.")
 
         if cache:
             try:
@@ -332,15 +329,5 @@ class BGApp:
         return bg
 
     def post_bg(self, data: List[Dict[str, Any]]) -> None:
-        # path = Path(__file__).parent / ".." / "resources" / "calculated_bg"
-        # # if path does not exist, create it
-        # if not path.exists():
-        #     path.mkdir(parents=True, exist_ok=True)
-        # filename = "bg_data.json"
-        # address = path / filename
-        # # if file is available, read it and append the new data to it
-        # if address.exists():
-        #     with open(address, "r") as f:
-        #         data = json.load(f) + data
         self._api.post_data(data=data)
         logger.info("Bit grade records saved in the database")

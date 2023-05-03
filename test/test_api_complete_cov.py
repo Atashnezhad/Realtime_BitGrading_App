@@ -1,11 +1,14 @@
 import json
 from pathlib import Path
+from unittest.mock import Mock, patch
 
 import boto3
 import botocore
+import botocore.exceptions
 import pytest
 from botocore.stub import Stubber
 
+from src.model import EmptyCacheInS3
 from src.osu_api import Api
 from src.p03_1_app import BGApp
 
@@ -310,3 +313,22 @@ def test_s3_return_empty_raise_exception_nosuchkey(api, mocker):
         # mock_logger_info.assert_called_once()
         mock_boto3.assert_called_once()
         assert str(e.value) == "NoSuchKey"
+
+
+def raise_func_exc(*args, **kwargs):
+    raise Exception("NoSuchKey")
+
+
+def test_get_cache_raise_botocore_nosuchkey(api):
+    with patch("boto3.resource") as mock_resource:
+        mock_s3 = Mock()
+        mock_resource.return_value = mock_s3
+        mock_s3_obj = mock_resource.Object.return_value.get.return_value
+        mock_cache = mock_s3_obj["Body"].read.return_value.decode.return_value
+        mock_cache.side_effect = raise_func_exc
+        with pytest.raises(Exception) as e:
+            event = dict()
+            obj = BGApp(api, event)
+            obj.get_cache()
+            # assert EmptyCacheInS3(f"Cache object not found in S3 bucket.") was raised
+            assert str(e.value) == "NoSuchKey"
