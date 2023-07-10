@@ -10,6 +10,9 @@ import boto3
 import botocore
 import pymongo
 
+import sys
+sys.path.insert(0, ...)
+
 from src.enums import BGAppTasks
 from src.model import (SETTINGS, BitGrade, BitGradeData, DownholeMotor,
                        DrillString, EmptyCacheInS3, InvalidCacheInS3, Wits)

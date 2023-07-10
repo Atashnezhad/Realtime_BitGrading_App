@@ -100,7 +100,7 @@ run-app:
 
 # stop the port 8000
 .PHONY: stop-port
-	stop-port: sudo lsof -t -i tcp:8000 | xargs kill -9
+	sudo lsof -t -i tcp:8080 | xargs kill -9
 
 
 # dcoker commands for running
@@ -108,3 +108,13 @@ run-app:
 .PHONY: docker-build
 docker-build:
 	docker-compose up -d
+
+# run app using script.sh
+.PHONY: run-app-script
+run-app-script:
+	./script.sh run-app
+
+# stop app using script.sh
+.PHONY: stop-app-script
+stop-app-script:
+	./script.sh stop-port
