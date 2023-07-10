@@ -101,3 +101,10 @@ run-app:
 # stop the port 8000
 .PHONY: stop-port
 	stop-port: sudo lsof -t -i tcp:8000 | xargs kill -9
+
+
+# dcoker commands for running
+# docker compose build
+.PHONY: docker-build
+docker-build:
+	docker-compose up -d
