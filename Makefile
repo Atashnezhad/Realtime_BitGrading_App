@@ -83,15 +83,6 @@ print-env:
 #	export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 #   export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
-# run the app using uvicorn
-.PHONY: run-app
-run-app:
-	uvicorn main:app --reload --port 8080
-
-# stop the port 8000
-.PHONY: stop-port
-	stop-port: sudo lsof -t -i tcp:8000 | xargs kill -9
-
 # make pytest coverage
 .PHONY: run-pytest-coverage
 run-pytest-coverage:
@@ -101,3 +92,12 @@ run-pytest-coverage:
 .PHONY: show-coverage
 show-coverage:
 	open htmlcov/index.html
+
+# run the app using uvicorn
+.PHONY: run-app
+run-app:
+	uvicorn app.main:app --reload --port 8080
+
+# stop the port 8000
+.PHONY: stop-port
+	stop-port: sudo lsof -t -i tcp:8000 | xargs kill -9
