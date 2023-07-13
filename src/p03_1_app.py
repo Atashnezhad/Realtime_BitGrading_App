@@ -1,6 +1,7 @@
 import json
 import logging
 import os
+import sys
 from itertools import groupby
 from json import JSONDecodeError
 from pathlib import Path
@@ -10,7 +11,6 @@ import boto3
 import botocore
 import pymongo
 
-import sys
 sys.path.insert(0, ...)
 
 from src.enums import BGAppTasks
