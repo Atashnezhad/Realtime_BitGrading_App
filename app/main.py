@@ -10,10 +10,10 @@ app = FastAPI()
 
 # Define the Pydantic model for the task payload
 class Event(BaseModel):
-    start_ts: int
-    end_ts: int
-    asset_id: int
-    task: str
+    start_ts: int = 1677112070
+    end_ts: int = 1677115068
+    asset_id: int = 123456789
+    task: str = "return_cache"
 
 
 @app.get("/")
@@ -21,10 +21,10 @@ def home():
     return {"health_check": "OK"}
 
 
-@app.post("/task/{event}")
-def task(event: str):
+@app.post("/task")
+def task(event: Event):
     api = Api()
-    event_dict = json.loads(event)
+    event_dict = event.dict()
     # print(event_dict)
     obj = BGApp(api, event_dict)
     returned_value = obj.run()
