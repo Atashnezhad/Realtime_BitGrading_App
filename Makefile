@@ -103,7 +103,7 @@ run-app:
 	sudo lsof -t -i tcp:8080 | xargs kill -9
 
 
-# dcoker commands for running
+# docker commands for running
 # docker compose build
 .PHONY: docker-build
 docker-build:
