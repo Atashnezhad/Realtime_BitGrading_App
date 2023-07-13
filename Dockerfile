@@ -1,4 +1,8 @@
-FROM python:3.8
-RUN pip3 install fastapi uvicorn
-COPY ./app /app
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "15400"]
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8
+
+COPY ./requirements.txt /app/requirements.txt
+
+RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
+
+COPY ./app /app/app
+COPY ./src /app/src
