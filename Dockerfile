@@ -1,8 +1,15 @@
 FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8
 
-COPY ./requirements.txt /app/requirements.txt
+WORKDIR /app
 
-RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
+COPY requirements.txt requirements.txt
 
-COPY ./app /app/app
-COPY ./src /app/src
+RUN pip3 install -r requirements.txt
+
+COPY . .
+
+CMD ["python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+
+#CMD ["chmod", "+x", "script.sh"]
+
+#CMD ["./script.sh", "run-app"]

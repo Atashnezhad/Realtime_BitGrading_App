@@ -103,12 +103,6 @@ run-app:
 	sudo lsof -t -i tcp:8080 | xargs kill -9
 
 
-# docker commands for running
-# docker compose build
-.PHONY: docker-build
-docker-build:
-	docker-compose up -d
-
 # run app using script.sh
 .PHONY: run-app-script
 run-app-script:
@@ -118,3 +112,14 @@ run-app-script:
 .PHONY: stop-app-script
 stop-app-script:
 	./script.sh stop-port
+
+# if the docker command is not found, in bash use zsh
+# build a docker image
+.PHONY: build
+build:
+	docker build -t rtbg-app .
+
+# build on port 5000 container
+.PHONY: build-port
+build-port:
+	docker run -d -p 9000:5000 --name my-bg-app rtbg-app

@@ -1,11 +1,11 @@
-import json
+import logging
 
-from fastapi import FastAPI
+from flask import Flask
 from pydantic import BaseModel
 from src.osu_api import Api
 from src.p03_1_app import BGApp
 
-app = FastAPI()
+app = Flask(__name__)
 
 
 # Define the Pydantic model for the task payload
@@ -16,13 +16,14 @@ class Event(BaseModel):
     task: str = "return_cache"
 
 
-@app.get("/")
+@app.route('/')
 def home():
     return {"health_check": "OK"}
 
 
 @app.post("/task")
 def task(event: Event):
+    logging.info(f"Lambda function executed successfully with event {event}")
     api = Api()
     event_dict = event.dict()
     # print(event_dict)
