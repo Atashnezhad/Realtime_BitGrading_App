@@ -119,7 +119,12 @@ stop-app-script:
 build:
 	docker build -t rtbg-app .
 
-# build on port 5000 container
-.PHONY: build-port
-build-port:
+# build on port 5000 container - flask
+.PHONY: build-port-fastapi
+build-port-fastapi:
+	docker run --name fastapi-container -p 80:80 -d rtbg-app
+
+# build on port 5000 container - flask
+.PHONY: build-port-flask
+build-port-flask:
 	docker run -d -p 9000:5000 --name my-bg-app rtbg-app
