@@ -128,3 +128,11 @@ build-port-fastapi:
 .PHONY: build-port-flask
 build-port-flask:
 	docker run -d -p 9000:5000 --name my-bg-app rtbg-app
+
+
+# stop the docker container and rm it
+.PHONY: stop-delete
+stop-delete:
+	docker stop fastapi-container
+	docker rm fastapi-container
+	docker rmi rtbg-app
