@@ -136,3 +136,16 @@ stop-delete:
 	docker stop fastapi-container
 	docker rm fastapi-container
 	docker rmi rtbg-app
+
+# use bash ./script_dockers.sh to does build/run_container/stop_container and remove image
+.PHONY: run-docker-build
+run-docker-build:
+	./script_dockers.sh build
+
+.PHONY: run-docker-run
+run-docker-run:
+	./script_dockers.sh run
+
+.PHONY: run-docker-remove
+run-docker-remove:
+	./script_dockers.sh remove
