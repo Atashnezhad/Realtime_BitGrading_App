@@ -9,10 +9,7 @@ build_image() {
 }
 
 run_container_fastapi() {
-    # Generate a random container name using 'date' and 'md5sum'
-    container_name="${CONTAINER_NAME}-$(date | md5sum | head -c 10)"
-
-    docker run --name "$container_name" -p 80:80 -d "$IMAGE_NAME"
+    docker run --name "$CONTAINER_NAME" -p 80:80 -d "$IMAGE_NAME"
 }
 
 remove_container() {
@@ -25,9 +22,14 @@ remove_container() {
     fi
 }
 
+# Function to remove all Docker images
+remove_all_images() {
+    docker image rm $(docker image ls -aq)
+}
+
 # Check if an argument is provided
 if [ $# -ne 1 ]; then
-    echo "Usage: $0 [build|run|remove]"
+    echo "Usage: $0 [build|run|remove|remove-all]"
     exit 1
 fi
 
@@ -36,9 +38,12 @@ if [ "$1" == "build" ]; then
     build_image
 elif [ "$1" == "run" ]; then
     run_container_fastapi
-elif [ "$1" == "remove" ]; then
+elif [ "$1" == "remove-container" ]; then
     remove_container
+elif [ "$1" == "remove-all-imgs" ]; then
+    remove_all_images
 else
-    echo "Invalid argument. Usage: $0 [build|run|remove]"
+    echo "Invalid argument. Usage: $0 [build|run|remove|remove-all]"
     exit 1
 fi
+

@@ -1,0 +1,8 @@
+{
+    "timestamp": 123456789,
+    "provider":"osu_provider",
+    "drillstring_id": "ds_1",
+    "data": {
+      "bg":0
+    }
+}

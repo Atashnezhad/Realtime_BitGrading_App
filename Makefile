@@ -148,4 +148,9 @@ run-docker-run:
 
 .PHONY: run-docker-remove
 run-docker-remove:
-	./script_dockers.sh remove
+	./script_dockers.sh remove-container
+
+# docker remove all images
+.PHONY: run-docker-remove-all
+run-docker-remove-all:
+	./script_dockers.sh remove-all-imgs
