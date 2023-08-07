@@ -11,8 +11,8 @@ COPY . .
 # Copy the .env file to the container
 COPY .env ./.env
 
-# Set environment variables from .env file
-RUN set -o allexport && source .env && set +o allexport
+# Load environment variables from .env file using ENV
+ENV $(cat .env | grep -v ^# | xargs)
 
 # this following is using the flask
 #CMD ["python3", "-m" , "flask", "run", "--host=0.0.0.0"]
