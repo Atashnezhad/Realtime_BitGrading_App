@@ -7,3 +7,4 @@ htmlcov
 src/__pycache__
 test/__pycache__
 /get-docker.sh
+/.env

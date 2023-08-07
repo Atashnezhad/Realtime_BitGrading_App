@@ -7,6 +7,11 @@ from json import JSONDecodeError
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
+# load the env variables from .env file
+from dotenv import load_dotenv
+
+load_dotenv()
+
 import boto3
 import botocore
 import pymongo
@@ -258,7 +263,7 @@ class BGApp:
             return None
 
     def calculate_bit_grade(
-        self, parsed_wits_records_per_ds: Dict, ds_dhm_cof_map: Dict, _return=False
+            self, parsed_wits_records_per_ds: Dict, ds_dhm_cof_map: Dict, _return=False
     ) -> List[Dict[str, Any]]:
         for ds, wits_records in parsed_wits_records_per_ds.items():
             # get the motor_cof for the drill_string_id

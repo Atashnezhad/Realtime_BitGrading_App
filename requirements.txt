@@ -7,8 +7,7 @@ pymongo~=4.3.3
 fastapi~=0.95.1
 requests~=2.28.2
 pytest-mock
-
 pytest~=7.3.1
 Flask==2.3.2
-
+python-dotenv~=1.0.0
 uvicorn~=0.17.6
