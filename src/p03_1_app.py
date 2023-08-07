@@ -13,7 +13,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import boto3
-import botocore
 import pymongo
 
 sys.path.insert(0, ...)
