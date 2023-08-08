@@ -154,3 +154,11 @@ run-docker-remove:
 .PHONY: run-docker-remove-all
 run-docker-remove-all:
 	./script_dockers.sh remove-all-imgs
+
+# deploy to heroku
+.PHONY: deploy-heroku
+deploy-heroku:
+	heroku container:login
+	heroku create rtbg-app
+	heroku container:push web --app rtbg-app
+	heroku open --app rtbg-app
