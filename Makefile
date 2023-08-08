@@ -83,15 +83,6 @@ print-env:
 #	export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 #   export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
-# run the app using uvicorn
-.PHONY: run-app
-run-app:
-	uvicorn main:app --reload --port 8080
-
-# stop the port 8000
-.PHONY: stop-port
-	stop-port: sudo lsof -t -i tcp:8000 | xargs kill -9
-
 # make pytest coverage
 .PHONY: run-pytest-coverage
 run-pytest-coverage:
@@ -101,3 +92,73 @@ run-pytest-coverage:
 .PHONY: show-coverage
 show-coverage:
 	open htmlcov/index.html
+
+# run the app using uvicorn
+.PHONY: run-app
+run-app:
+	uvicorn app.main:app --reload --port 8080
+
+# stop the port 8000
+.PHONY: stop-port
+	sudo lsof -t -i tcp:8080 | xargs kill -9
+
+
+# run app using script.sh
+.PHONY: run-app-script
+run-app-script:
+	./script.sh run-app
+
+# stop app using script.sh
+.PHONY: stop-app-script
+stop-app-script:
+	./script.sh stop-port
+
+# if the docker command is not found, in bash use zsh
+# build a docker image
+.PHONY: build
+build:
+	docker build -t rtbg-app .
+
+# build on port 5000 container - flask
+.PHONY: build-port-fastapi
+build-port-fastapi:
+	docker run --name fastapi-container -p 80:80 -d rtbg-app
+
+# build on port 5000 container - flask
+.PHONY: build-port-flask
+build-port-flask:
+	docker run -d -p 9000:5000 --name my-bg-app rtbg-app
+
+
+# stop the docker container and rm it
+.PHONY: stop-delete
+stop-delete:
+	docker stop fastapi-container
+	docker rm fastapi-container
+	docker rmi rtbg-app
+
+# use bash ./script_dockers.sh to does build/run_container/stop_container and remove image
+.PHONY: run-docker-build
+run-docker-build:
+	./script_dockers.sh build
+
+.PHONY: run-docker-run
+run-docker-run:
+	./script_dockers.sh run
+
+.PHONY: run-docker-remove
+run-docker-remove:
+	./script_dockers.sh remove-container
+
+# docker remove all images
+.PHONY: run-docker-remove-all
+run-docker-remove-all:
+	./script_dockers.sh remove-all-imgs
+
+# deploy to heroku
+.PHONY: deploy-heroku
+deploy-heroku:
+	heroku container:login
+	heroku create rtbg-app
+	heroku container:push web --app rtbg-app
+	heroku open --app rtbg-app
