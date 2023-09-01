@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 # load the env variables from .env file
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 import boto3
 import pymongo
@@ -20,7 +20,7 @@ from src.model import (SETTINGS, BitGrade, BitGradeData, DownholeMotor,
                        DrillString, EmptyCacheInS3, InvalidCacheInS3, Wits)
 from src.osu_api import Api
 
-load_dotenv()
+# load_dotenv()
 
 # Initialize the logger
 logger = logging.getLogger()
